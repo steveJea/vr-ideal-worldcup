@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR 이상형 월드컵 Beta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif; 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+    }
+    .clickable {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body id="body" class="text-white min-h-screen">
+  <div class="min-h-screen relative">
+    <!-- START SCREEN -->
+    <div id="start-screen" class="min-h-screen flex items-center justify-center clickable">
+      <div class="overlay absolute inset-0"></div>
+      
+      <div class="max-w-2xl mx-auto px-6 text-center relative z-10">
+        <img src="https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/stage_bg/title.png" 
+             class="mx-auto mb-12 max-w-md" alt="Title">
+
+        <div class="mb-10">
+          <div class="text-xs font-semibold tracking-widest text-violet-300 mb-4">토너먼트 규모 선택</div>
+          <div class="grid grid-cols-3 gap-4" id="size-buttons"></div>
+        </div>
+
+        <button id="start-btn"
+                class="w-full py-6 text-2xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 active:scale-[0.985] transition-all rounded-3xl disabled:opacity-40 shadow-xl"
+                disabled>
+          게임 시작하기
+        </button>
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen" class="hidden min-h-screen relative">
+      <div class="overlay absolute inset-0"></div>
+      <div class="max-w-5xl mx-auto px-6 pt-8 pb-16 relative z-10">
+        <div class="flex items-center justify-between mb-8">
+          <div id="round-badge" class="px-6 h-10 flex items-center text-lg font-bold rounded-3xl tracking-wider bg-black/60"></div>
+          <div class="text-sm text-slate-300">
+            남은 후보 <span id="remaining-count" class="font-mono text-3xl font-bold text-white">16</span>명
+          </div>
+        </div>
+        <div id="matchup-container" class="min-h-[560px] flex items-center justify-center"></div>
+      </div>
+    </div>
+
+    <!-- WINNER SCREEN -->
+    <div id="winner-screen" class="hidden min-h-screen relative">
+      <div class="overlay absolute inset-0"></div>
+      <div class="max-w-2xl mx-auto pt-16 px-6 text-center relative z-10"></div>
+    </div>
+  </div>
+
+  <script>
+    const BASE = "https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/";
+    const BG = {
+      title: BASE + "stage_bg/title.png",
+      64: BASE + "stage_bg/64.jpg",
+      32: BASE + "stage_bg/32.jpg",
+      16: BASE + "stage_bg/16.jpg",
+      8: BASE + "stage_bg/8.jpg",
+      4: BASE + "stage_bg/4.jpg",
+      2: BASE + "stage_bg/2.jpg",
+      win: BASE + "stage_bg/win.jpg"
+    };
+
+    let globalData = [];
+    let currentRoundPlayers = [];
+    let nextRoundPlayers = [];
+    let currentRoundName = '';
+    let selectedSize = null;
+
+    function setBackground(key) {
+      document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
+    }
+
+    async function loadCSVData() {
+      const res = await fetch('data.csv');
+      const text = await res.text();
+      const lines = text.trim().split(/\r?\n/);
+      const data = [];
+      const start = (lines[0].toLowerCase().includes('code')) ? 1 : 0;
+      for (let i = start; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        const p = lines[i].split(',').map(x => x.trim().replace(/^"|"$/g,''));
+        if (p.length >= 2) data.push({ code: p[0], name: p[1] });
+      }
+      return data;
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length-1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i+1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function getRoundName(num) {
+      const map = {64:'64강',32:'32강',16:'16강',8:'8강',4:'4강',2:'결승',1:'우승'};
+      return map[num] || `${num}강`;
+    }
+
+    function updateStatus() {
+      document.getElementById('remaining-count').textContent = currentRoundPlayers.length + nextRoundPlayers.length;
+      document.getElementById('round-badge').textContent = currentRoundName;
+    }
+
+    function createContestantCard(person, onChoose) {
+      const card = document.createElement('div');
+      card.className = `tournament-card group w-full max-w-[360px] bg-black/70 border border-white/30 hover:border-violet-400 rounded-3xl overflow-hidden cursor-pointer shadow-2xl backdrop-blur-md`;
+      card.innerHTML = `
+        <div class="relative">
+          <img src="${BASE}${person.code}.jpg" class="w-full aspect-[4/3] object-cover" alt="${person.name}">
+          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <div class="text-white text-3xl font-bold tracking-tight">${person.name}</div>
+          </div>
+        </div>
+      `;
+      const img = card.querySelector('img');
+      img.onerror = () => { if (img.src.endsWith('.jpg')) img.src = `${BASE}${person.code}.png`; };
+      card.addEventListener('click', onChoose);
+      return card;
+    }
+
+    function renderMatchup(container, p1, p2) {
+      container.innerHTML = '';
+      const wrap = document.createElement('div');
+      wrap.className = "flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-[1100px]";
+      const vs = document.createElement('div');
+      vs.innerHTML = `<div class="text-6xl font-black text-white/80 tracking-widest">VS</div>`;
+      wrap.appendChild(createContestantCard(p1, () => handleChoice(p1, p2)));
+      wrap.appendChild(vs);
+      wrap.appendChild(createContestantCard(p2, () => handleChoice(p2, p1)));
+      container.appendChild(wrap);
+    }
+
+    function showSelectedHighlight(winner) {
+      const div = document.createElement('div');
+      div.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200]";
+      div.innerHTML = `
+        <div class="text-center scale-100 transition-transform">
+          <div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div>
+          <img src="${BASE}${winner.code}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}${winner.code}.png'">
+          <div class="text-4xl font-bold mt-6 text-white">${winner.name}</div>
+        </div>
+      `;
+      document.body.appendChild(div);
+      setTimeout(() => div.remove(), 1250);
+    }
+
+    function handleChoice(winner, loser) {
+      nextRoundPlayers.push(winner);
+      showSelectedHighlight(winner);
+      setTimeout(showNextMatchup, 1300);
+    }
+
+    function showNextMatchup() {
+      const container = document.getElementById('matchup-container');
+      if (currentRoundPlayers.length === 0 && nextRoundPlayers.length > 0) {
+        currentRoundPlayers = shuffle(nextRoundPlayers);
+        nextRoundPlayers = [];
+        currentRoundName = getRoundName(currentRoundPlayers.length);
+        updateStatus();
+      }
+      if (currentRoundPlayers.length <= 1) {
+        showWinner(currentRoundPlayers[0] || nextRoundPlayers[0]);
+        return;
+      }
+      const p1 = currentRoundPlayers.shift();
+      const p2 = currentRoundPlayers.shift();
+      renderMatchup(container, p1, p2);
+      updateStatus();
+    }
+
+    function showWinner(winner) {
+      let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
+      const exist = hallOfFame.find(w => w.code === winner.code);
+      if (exist) exist.wins++;
+      else hallOfFame.push({code: winner.code, name: winner.name, wins: 1});
+      localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
+
+      document.getElementById('game-screen').classList.add('hidden');
+      const ws = document.getElementById('winner-screen');
+      ws.classList.remove('hidden');
+      setBackground('win');
+
+      let history = hallOfFame.sort((a,b) => b.wins - a.wins).map(w => `
+        <div class="flex gap-4 bg-black/60 p-4 rounded-2xl">
+          <img src="${BASE}${w.code}.jpg" class="w-16 h-16 object-cover rounded-xl flex-shrink-0" onerror="this.src='${BASE}${w.code}.png'">
+          <div>
+            <div class="font-bold text-lg">${w.name}</div>
+            <div class="text-emerald-400">${w.wins}회 우승</div>
+          </div>
+        </div>
+      `).join('');
+
+      ws.innerHTML = `
+        <div class="max-w-2xl mx-auto pt-12 px-6 text-center">
+          <div class="text-7xl mb-4">👑</div>
+          <h2 class="text-6xl font-black mb-3">최종 우승자</h2>
+          <div class="mx-auto w-96 rounded-3xl overflow-hidden border-8 border-yellow-400 my-10">
+            <img src="${BASE}${winner.code}.jpg" class="w-full" onerror="this.src='${BASE}${winner.code}.png'">
+          </div>
+          <div class="text-5xl font-bold mb-10">${winner.name}</div>
+
+          <div class="mt-8">
+            <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
+            <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${history}</div>
+          </div>
+
+          <button onclick="location.reload()" class="mt-12 px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl">다시 시작하기</button>
+        </div>
+      `;
+    }
+
+    function initTournament(contestants) {
+      currentRoundPlayers = shuffle(contestants);
+      nextRoundPlayers = [];
+      currentRoundName = getRoundName(currentRoundPlayers.length);
+      document.getElementById('start-screen').classList.add('hidden');
+      document.getElementById('game-screen').classList.remove('hidden');
+      setBackground('64');
+      updateStatus();
+      showNextMatchup();
+    }
+
+    function setupSizeButtons() {
+      const container = document.getElementById('size-buttons');
+      [16,32,64].forEach(n => {
+        const btn = document.createElement('div');
+        btn.className = `cursor-pointer border-2 border-slate-700 hover:border-violet-500 bg-black/70 rounded-3xl p-8 transition-all backdrop-blur-md`;
+        btn.innerHTML = `<div class="text-5xl font-black">${n}강</div><div class="text-slate-400 mt-2">${n}명</div>`;
+        btn.onclick = () => {
+          document.querySelectorAll('#size-buttons > div').forEach(b => b.classList.remove('border-violet-500','bg-violet-950'));
+          btn.classList.add('border-violet-500','bg-violet-950');
+          selectedSize = n;
+          document.getElementById('start-btn').disabled = false;
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    async function startGame() {
+      const btn = document.getElementById('start-btn');
+      btn.disabled = true;
+      btn.textContent = "로딩 중...";
+
+      try {
+        globalData = await loadCSVData();
+        let size = selectedSize;
+        if (globalData.length < size) size = globalData.length;
+        initTournament(shuffle(globalData).slice(0, size));
+      } catch(e) {
+        alert("데이터 로딩 실패");
+      }
+    }
+
+    window.onload = () => {
+      setBackground('title');
+      setupSizeButtons();
+      document.getElementById('start-btn').onclick = startGame;
+    };
+  </script>
+</body>
+</html>
