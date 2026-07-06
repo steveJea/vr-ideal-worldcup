@@ -14,20 +14,18 @@
       background-attachment: fixed;
     }
     .overlay {
-      background: rgba(0, 0, 0, 0.75);
-    }
-    .clickable {
-      position: relative;
-      z-index: 10;
+      background: rgba(0, 0, 0, 0.72);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
     }
   </style>
 </head>
-<body id="body" class="text-white min-h-screen">
+<body id="body" class="text-white min-h-screen relative">
   <div class="min-h-screen relative">
     <!-- START SCREEN -->
-    <div id="start-screen" class="min-h-screen flex items-center justify-center clickable">
-      <div class="overlay absolute inset-0"></div>
-      
+    <div id="start-screen" class="min-h-screen flex items-center justify-center">
+      <div class="overlay"></div>
       <div class="max-w-2xl mx-auto px-6 text-center relative z-10">
         <img src="https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/stage_bg/title.png" 
              class="mx-auto mb-12 max-w-md" alt="Title">
@@ -47,7 +45,7 @@
 
     <!-- GAME SCREEN -->
     <div id="game-screen" class="hidden min-h-screen relative">
-      <div class="overlay absolute inset-0"></div>
+      <div class="overlay"></div>
       <div class="max-w-5xl mx-auto px-6 pt-8 pb-16 relative z-10">
         <div class="flex items-center justify-between mb-8">
           <div id="round-badge" class="px-6 h-10 flex items-center text-lg font-bold rounded-3xl tracking-wider bg-black/60"></div>
@@ -61,7 +59,7 @@
 
     <!-- WINNER SCREEN -->
     <div id="winner-screen" class="hidden min-h-screen relative">
-      <div class="overlay absolute inset-0"></div>
+      <div class="overlay"></div>
       <div class="max-w-2xl mx-auto pt-16 px-6 text-center relative z-10"></div>
     </div>
   </div>
@@ -120,6 +118,8 @@
     function updateStatus() {
       document.getElementById('remaining-count').textContent = currentRoundPlayers.length + nextRoundPlayers.length;
       document.getElementById('round-badge').textContent = currentRoundName;
+      const roundKey = currentRoundName.replace('강','');
+      setBackground(roundKey);
     }
 
     function createContestantCard(person, onChoose) {
@@ -156,7 +156,7 @@
       const div = document.createElement('div');
       div.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200]";
       div.innerHTML = `
-        <div class="text-center scale-100 transition-transform">
+        <div class="text-center">
           <div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div>
           <img src="${BASE}${winner.code}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}${winner.code}.png'">
           <div class="text-4xl font-bold mt-6 text-white">${winner.name}</div>
@@ -272,6 +272,12 @@
         alert("데이터 로딩 실패");
       }
     }
+
+    // 오른쪽 클릭 방지
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      alert("마우스 오른쪽 버튼은 사용할 수 없습니다.");
+    });
 
     window.onload = () => {
       setBackground('title');
