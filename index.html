@@ -3,6 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBBS - VR 이상형 월드컵</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Pretendard', system-ui, sans-serif; }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff3366;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+    .gnb {
+      display: flex;
+      gap: 30px;
+      flex: 1;
+    }
+    .gnb a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .gnb a:hover {
+      color: white;
+    }
+    .current {
+      color: #ff3366 !important;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="https://mbbs.kr" class="logo">MBBS</a>
+      
+      <nav class="gnb">
+        <a href="https://vr.mbbs.kr" class="current">VR 이상형 월드컵</a>
+        <a href="#">캐릭터 라이브러리</a>
+        <a href="#">바이브 갤러리</a>
+        <a href="#">커뮤니티</a>
+        <a href="#">Admin</a>
+      </nav>
+    </div>
+  </header>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VR 이상형 월드컵 Beta</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -298,4 +365,17 @@
     };
   </script>
 </body>
+  <footer style="background:#111; color:#888; text-align:center; padding:40px 20px; margin-top:100px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <p>© 2026 MBBS All Rights Reserved.</p>
+      <p style="margin-top:10px; font-size:14px;">
+        <a href="https://mbbs.kr" style="color:#666; text-decoration:none;">홈</a> | 
+        <a href="#" style="color:#666; text-decoration:none;">이용약관</a> | 
+        <a href="#" style="color:#666; text-decoration:none;">개인정보처리방침</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+  
 </html>
