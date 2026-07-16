@@ -221,7 +221,7 @@
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
-      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1}); // 최근 것이 위로
+      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1}); // 최근 우승자가 위로
       localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
 
       document.getElementById('game-screen').classList.add('hidden');
@@ -334,8 +334,6 @@
       try {
         globalData = await loadCSVData();
         let filtered = filterByGender(globalData, selectedGender);
-
-        console.log(`전체: ${globalData.length}, female: ${filtered.length}`);
 
         if (filtered.length < 4) {
           alert(`선택한 성별(${selectedGender})의 카드가 부족합니다. (${filtered.length}개)`);
