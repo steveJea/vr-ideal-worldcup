@@ -98,8 +98,9 @@
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
     }
 
-    // 강력한 CSV 파서
-    function parseCSV(text) {
+    async function loadCSVData() {
+      const res = await fetch(CSV_URL + '?t=' + Date.now());
+      const text = await res.text();
       const lines = text.trim().split(/\r?\n/);
       if (lines.length < 2) return [];
 
@@ -107,50 +108,13 @@
       const data = [];
 
       for (let i = 1; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (!line) continue;
-
-        const row = [];
-        let current = '';
-        let inQuotes = false;
-
-        for (let j = 0; j < line.length; j++) {
-          const char = line[j];
-          if (char === '"') {
-            inQuotes = !inQuotes;
-          } else if (char === ',' && !inQuotes) {
-            row.push(current.trim());
-            current = '';
-          } else {
-            current += char;
-          }
-        }
-        row.push(current.trim());
-
+        if (!lines[i].trim()) continue;
+        const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
         const obj = {};
-        headers.forEach((h, idx) => {
-          obj[h] = row[idx] || '';
-        });
+        headers.forEach((h, idx) => obj[h] = values[idx] || '');
         if (obj['이름'] || obj.name) data.push(obj);
       }
       return data;
-    }
-
-    async function loadCSVData() {
-      try {
-        const res = await fetch(CSV_URL + '?t=' + Date.now());
-        const text = await res.text();
-        console.log("CSV Raw Length:", text.length);
-
-        globalData = parseCSV(text);
-        console.log("Parsed Data Count:", globalData.length);
-        if (globalData.length > 0) console.log("First Row:", globalData[0]);
-
-        return globalData;
-      } catch (e) {
-        console.error("CSV Load Error:", e);
-        return [];
-      }
     }
 
     function filterByGender(data, mode) {
@@ -257,7 +221,7 @@
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
-      else hallOfFame.push({id: winner.id, name: winner['이름'] || winner.name, wins: 1});
+      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1}); // 최근 것이 위로
       localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
 
       document.getElementById('game-screen').classList.add('hidden');
@@ -265,7 +229,7 @@
       ws.classList.remove('hidden');
       setBackground('win');
 
-      let history = hallOfFame.sort((a,b)=>b.wins-a.wins).map(w => `
+      let history = hallOfFame.map(w => `
         <div class="flex gap-4 bg-black/60 p-4 rounded-2xl">
           <img src="${BASE}img/bt_img/${w.id}.jpg" class="w-16 h-16 object-cover rounded-xl" onerror="this.src='${BASE}img/bt_img/${w.id}.png'">
           <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
