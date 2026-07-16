@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -112,7 +114,7 @@
         const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
         const obj = {};
         headers.forEach((h, idx) => obj[h] = values[idx] || '');
-        if (obj['이름']) data.push(obj);
+        if (obj['이름'] || obj.name) data.push(obj);
       }
       return data;
     }
@@ -121,8 +123,8 @@
       if (mode === 'mix') return data;
       return data.filter(p => {
         const g = (p['성별'] || p.gender || '').toString().toLowerCase().trim();
-        if (mode === 'male') return g.includes('male') || g.includes('m') || g.includes('남');
-        if (mode === 'female') return g.includes('female') || g.includes('f') || g.includes('여');
+        if (mode === 'male') return g === 'male' || g === 'm' || g === '남' || g === '남성';
+        if (mode === 'female') return g === 'female' || g === 'f' || g === '여' || g === '여성';
         return true;
       });
     }
@@ -137,6 +139,7 @@
     }
 
     function getRoundName(num) {
+      if (num === 1) return '우승자';
       const map = {64:'64강',32:'32강',16:'16강',8:'8강',4:'4강',2:'결승'};
       return map[num] || `${num}강`;
     }
@@ -144,12 +147,12 @@
     function updateStatus() {
       document.getElementById('remaining-count').textContent = currentRoundPlayers.length + nextRoundPlayers.length;
       document.getElementById('round-badge').textContent = currentRoundName;
-      const roundKey = currentRoundName.replace('강','').replace('결승','2');
+      const roundKey = currentRoundName.replace('강','').replace('결승','2').replace('우승자','1');
       setBackground(roundKey);
     }
 
     function createContestantCard(person, onChoose) {
-      const name = person['이름'] || '-';
+      const name = person['이름'] || person.name || '-';
       const id = person.id || 'unknown';
       const card = document.createElement('div');
       card.className = `tournament-card group w-full max-w-[360px] bg-black/70 border border-white/30 hover:border-violet-400 rounded-3xl overflow-hidden cursor-pointer shadow-2xl backdrop-blur-md`;
@@ -183,7 +186,7 @@
     function showSelectedHighlight(winner) {
       const div = document.createElement('div');
       div.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200]";
-      div.innerHTML = `<div class="text-center"><div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div><img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'"><div class="text-4xl font-bold mt-6 text-white">${winner['이름']}</div></div>`;
+      div.innerHTML = `<div class="text-center"><div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div><img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'"><div class="text-4xl font-bold mt-6 text-white">${winner['이름'] || winner.name}</div></div>`;
       document.body.appendChild(div);
       setTimeout(() => div.remove(), 1250);
     }
@@ -221,7 +224,7 @@
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
-      else hallOfFame.push({id: winner.id, name: winner['이름'], wins: 1});
+      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1});
       localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
 
       document.getElementById('game-screen').classList.add('hidden');
@@ -229,7 +232,7 @@
       ws.classList.remove('hidden');
       setBackground('win');
 
-      let history = hallOfFame.sort((a,b)=>b.wins-a.wins).map(w => `
+      let history = hallOfFame.map(w => `
         <div class="flex gap-4 bg-black/60 p-4 rounded-2xl">
           <img src="${BASE}img/bt_img/${w.id}.jpg" class="w-16 h-16 object-cover rounded-xl" onerror="this.src='${BASE}img/bt_img/${w.id}.png'">
           <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
@@ -243,7 +246,7 @@
           <div class="mx-auto w-96 rounded-3xl overflow-hidden border-8 border-yellow-400 my-10 relative">
             <img src="${BASE}img/bt_img/${winner.id}.jpg" class="w-full" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'">
           </div>
-          <div class="text-5xl font-bold mb-4">${winner['이름']}</div>
+          <div class="text-5xl font-bold mb-4">${winner['이름'] || winner.name}</div>
           <button onclick="showProfile(${JSON.stringify(winner)})" class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
           <div class="mt-8">
             <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
@@ -255,13 +258,13 @@
     }
 
     function showProfile(person) {
-      const name = person['이름'] || '-';
-      const gender = person['성별'] || '-';
-      const age = person['나이'] || '-';
-      const region = person['지역'] || '-';
-      const grade = person['등급'] || '-';
-      const cls = person['클래스'] || '-';
-      const attr = person['속성'] || '-';
+      const name = person['이름'] || person.name || '-';
+      const gender = person['성별'] || person.gender || '-';
+      const age = person['나이'] || person.age || '-';
+      const region = person['지역'] || person.region || '-';
+      const grade = person['등급'] || person.grade || '-';
+      const cls = person['클래스'] || person.class || '-';
+      const attr = person['속성'] || person.attribute || '-';
 
       document.getElementById('profile-content').innerHTML = `
         <div class="p-6">
@@ -335,8 +338,6 @@
         globalData = await loadCSVData();
         let filtered = filterByGender(globalData, selectedGender);
 
-        console.log(`전체: ${globalData.length}, female: ${filtered.length}`);
-
         if (filtered.length < 4) {
           alert(`선택한 성별(${selectedGender})의 카드가 부족합니다. (${filtered.length}개)`);
           btn.disabled = false;
@@ -367,3 +368,4 @@
   </script>
 </body>
 </html>
+>>>>>>> 68e9368f79035ad919bf150c5b842eb422ff7cfa
