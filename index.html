@@ -98,8 +98,9 @@
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
     }
 
-    // 개선된 CSV 파서 (콤마가 있는 숫자 처리)
-    function parseCSV(text) {
+    async function loadCSVData() {
+      const res = await fetch(CSV_URL + '?t=' + Date.now());
+      const text = await res.text();
       const lines = text.trim().split(/\r?\n/);
       if (lines.length < 2) return [];
 
@@ -108,46 +109,12 @@
 
       for (let i = 1; i < lines.length; i++) {
         if (!lines[i].trim()) continue;
-        const row = [];
-        let current = '';
-        let inQuotes = false;
-
-        for (let char of lines[i]) {
-          if (char === '"') {
-            inQuotes = !inQuotes;
-          } else if (char === ',' && !inQuotes) {
-            row.push(current.trim());
-            current = '';
-          } else {
-            current += char;
-          }
-        }
-        row.push(current.trim());
-
+        const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
         const obj = {};
-        headers.forEach((h, idx) => {
-          obj[h] = row[idx] || '';
-        });
-        if (obj['이름'] || obj.name) data.push(obj);
+        headers.forEach((h, idx) => obj[h] = values[idx] || '');
+        if (obj['이름']) data.push(obj);
       }
       return data;
-    }
-
-    async function loadCSVData() {
-      try {
-        const res = await fetch(CSV_URL + '?t=' + Date.now());
-        const text = await res.text();
-        console.log("CSV Raw Length:", text.length);
-
-        globalData = parseCSV(text);
-        console.log("Parsed Data Count:", globalData.length);
-        if (globalData.length > 0) console.log("First Row:", globalData[0]);
-
-        return globalData;
-      } catch (e) {
-        console.error("CSV Load Error:", e);
-        return [];
-      }
     }
 
     function filterByGender(data, mode) {
