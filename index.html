@@ -99,28 +99,44 @@
     }
 
     async function loadCSVData() {
-      const res = await fetch(CSV_URL + '?t=' + Date.now());
-      const text = await res.text();
-      const lines = text.trim().split(/\r?\n/);
-      if (lines.length < 2) return [];
+      try {
+        const res = await fetch(CSV_URL + '?t=' + Date.now());
+        const text = await res.text();
+        console.log("CSV Raw Length:", text.length); // 디버깅
 
-      const headers = lines[0].split(',').map(h => h.trim());
-      const data = [];
+        const lines = text.trim().split(/\r?\n/);
+        if (lines.length < 2) {
+          console.log("CSV lines too short");
+          return [];
+        }
 
-      for (let i = 1; i < lines.length; i++) {
-        if (!lines[i].trim()) continue;
-        const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
-        const obj = {};
-        headers.forEach((h, idx) => obj[h] = values[idx] || '');
-        if (obj['이름']) data.push(obj);
+        const headers = lines[0].split(',').map(h => h.trim());
+        console.log("Headers:", headers);
+
+        const data = [];
+
+        for (let i = 1; i < lines.length; i++) {
+          if (!lines[i].trim()) continue;
+          const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
+          const obj = {};
+          headers.forEach((h, idx) => {
+            obj[h] = values[idx] || '';
+          });
+          if (obj['이름'] || obj.name) data.push(obj);
+        }
+
+        console.log("Parsed Data Count:", data.length);
+        return data;
+      } catch (e) {
+        console.error("CSV Load Error:", e);
+        return [];
       }
-      return data;
     }
 
     function filterByGender(data, mode) {
       if (mode === 'mix') return data;
       return data.filter(p => {
-        const g = (p['성별'] || '').toString().toLowerCase().trim();
+        const g = (p['성별'] || p.gender || '').toString().toLowerCase().trim();
         if (mode === 'male') return g.includes('male') || g.includes('m') || g.includes('남');
         if (mode === 'female') return g.includes('female') || g.includes('f') || g.includes('여');
         return true;
