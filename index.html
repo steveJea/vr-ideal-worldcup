@@ -425,6 +425,8 @@
     function checkStartReady() {
       document.getElementById('start-btn').disabled = !(selectedGender && selectedSize);
     }
+    async function startGame() 
+    
 console.log("=== Gender 분포 ===");
 const genderStats = {};
 globalData.forEach(p => {
@@ -432,7 +434,8 @@ globalData.forEach(p => {
   genderStats[g] = (genderStats[g] || 0) + 1;
 });
 console.table(genderStats);
-    async function startGame() {
+    
+    {
       const btn = document.getElementById('start-btn');
       btn.disabled = true;
       btn.textContent = "로딩 중...";
