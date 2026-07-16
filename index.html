@@ -93,6 +93,7 @@
     let currentRoundName = '';
     let selectedSize = null;
     let selectedGender = null;
+    let currentWinner = null;   // ← 프로필용
 
     function setBackground(key) {
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
@@ -219,6 +220,8 @@
     }
 
     function showWinner(winner) {
+      currentWinner = winner;   // 프로필용 저장
+
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
@@ -245,7 +248,7 @@
             <img src="${BASE}img/bt_img/${winner.id}.jpg" class="w-full" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'">
           </div>
           <div class="text-5xl font-bold mb-4">${winner['이름'] || winner.name}</div>
-          <button onclick="showProfile(this.dataset.person)" data-person='${JSON.stringify(winner).replace(/'/g, "\\'")}' class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
+          <button onclick="showProfile()" class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
           <div class="mt-8">
             <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
             <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${history}</div>
@@ -255,8 +258,9 @@
       `;
     }
 
-    function showProfile(btn) {
-      const person = JSON.parse(btn.dataset.person);
+    function showProfile() {
+      if (!currentWinner) return;
+      const person = currentWinner;
       const name = person['이름'] || person.name || '-';
       const gender = person['성별'] || person.gender || '-';
       const age = person['나이'] || person.age || '-';
