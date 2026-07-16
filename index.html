@@ -98,35 +98,55 @@
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
     }
 
+    // 강력한 CSV 파서
+    function parseCSV(text) {
+      const lines = text.trim().split(/\r?\n/);
+      if (lines.length < 2) return [];
+
+      const headers = lines[0].split(',').map(h => h.trim());
+      const data = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+
+        const row = [];
+        let current = '';
+        let inQuotes = false;
+
+        for (let j = 0; j < line.length; j++) {
+          const char = line[j];
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === ',' && !inQuotes) {
+            row.push(current.trim());
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        row.push(current.trim());
+
+        const obj = {};
+        headers.forEach((h, idx) => {
+          obj[h] = row[idx] || '';
+        });
+        if (obj['이름'] || obj.name) data.push(obj);
+      }
+      return data;
+    }
+
     async function loadCSVData() {
       try {
         const res = await fetch(CSV_URL + '?t=' + Date.now());
         const text = await res.text();
         console.log("CSV Raw Length:", text.length);
 
-        const lines = text.trim().split(/\r?\n/);
-        console.log("Lines Count:", lines.length);
+        globalData = parseCSV(text);
+        console.log("Parsed Data Count:", globalData.length);
+        if (globalData.length > 0) console.log("First Row:", globalData[0]);
 
-        if (lines.length < 2) return [];
-
-        const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
-        console.log("Headers:", headers);
-
-        const data = [];
-        for (let i = 1; i < lines.length; i++) {
-          if (!lines[i].trim()) continue;
-          const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
-          const obj = {};
-          headers.forEach((h, idx) => {
-            obj[h] = values[idx] || '';
-          });
-          if (obj.name || obj['이름']) data.push(obj);
-        }
-
-        console.log("Parsed Data Count:", data.length);
-        if (data.length > 0) console.log("First Row:", data[0]);
-
-        return data;
+        return globalData;
       } catch (e) {
         console.error("CSV Load Error:", e);
         return [];
@@ -136,7 +156,7 @@
     function filterByGender(data, mode) {
       if (mode === 'mix') return data;
       return data.filter(p => {
-        const g = (p.gender || p['성별'] || '').toString().toLowerCase().trim();
+        const g = (p['성별'] || p.gender || '').toString().toLowerCase().trim();
         if (mode === 'male') return g.includes('male') || g.includes('m') || g.includes('남');
         if (mode === 'female') return g.includes('female') || g.includes('f') || g.includes('여');
         return true;
@@ -165,7 +185,7 @@
     }
 
     function createContestantCard(person, onChoose) {
-      const name = person.name || person['이름'] || '-';
+      const name = person['이름'] || person.name || '-';
       const id = person.id || 'unknown';
       const card = document.createElement('div');
       card.className = `tournament-card group w-full max-w-[360px] bg-black/70 border border-white/30 hover:border-violet-400 rounded-3xl overflow-hidden cursor-pointer shadow-2xl backdrop-blur-md`;
@@ -199,7 +219,7 @@
     function showSelectedHighlight(winner) {
       const div = document.createElement('div');
       div.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200]";
-      div.innerHTML = `<div class="text-center"><div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div><img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'"><div class="text-4xl font-bold mt-6 text-white">${winner.name || winner['이름']}</div></div>`;
+      div.innerHTML = `<div class="text-center"><div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div><img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'"><div class="text-4xl font-bold mt-6 text-white">${winner['이름'] || winner.name}</div></div>`;
       document.body.appendChild(div);
       setTimeout(() => div.remove(), 1250);
     }
@@ -237,7 +257,7 @@
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
-      else hallOfFame.push({id: winner.id, name: winner.name || winner['이름'], wins: 1});
+      else hallOfFame.push({id: winner.id, name: winner['이름'] || winner.name, wins: 1});
       localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
 
       document.getElementById('game-screen').classList.add('hidden');
@@ -259,7 +279,7 @@
           <div class="mx-auto w-96 rounded-3xl overflow-hidden border-8 border-yellow-400 my-10 relative">
             <img src="${BASE}img/bt_img/${winner.id}.jpg" class="w-full" onerror="this.src='${BASE}img/bt_img/${winner.id}.png'">
           </div>
-          <div class="text-5xl font-bold mb-4">${winner.name || winner['이름']}</div>
+          <div class="text-5xl font-bold mb-4">${winner['이름'] || winner.name}</div>
           <button onclick="showProfile(${JSON.stringify(winner)})" class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
           <div class="mt-8">
             <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
@@ -271,13 +291,13 @@
     }
 
     function showProfile(person) {
-      const name = person.name || person['이름'] || '-';
-      const gender = person.gender || person['성별'] || '-';
-      const age = person.age || person['나이'] || '-';
-      const region = person.region || person['지역'] || '-';
-      const grade = person.grade || person['등급'] || '-';
-      const cls = person.class || person['클래스'] || '-';
-      const attr = person.attribute || person['속성'] || '-';
+      const name = person['이름'] || person.name || '-';
+      const gender = person['성별'] || person.gender || '-';
+      const age = person['나이'] || person.age || '-';
+      const region = person['지역'] || person.region || '-';
+      const grade = person['등급'] || person.grade || '-';
+      const cls = person['클래스'] || person.class || '-';
+      const attr = person['속성'] || person.attribute || '-';
 
       document.getElementById('profile-content').innerHTML = `
         <div class="p-6">
