@@ -98,36 +98,52 @@
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
     }
 
+    // 개선된 CSV 파서 (콤마가 있는 숫자 처리)
+    function parseCSV(text) {
+      const lines = text.trim().split(/\r?\n/);
+      if (lines.length < 2) return [];
+
+      const headers = lines[0].split(',').map(h => h.trim());
+      const data = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        const row = [];
+        let current = '';
+        let inQuotes = false;
+
+        for (let char of lines[i]) {
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === ',' && !inQuotes) {
+            row.push(current.trim());
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        row.push(current.trim());
+
+        const obj = {};
+        headers.forEach((h, idx) => {
+          obj[h] = row[idx] || '';
+        });
+        if (obj['이름'] || obj.name) data.push(obj);
+      }
+      return data;
+    }
+
     async function loadCSVData() {
       try {
         const res = await fetch(CSV_URL + '?t=' + Date.now());
         const text = await res.text();
         console.log("CSV Raw Length:", text.length);
-        console.log("First 300 chars:", text.substring(0, 300));
 
-        const lines = text.trim().split(/\r?\n/);
-        console.log("Lines Count:", lines.length);
+        globalData = parseCSV(text);
+        console.log("Parsed Data Count:", globalData.length);
+        if (globalData.length > 0) console.log("First Row:", globalData[0]);
 
-        if (lines.length < 2) return [];
-
-        const headers = lines[0].split(',').map(h => h.trim());
-        console.log("Headers:", headers);
-
-        const data = [];
-        for (let i = 1; i < lines.length; i++) {
-          if (!lines[i].trim()) continue;
-          const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
-          const obj = {};
-          headers.forEach((h, idx) => {
-            obj[h] = values[idx] || '';
-          });
-          if (obj['이름'] || obj.name) data.push(obj);
-        }
-
-        console.log("Parsed Data Count:", data.length);
-        if (data.length > 0) console.log("First Row Sample:", data[0]);
-
-        return data;
+        return globalData;
       } catch (e) {
         console.error("CSV Load Error:", e);
         return [];
