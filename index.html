@@ -93,7 +93,7 @@
     let currentRoundName = '';
     let selectedSize = null;
     let selectedGender = null;
-    let currentWinner = null;   // ← 프로필용
+    let currentWinner = null;
 
     function setBackground(key) {
       document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
@@ -220,7 +220,7 @@
     }
 
     function showWinner(winner) {
-      currentWinner = winner;   // 프로필용 저장
+      currentWinner = winner;
 
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
@@ -234,7 +234,7 @@
       setBackground('win');
 
       let history = hallOfFame.map(w => `
-        <div class="flex gap-4 bg-black/60 p-4 rounded-2xl">
+        <div onclick="showProfileFromHall('${w.id}')" class="flex gap-4 bg-black/60 p-4 rounded-2xl cursor-pointer hover:bg-black/80 transition-all">
           <img src="${BASE}img/bt_img/${w.id}.jpg" class="w-16 h-16 object-cover rounded-xl" onerror="this.src='${BASE}img/bt_img/${w.id}.png'">
           <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
         </div>
@@ -258,12 +258,20 @@
       `;
     }
 
+    function showProfileFromHall(id) {
+      const person = globalData.find(p => p.id === id);
+      if (person) {
+        currentWinner = person;
+        showProfile();
+      }
+    }
+
     function showProfile() {
       if (!currentWinner) return;
       const person = currentWinner;
       const name = person['이름'] || person.name || '-';
       const gender = person['성별'] || person.gender || '-';
-      const age = person['나이'] || person.age || '-';
+      const age = person['나이'] || person.age || '미상';
       const region = person['지역'] || person.region || '-';
       const grade = person['등급'] || person.grade || '-';
       const cls = person['클래스'] || person.class || '-';
