@@ -233,12 +233,15 @@
       ws.classList.remove('hidden');
       setBackground('win');
 
-      let history = hallOfFame.map(w => `
-        <div onclick="showProfileFromHall('${w.id}')" class="flex gap-4 bg-black/60 p-4 rounded-2xl cursor-pointer hover:bg-black/80 transition-all">
-          <img src="${BASE}img/bt_img/${w.id}.jpg" class="w-16 h-16 object-cover rounded-xl" onerror="this.src='${BASE}img/bt_img/${w.id}.png'">
-          <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
-        </div>
-      `).join('');
+      let historyHTML = '';
+      hallOfFame.forEach(w => {
+        historyHTML += `
+          <div onclick="showProfileFromHall('${w.id}')" class="flex gap-4 bg-black/60 p-4 rounded-2xl cursor-pointer hover:bg-black/80 transition-all">
+            <img src="${BASE}img/bt_img/${w.id}.jpg" class="w-16 h-16 object-cover rounded-xl" onerror="this.src='${BASE}img/bt_img/${w.id}.png'">
+            <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
+          </div>
+        `;
+      });
 
       ws.querySelector('div').innerHTML = `
         <div class="max-w-2xl mx-auto pt-12 px-6 text-center">
@@ -251,7 +254,7 @@
           <button onclick="showProfile()" class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
           <div class="mt-8">
             <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
-            <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${history}</div>
+            <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${historyHTML}</div>
           </div>
           <button onclick="location.reload()" class="mt-12 px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl">다시 시작하기</button>
         </div>
@@ -259,10 +262,12 @@
     }
 
     function showProfileFromHall(id) {
-      const person = globalData.find(p => p.id === id);
+      const person = globalData.find(p => (p.id || p.ID) === id);
       if (person) {
         currentWinner = person;
         showProfile();
+      } else {
+        alert("프로필 정보를 찾을 수 없습니다.");
       }
     }
 
