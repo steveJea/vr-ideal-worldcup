@@ -425,7 +425,13 @@
     function checkStartReady() {
       document.getElementById('start-btn').disabled = !(selectedGender && selectedSize);
     }
-
+console.log("=== Gender 분포 ===");
+const genderStats = {};
+globalData.forEach(p => {
+  const g = (p.gender || '').toString().trim();
+  genderStats[g] = (genderStats[g] || 0) + 1;
+});
+console.table(genderStats);
     async function startGame() {
       const btn = document.getElementById('start-btn');
       btn.disabled = true;
