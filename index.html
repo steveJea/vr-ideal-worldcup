@@ -335,7 +335,7 @@
         globalData = await loadCSVData();
         let filtered = filterByGender(globalData, selectedGender);
 
-        console.log(`전체 카드: ${globalData.length}개, 선택된 성별(${selectedGender}): ${filtered.length}개`);
+        console.log(`전체: ${globalData.length}, female: ${filtered.length}`);
 
         if (filtered.length < 4) {
           alert(`선택한 성별(${selectedGender})의 카드가 부족합니다. (${filtered.length}개)`);
