@@ -121,8 +121,8 @@
       if (mode === 'mix') return data;
       return data.filter(p => {
         const g = (p['성별'] || p.gender || '').toString().toLowerCase().trim();
-        if (mode === 'male') return g.includes('male') || g.includes('m') || g.includes('남');
-        if (mode === 'female') return g.includes('female') || g.includes('f') || g.includes('여');
+        if (mode === 'male') return g === 'male' || g === 'm' || g === '남' || g === '남성';
+        if (mode === 'female') return g === 'female' || g === 'f' || g === '여' || g === '여성';
         return true;
       });
     }
@@ -137,6 +137,7 @@
     }
 
     function getRoundName(num) {
+      if (num === 1) return '우승자';
       const map = {64:'64강',32:'32강',16:'16강',8:'8강',4:'4강',2:'결승'};
       return map[num] || `${num}강`;
     }
@@ -144,7 +145,7 @@
     function updateStatus() {
       document.getElementById('remaining-count').textContent = currentRoundPlayers.length + nextRoundPlayers.length;
       document.getElementById('round-badge').textContent = currentRoundName;
-      const roundKey = currentRoundName.replace('강','').replace('결승','2');
+      const roundKey = currentRoundName.replace('강','').replace('결승','2').replace('우승자','1');
       setBackground(roundKey);
     }
 
@@ -221,7 +222,7 @@
       let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
       const exist = hallOfFame.find(w => w.id === winner.id);
       if (exist) exist.wins++;
-      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1}); // 최근 우승자가 위로
+      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1});
       localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
 
       document.getElementById('game-screen').classList.add('hidden');
