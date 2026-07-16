@@ -102,19 +102,18 @@
       try {
         const res = await fetch(CSV_URL + '?t=' + Date.now());
         const text = await res.text();
-        console.log("CSV Raw Length:", text.length); // 디버깅
+        console.log("CSV Raw Length:", text.length);
+        console.log("First 300 chars:", text.substring(0, 300));
 
         const lines = text.trim().split(/\r?\n/);
-        if (lines.length < 2) {
-          console.log("CSV lines too short");
-          return [];
-        }
+        console.log("Lines Count:", lines.length);
+
+        if (lines.length < 2) return [];
 
         const headers = lines[0].split(',').map(h => h.trim());
         console.log("Headers:", headers);
 
         const data = [];
-
         for (let i = 1; i < lines.length; i++) {
           if (!lines[i].trim()) continue;
           const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
@@ -126,6 +125,8 @@
         }
 
         console.log("Parsed Data Count:", data.length);
+        if (data.length > 0) console.log("First Row Sample:", data[0]);
+
         return data;
       } catch (e) {
         console.error("CSV Load Error:", e);
