@@ -387,3 +387,22 @@ id,name,gender,age,region,grade,class,attribute,power,HP,ATK,DEF,PHY,MEN,MOR
 2000900213, Kim Mi-Yoon,FEMALE,15,DOBONG,NORMAL,WIND,DEFENSE,356,78,10,12,55,70,73
 2000900214, Kwon Ye-Rhi,FEMALE,18,DOBONG,HIGH RARE,WIND,CRUSH,846,200,40,35,80,55,72
 2000900215, Oh Soel-Hoa,FEMALE,18,DOBONG,SUPER RARE,ICE,CRUSH,1507,450,48,38,78,80,75
+2000900216,Bok Jeong-Aa,Female,16,Dobong-gu,RARE,wind,crush,547.5,110,28,21,77,65,43
+2000900217,Bae Soo Youn,Female,17,Dobong-gu,RARE,wind,charge,525,131,28,19,80,54,51
+2000900218,Nam Da Yoon,Female,17,Dobong-gu,RARE,dark,disturb,588,150,25,25,65,44,24
+2000900219,Nam Da Yoen,Female,15,Dobong-gu,RARE,ice,fascination,522,131,25,20,65,44,35
+2000900220,Jeon Min Kang,Female,16,Dobong-gu,NORMAL,ice,charge,217,45,7,6,54,16,78
+2000900221,Lim Han Vin,Female,16,Dobong-gu,NORMAL,ice,defense,277,77,6,11,70,34,55
+2000900222,On Yu Jin,Female,17,Dobong-gu,NORMAL,fire,charge,231,44,5,5,38,32,80
+2000900223,Ye Eun Aa,Female,16,Dobong-gu,NORMAL,fire,charge,243,78,15,12,80,16,39
+2000900224,Kim Ye Bin,Female,17,Dobong-gu,NORMAL,ice,defense,346,80,9,15,78,65,49
+2000900225,Kim Na Hyeon,Female,15,Dobong-gu,SUPER RARE,dark,disturb,1722,450,45,45,80,90,6
+2000900226,Sun Yu Rin,Female,14,Dobong-gu,NORMAL,fire,fascination,373,75,8,15,80,44,61
+2000900227,Seo Mina,Female,16,Dobong-gu,NORMAL,wind,charge,286,72,13,9,65,43,52
+2000900228,Park Seoly,Female,16,Dobong-gu,NORMAL,ice,charge,359,77,11,11,65,70,68
+2000900229,Kong Joo Youn,Female,16,Dobong-gu,RARE,fire,charge,534,121,25,19,56,77,75
+2000900230,Ahn Tae Young,Female,16,Dobong-gu,NORMAL,wind,defense,315,55,8,15,80,45,80
+2000900231,Ryu H.V.,Female,16,Dobong-gu,RARE,wind,crush,624,145,30,21,78,70,66
+2000900232,Jegal M.Y.,Female,17,Dobong-gu,RARE,ice,charge,537,125,28,24,77,65,42
+2000900233,Park Ina,Female,16,Dobong-gu,HIGH RARE,wind,crush,827,200,40,33,65,80,44
+2000900234,Kim Shin Hyeon,Female,16,Dobong-gu,MYTHIC RARE,abyss,Phenomenal,11948,1900,400,460,90,90,1
