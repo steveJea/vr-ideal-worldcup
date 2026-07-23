@@ -1,389 +1,389 @@
 id,name,gender,age,region,grade,class,attribute,power,HP,ATK,DEF,PHY,MEN,MOR
-2000100001, Lim Yu-ri,female,16,Gangnam-gu,ULTRA RARE,dark,fascination,2452,550,70,70,75,90,1
-2002000352, Kim Ji-woo,female,18,Yongsan-gu,HIGH RARE,light,support,996,200,31,48,77,46,88
-2000100002, Oh Hee-jin,female,13,Gangnam-gu,NORMAL,ice,charge,337,70,13,8,70,65,58
-2000600115, Mun Ji-a,female,19,Guro-gu,HIGH RARE,fire,crush,928,210,35,45,80,85,58
-2000600116, Go Myeong-shin,female,15,Yangcheon-gu,HIGH RARE,ice,crush,730,180,44,20,55,65,60
-2000600117, Park Hye-an,female,17,Guro-gu,RARE,wind,support,385,80,10,12,56,30,78
-2000100003, Lee Min-chae,female,15,Gangnam-gu,RARE,dark,support,437,125,25,25,65,3,55
-2000100004, Hwangbo Ye,female,16,Gangnam-gu,RARE,wind,crush,290,100,15,15,30,10,65
-2000100005, Kim Ji-soo,female,15,Gangnam-gu,HIGH RARE,dark,disturb,742,200,21,44,88,25,10
-2000600118, Kang Ji-min,female,19,Guro-gu,NORMAL,fire,charge,213,55,8,6,40,45,21
-1001900346, Lee Yeong-ha,male,18,Yeongdeungpo-gu,RARE,ice,charge,393,120,20,13,60,45,15
-1000600119, Lee Hu-nam,male,19,Guro-gu,RARE,fire,crush,409,110,21,21,70,30,18
-1000600120, Kim Hoo,male,17,Guro-gu,HIGH RARE,wind,disturb,1013,245,35,45,80,75,15
-1000600121, Oh Myeong-jun,male,17,Guro-gu,NORMAL,ice,charge,288,75,14,6,75,55,20
-1000600122, Lee Myeong-jin,male,17,Guro-gu,HIGH RARE,fire,crush,731,212,33,33,90,15,45
-1001400245, Kim Jae-ryang,male,17,Seocho-gu,HIGH RARE,ice,charge,606,210,30,15,65,35,25
-2000600123, An Hee-suk,female,19,Guro-gu,NORMAL,ice,charge,198,44,8,6,45,33,35
-1000500107, Choe Guk-seon,male,15,Guro-gu,HIGH RARE,ice,charge,704,250,35,35,55,55,1
-2002000353, An Ji-su,female,18,Yongsan-gu,HIGH RARE,fire,charge,882,220,40,35,85,75,65
-1000600124, Park O-ryu,male,17,Guro-gu,NORMAL,fire,charge,348,75,15,15,75,55,73
-1002000354, Kang Jae-a,male,14,Yongsan-gu,NORMAL,wind,charge,244,75,13,11,55,30,45
-2002400374, Go Se-rin,female,16,Jungnang-gu,SUPER RARE,ice,defense,1422,310,60,50,80,56,88
-1002000355, Kang Jun-cheol,male,18,Yongsan-gu,SUPER RARE,fire,charge,1406,300,60,60,70,70,55
-1000600125, Go Jeong-tae,male,19,Guro-gu,SUPER RARE,fire,disturb,1502,350,55,65,80,45,10
-2000600126, Mun Ji-ye,female,20,Guro-gu,RARE,fire,support,675,150,15,30,75,75,80
-1000600127, Gwak Jin-yeong,male,20,Guro-gu,HIGH RARE,ice,charge,769,212,35,22,75,88,12
-2001800343, Yeon Jae-eun,female,16,Yangcheon-gu,NORMAL,ice,charge,339,80,11,14,75,65,40
-2000100006, Oh Yu-na,female,15,Gangnam-gu,RARE,dark,support,650,110,20,30,65,60,55
-1000200018, Zee Se-Kang,male,21,Gangbuk-gu,ULTRA RARE,fire,charge,2100,520,80,55,80,35,60
-2000200019, Zee Se-ryeon,female,16,Gangbuk-gu,HIGH RARE,light,support,835,155,10,20,75,55,88
-2000600128, Jeong Seo-yeong,female,15,Guro-gu,RARE,fire,crush,426,90,20,15,65,55,15
-2000600129, Jeong A-yeong,female,14,Guro-gu,NORMAL,wind,charge,319,89,12,10,65,72,12
-1002400375, So Min-seop,male,19,Jungnang-gu,SUPER RARE,dark,crush,1478,385,70,35,70,65,15
-1000600130, Mun Ji-cheol,male,18,Guro-gu,SUPER RARE,fire,charge,1293,330,68,40,80,3,55
-2001900347, Jin Ha-rin,female,17,Yeongdeungpo-gu,SUPER RARE,wind,crush,1510,300,70,40,77,90,90
-2001600317, Jin Gyo-jin,female,16,Seongbuk-gu,RARE,ice,crush,547,85,29,11,75,65,88
-1000600131, Yu Jin-san,male,18,Guro-gu,RARE,fire,crush,402,120,28,12,70,23,19
-2000600132, Lee Yeong-a,female,14,Guro-gu,RARE,wind,support,473,95,16,18,44,50,90
-1001700331, Lee Ho-jun,male,18,Songpa-gu,NORMAL,wind,charge,248,89,15,13,80,12,42
-1000100007, Min Hong-gi,male,17,Gangnam-gu,SUPER RARE,fire,charge,1583,350,68,58,85,75,72
-2000100008, Min Yu-yeon,female,15,Gangnam-gu,RARE,wind,support,478,120,11,20,45,45,89
-2000900198, Jeong Yeon-a,female,16,Dobong-gu,RARE,wind,disturb,530,99,12,13,53,65,53
-1000200020, Choe Gang-su,male,15,Gangbuk-gu,NORMAL,wind,defense,192,54,6,11,48,12,55
-1001800344, An Jae-su,male,16,Yangcheon-gu,RARE,wind,support,433,100,25,10,45,60,11
-1000500108, Im Chang-su,male,18,Gwangjin-gu,NORMAL,fire,charge,325,89,15,13,77,43,60
-1000500109, Im Chang-yeol,male,17,Gwangjin-gu,SUPER RARE,wind,charge,1283,300,55,55,68,39,50
-2001400246, Kim Jae-sin,female,16,Seocho-gu,SUPER RARE,dark,crush,1565,350,65,30,70,85,65
-2001400247, Chae Ye-rin,female,15,Seocho-gu,HIGH RARE,ice,disturb,643,210,31,31,35,35,35
-1001900348, Cheon Jae-hwang,male,16,Yangcheon-gu,NORMAL,wind,defense,181,65,6,10,65,15,13
-1001900349, Kang Sin,male,18,Yangcheon-gu,NORMAL,wind,charge,366,78,14,12,80,65,65
-1000600133, Kim Jeong-han,male,17,Guro-gu,NORMAL,ice,charge,294,88,10,15,65,44,42
-2000600134, Yun Se-jeong,female,16,Guro-gu,RARE,wind,defense,469,115,18,28,65,65,20
-2000600135, Jeon Mi-seong,female,15,Guro-gu,HIGH RARE,fire,disturb,869,130,38,30,85,65,45
-2000600136, Yu Jin-a,female,16,Guro-gu,NORMAL,wind,charge,277,78,16,8,65,55,13
-1001600318, Geum Yu-jin,male,18,Seongbuk-gu,RARE,wind,crush,553,110,25,15,70,65,75
-2001400248, Im Hye-ri,female,14,Seocho-gu,ULTRA RARE,light,support,2368,550,50,80,65,78,99
-1002400376, An Ho-seon,male,16,Jungnang-gu,RARE,fire,charge,394,99,25,15,65,40,20
-1001600319, Kim Jae-min,male,18,Seongbuk-gu,NORMAL,wind,charge,298,65,10,12,77,45,55
-1001600320, Seong Jae-su,male,18,Seongbuk-gu,RARE,ice,crush,298,99,30,10,45,15,10
-2001600321, Yang Ji-rim,female,16,Seongbuk-gu,RARE,wind,disturb,440,85,12,18,55,40,55
-1001600322, Yun Seok-gu,male,17,Seongbuk-gu,NORMAL,fire,charge,316,80,15,13,78,40,65
-1001600323, Yun Seok-pal,male,16,Seongbuk-gu,RARE,fire,charge,473,120,25,15,75,50,40
-1001600324, In Chang-su,male,19,Seongbuk-gu,SUPER RARE,dark,crush,1556,330,60,45,80,90,12
-2000500110, Yun Jin-a,female,16,Gwangjin-gu,RARE,light,support,685,95,10,11,65,65,99
-1001600325, In Chang-min,male,23,Seongbuk-gu,NORMAL,fire,charge,119,33,5,5,45,10,16
-2001400249, Ye Haet-bit,female,15,Seocho-gu,NORMAL,wind,charge,245,38,9,8,65,38,57
-1001600326, Jeong Tae-jin,male,20,Seongbuk-gu,HIGH RARE,fire,crush,757,210,44,25,70,58,16
-1001600327, Jeon Min-jin,male,18,Seongbuk-gu,RARE,fire,charge,455,130,28,19,67,51,14
-1001600328, Gyeong Won-seok,male,18,Seongbuk-gu,RARE,wind,charge,468,121,27,26,59,60,20
-1001600329, Chu Jeong-uk,male,18,Seongbuk-gu,RARE,wind,charge,506,122,29,25,77,65,12
-1002400377, Park Seong-gwan,male,22,Jungnang-gu,HIGH RARE,fire,defense,746,222,27,44,65,66,12
-1001600330, Jin Su-yeol,male,19,Seongbuk-gu,RARE,ice,crush,386,100,23,14,65,30,24
-2000500111, Jo Yun-ha,female,16,Gwangjin-gu,RARE,wind,support,393,100,16,13,55,36,33
-1000500112, Du Yun-chang,male,19,Gwangjin-gu,RARE,fire,charge,440,110,25,19,67,54,18
-1000500113, Seon Yeong-un,male,18,Gangnam-gu,RARE,fire,defense,415,130,15,30,88,14,11
-1000100009, Kang Tae-jun,male,17,Gangnam-gu,RARE,fire,crush,476,110,20,15,75,55,25
-1000100010, Kang Tae-an,male,15,Gangnam-gu,RARE,wind,charge,450,115,21,14,75,55,20
-1000100011, Lee Min-su,male,17,Gangnam-gu,HIGH RARE,ice,defense,618,200,35,25,55,40,18
-1000100012, Kim Cheol-min,male,17,Gangnam-gu,NORMAL,wind,defense,101,30,5,6,12,16,21
-1000100013, Kim Hong-min,male,15,Gangnam-gu,NORMAL,wind,defense,88,31,5,5,14,10,18
-1002400378, Lee Seong-ho,male,18,Jungnang-gu,ULTRA RARE,dark,crush,2327,500,75,60,70,80,85
-2000500114, Jo Yun-i,female,16,Gwangjin-gu,HIGH RARE,wind,disturb,684,120,35,35,60,45,25
-1002100356, Lee Jin-gyu,male,15,Eunpyeong-gu,NORMAL,wind,defense,373,85,12,15,80,65,65
-1002100357, Ma Hyeong-eun,male,19,Eunpyeong-gu,NORMAL,ice,charge,193,45,9,6,45,40,16
-1002100358, Lee Taek-gil,male,18,Eunpyeong-gu,NORMAL,wind,defense,291,65,8,13,77,45,50
-1002100359, Choe Jae-hong,male,17,Eunpyeong-gu,NORMAL,wind,charge,227,65,15,11,45,30,45
-1002100360, Kim Min-kyu,male,16,Eunpyeong-gu,NORMAL,wind,charge,176,42,6,6,45,40,3
-2000400084, Cheon Hye-won,female,15,Gwanak-gu,NORMAL,ice,defense,309,80,12,12,60,44,70
-2000400085, Seon Na-yeong,female,15,Gwanak-gu,NORMAL,fire,charge,284,45,8,6,55,45,88
-2000400086, Lee Yoony,female,16,Gwanak-gu,HIGH RARE,ice,support,708,180,38,38,70,22,55
-2000400087, Choe Yun-aa,female,17,Gwanak-gu,HIGH RARE,wind,support,747,150,35,35,60,50,88
-2000400088, Choe Yun-hee,female,16,Gwanak-gu,SUPER RARE,dark,fascination,1360,250,45,55,55,40,88
-2000400089, Choe Yun-jeong,female,18,Gwanak-gu,RARE,ice,crush,528,100,30,20,65,65,55
-1000400090, Yun Tae-min,male,16,Gwanak-gu,HIGH RARE,wind,charge,690,165,35,30,65,55,55
-1000400091, Kim Cheol-ha,male,18,Gwanak-gu,NORMAL,ice,charge,204,45,9,8,55,30,35
-1002100361, Sin Ju-ho,male,18,Eunpyeong-gu,NORMAL,fire,charge,321,70,14,10,70,56,60
-2002100362, Sin Ju-won,female,16,Eunpyeong-gu,NORMAL,dark,defense,316,45,11,5,55,40,55
-1002100363, Jang Je-hun,male,20,Eunpyeong-gu,NORMAL,fire,charge,262,70,14,8,65,45,30
-1002100364, Lee Jae-deok,male,21,Eunpyeong-gu,HIGH RARE,fire,crush,562,150,38,22,45,45,15
-2002100365, Lee So-jin,female,20,Eunpyeong-gu,NORMAL,fire,charge,253,50,12,5,45,45,66
-1002100366, Kim Jun-ki,male,17,Eunpyeong-gu,SUPER RARE,ice,charge,1304,300,68,48,55,55,78
-1002100367, Mun Cheol-jae,male,16,Eunpyeong-gu,NORMAL,ice,defense,198,45,6,11,55,30,30
-1002100368, Jeong Jae-heon,male,20,Eunpyeong-gu,NORMAL,ice,charge,237,75,11,8,75,32,17
-1002100369, Choe Bong-geun,male,17,Eunpyeong-gu,NORMAL,wind,charge,205,55,10,10,65,15,45
-1002100370, Choe Jin-gyu,male,16,Eunpyeong-gu,HIGH RARE,wind,crush,572,180,35,22,55,30,12
-1002100371, Choe Chang-won,male,20,Eunpyeong-gu,ULTRA RARE,dark,Overwhelming,2337,500,70,70,70,70,1
-2002400379, Han Ha-ru,female,18,Jungnang-gu,NORMAL,fire,charge,332,88,14,10,75,75,10
-1002400380, Pung Him-chan,male,16,Jungnang-gu,NORMAL,fire,defense,211,60,7,13,55,30,25
-1002400381, Pyo O-seong,male,18,Jungnang-gu,NORMAL,wind,charge,229,60,12,8,58,40,22
-2002400382, Tak Ri,female,14,Jungnang-gu,NORMAL,fire,charge,405,80,11,6,80,80,80
-2002400383, Choe Yeo-jin,female,16,Jungnang-gu,NORMAL,ice,defense,246,50,8,11,35,35,80
-1002400384, Jegal Beo-deul,male,18,Jungnang-gu,NORMAL,wind,charge,340,75,14,8,75,55,70
-2002300373, Han Mideum,female,16,Jung-gu,NORMAL,ice,defense,213,55,5,11,35,20,75
-1002200372, Seo Seong-min,male,9,Jongno-gu,ULTRA RARE,light,disturb,2285,450,55,70,55,90,90
-1000400092, Geum Eo-jin,male,23,Gwanak-gu,SUPER RARE,ice,charge,1644,400,65,55,85,88,78
-1000400093, Choe Min-Woo,male,18,Gwanak-gu,NORMAL,fire,charge,139,55,11,8,45,10,10
-2001800345, An Ji-yun,female,15,Yangcheon-gu,NORMAL,wind,charge,199,55,10,8,45,40,12
-1000100014, Han Jae,male,19,Gangnam-gu,NORMAL,wind,charge,202,55,10,5,55,30,25
-2000100015, Jeon Jan-di,female,17,Gangnam-gu,NORMAL,ice,charge,212,65,9,7,55,30,24
-1000100016, Jeong Hyeong-jun,male,16,Gangnam-gu,NORMAL,fire,defense,170,50,6,8,45,22,23
-2000100017, Jang Eun-chae,female,15,Gangnam-gu,NORMAL,ice,charge,245,55,10,7,45,55,28
-1000200021, Gil Jeong-jae,male,17,Gangbuk-gu,NORMAL,ice,defense,332,80,6,14,55,55,82
-1000200022, Gil Yun-jae,male,16,Gangbuk-gu,NORMAL,wind,charge,366,75,13,8,75,65,80
-2000200023, Gil Seon-jae,female,15,Gangbuk-gu,HIGH RARE,wind,crush,770,77,44,25,78,80,82
-2000400094, Seon Mi-yeong,female,22,Gwanak-gu,SUPER RARE,ice,disturb,1453,300,65,35,70,75,43
-2000400095, Yun Hui-ji,female,16,Gwanak-gu,NORMAL,wind,charge,279,78,13,11,75,45,25
-2001900350, Kim Ga-ram,female,18,Yeongdeungpo-gu,NORMAL,fire,defense,251,60,7,11,65,44,28
-1001900351, Kim Deul,male,17,Yeongdeungpo-gu,NORMAL,wind,charge,159,55,10,8,45,16,18
-2000800167, Kwon Du-ri,female,16,Nowon-gu,NORMAL,wind,fascination,234,45,10,11,55,32,30
-1000700137, Namgung Mu-yeol,male,17,Geumcheon-gu,NORMAL,fire,charge,242,80,12,11,75,30,16
-1001700332, Hwang Ki-hun,male,18,Songpa-gu,RARE,fire,charge,444,120,25,15,75,44,24
-1001700333, Hwang Bo-hun,male,16,Songpa-gu,RARE,fire,charge,400,122,27,25,77,1,38
-2001700334, Jeong Sae-ron,female,15,Songpa-gu,NORMAL,ice,charge,254,66,13,9,70,45,21
-2001700335, Yu Han-gyeol,female,16,Songpa-gu,NORMAL,wind,charge,160,45,11,6,45,20,21
-1001000212, Heo Seong,male,16,Dongdaemun-gu,NORMAL,fire,defense,265,75,8,13,65,44,27
-1001000213, Kim Jae-seop,male,18,Dongdaemun-gu,SUPER RARE,fire,crush,1421,400,68,40,75,50,16
-2001100215, Yun Mi-ri-nae,female,18,Dongjak-gu,NORMAL,ice,charge,276,70,10,6,55,60,23
-2001100216, Jeon Ha-na,female,15,Dongjak-gu,NORMAL,wind,defense,254,70,10,10,65,44,21
-1001700336, An Hyeon,male,16,Songpa-gu,NORMAL,fire,charge,233,59,12,8,66,40,19
-1001700337, Gwak Je-hyeong,male,17,Songpa-gu,NORMAL,wind,charge,341,80,13,11,75,70,35
-1001700338, Seo Gyeong-seok,male,17,Songpa-gu,NORMAL,fire,charge,344,75,10,8,70,58,75
-2001700339, Seol Dal,female,17,Songpa-gu,NORMAL,fire,charge,366,88,13,9,80,55,78
-1001700340, Park Mi-reu,male,17,Songpa-gu,NORMAL,ice,defense,236,45,8,11,56,25,75
-2001700341, Nam Tae-eun,female,17,Songpa-gu,NORMAL,wind,charge,254,44,5,12,55,31,85
-2001700342, Bong Jin-yu,female,10,Songpa-gu,ULTRA RARE,dark,disturb,2321,600,65,75,45,88,22
-2000800168, Lee Je-won,female,15,Nowon-gu,NORMAL,wind,support,302,55,6,8,55,63,19
-1000300054, Ga Yun-Woo,male,16,Gangseo-gu,NORMAL,wind,charge,228,70,10,10,55,32,29
-2000300055, Kang Na-bit,female,17,Gangseo-gu,NORMAL,wind,charge,213,45,15,11,70,28,31
-2000700138, Kang Ri-an,female,16,Geumcheon-gu,NORMAL,fire,charge,236,55,13,7,65,40,27
-1000800169, Kang Myeong-jun,male,15,Nowon-gu,NORMAL,wind,defense,267,45,6,10,70,33,78
-1001000214, Kang Sang,male,16,Dongdaemun-gu,NORMAL,wind,defense,226,45,5,12,55,30,58
-2001200244, Kang Seo-eon,female,15,Mapo-gu,NORMAL,fire,support,439,60,12,13,70,78,80
-1001400250, Kang Seung-heon,male,18,Seocho-gu,NORMAL,wind,charge,325,56,11,5,72,55,79
-2001400251, Go Myeong-hui,female,15,Seocho-gu,NORMAL,fire,defense,329,35,5,11,55,75,82
-1001500280, Hwang Hyeok,male,19,Seongdong-gu,NORMAL,wind,charge,373,75,12,6,77,78,58
-2001500281, Hwang Jin,female,16,Seongdong-gu,NORMAL,wind,charge,232,45,11,6,45,28,78
-2001500282, Hong Ga-yeong,female,16,Seongdong-gu,RARE,fire,charge,564,120,24,20,82,65,80
-2000400096, Lee Ro-ha,female,18,Seongdong-gu,RARE,wind,support,628,110,16,22,65,80,92
-1001500283, Yun U-ram,male,16,Seongdong-gu,RARE,fire,crush,501,111,25,18,70,65,18
-2001500284, Chu Na-ri,female,16,Seongdong-gu,NORMAL,fire,charge,226,70,12,8,70,28,21
-1001500285, Seo Jin-seong,male,21,Seongdong-gu,RARE,dark,disturb,452,120,16,15,65,32,20
-1001500286, Baek Cheon-ju,male,28,Seongdong-gu,HIGH RARE,ice,charge,696,198,38,38,65,44,16
-1001500287, Song Cheol-sun,male,21,Seongdong-gu,NORMAL,ice,charge,222,55,9,6,56,41,20
-1001500288, Sa Jin-tae,male,18,Seongdong-gu,NORMAL,fire,charge,246,65,10,9,75,38,21
-1001500289, Park Tae-uk,male,19,Seongdong-gu,NORMAL,fire,charge,170,45,8,7,56,18,25
-1001500290, Pung Geon,male,18,Seongdong-gu,HIGH RARE,wind,charge,649,215,38,24,56,44,19
-2001500291, Hong Na-yeong,female,15,Seongdong-gu,NORMAL,ice,charge,223,35,10,6,65,15,85
-2001500292, Hong Da-yeong,female,14,Seongdong-gu,HIGH RARE,wind,support,932,200,25,45,80,77,83
-1001500293, Jeong Han-seo,male,15,Seongdong-gu,HIGH RARE,wind,charge,813,199,36,28,78,66,82
-2001500294, An Ri,female,16,Seongdong-gu,RARE,wind,crush,628,125,28,23,82,71,79
-1001500295, Sin Jae,male,16,Seongdong-gu,NORMAL,fire,charge,368,77,13,8,80,72,59
-1001500296, Ha Hyeok,male,16,Seongdong-gu,NORMAL,fire,charge,157,45,7,5,33,18,37
-2001500297, Jo Yeong-ae,female,16,Seongdong-gu,NORMAL,wind,charge,175,44,8,6,52,21,30
-1001500298, Jeon Ju-il,male,15,Seongdong-gu,RARE,fire,charge,395,110,22,18,56,44,21
-1001500299, Lee Jin-u,male,15,Seongdong-gu,NORMAL,wind,charge,199,44,7,5,42,38,31
-1001500300, Jang Seung-heon,male,16,Seongdong-gu,NORMAL,ice,charge,174,55,7,6,45,21,25
-1001500301, Guk Tae-won,male,15,Seongdong-gu,NORMAL,wind,charge,196,66,8,6,46,28,21
-1001500302, Jeong Jong-il,male,16,Seongdong-gu,NORMAL,wind,defense,338,65,8,11,71,56,80
-1001500303, Yun Nam-gyu,male,17,Seongdong-gu,RARE,wind,charge,554,121,23,16,78,68,79
-1001500304, Ye Hyeon-seung,male,18,Seongdong-gu,NORMAL,fire,charge,397,70,11,10,80,77,82
-2000400097, Lee Hye-gyeong,female,16,Gwanak-gu,SUPER RARE,ice,fascination,1592,350,45,55,75,88,52
-1001500305, Mun Jae,male,20,Seongdong-gu,SUPER RARE,fire,charge,1484,420,62,35,85,65,60
-1001500306, Kang Cheol-hun,male,19,Seongdong-gu,HIGH RARE,fire,charge,721,200,40,25,75,35,60
-1001500307, Kang Cheol-jin,male,18,Seongdong-gu,HIGH RARE,ice,crush,844,210,40,23,80,65,72
-2001500308, Ju Ye-seo,female,18,Seongdong-gu,HIGH RARE,ice,support,822,190,25,38,65,65,85
-2000400098, Moon Yu-seon,female,14,Gwanak-gu,SUPER RARE,light,support,1631,350,35,66,65,76,90
-2001500309, Gong Tae-in,female,16,Seongdong-gu,NORMAL,wind,charge,263,45,11,9,55,40,72
-1001500310, Gong Yun-seong,male,18,Seongdong-gu,NORMAL,wind,charge,257,44,8,6,58,46,55
-1001500311, Seo O-seong,male,22,Seongdong-gu,SUPER RARE,wind,crush,1226,280,45,38,77,65,19
-2001500312, Ju Ye-na,female,16,Seongdong-gu,RARE,wind,fascination,560,120,15,15,65,55,70
-1001500313, Jang Mu-yeong,male,19,Seongdong-gu,SUPER RARE,fire,charge,1525,350,69,44,85,72,78
-2001500314, Ju Ye-rin,female,15,Seongdong-gu,SUPER RARE,wind,support,1392,280,35,55,75,80,85
-1001500315, Choe Chang-min,male,18,Seongdong-gu,ULTRA RARE,dark,Overwhelming,2330,505,75,60,80,60,8
-2001500316, Lee Ji-young,female,16,Seongdong-gu,MYTHIC RARE,abyss,exterminate,12765,1850,450,450,100,100,100
-1000200024, Seon-u Min-cheol,male,18,Gangbuk-gu,SUPER RARE,fire,defense,1600,480,40,68,85,56,77
-2000200025, Seon-u Min-a,female,15,Gangbuk-gu,HIGH RARE,wind,charge,869,200,40,35,88,65,80
-2000200026, Bae Na-bit,female,17,Gangbuk-gu,RARE,wind,fascination,591,100,20,20,75,55,81
-2000200027, Nam Go-eun,female,17,Gangbuk-gu,HIGH RARE,ice,crush,762,212,45,25,56,72,21
-2000200028, Son Ran,female,16,Gangbuk-gu,RARE,fire,charge,436,116,27,16,61,43,45
-2000200029, Seo Ha-yun,female,17,Gangbuk-gu,NORMAL,wind,defense,228,55,7,11,56,38,31
-1000200030, Kim Seong-jin,male,18,Gangbuk-gu,MYTHIC RARE,abyss,Furious,12383,1850,460,440,95,95,1
-2000200031, Ryu Ha-ye,female,17,Gangbuk-gu,RARE,dark,support,678,98,12,21,58,65,89
-1000200032, Kim Jun-ha,male,17,Gangbuk-gu,NORMAL,wind,charge,260,65,11,9,65,43,32
-1000200033, Nam Gyeong-taek,male,16,Gangbuk-gu,NORMAL,wind,charge,206,65,8,8,43,25,39
-1000200034, Sa Ju-hyeok,male,17,Gangbuk-gu,NORMAL,wind,defense,353,80,10,12,77,54,78
-1000200035, Bok Gwang-jun,male,18,Gangbuk-gu,HIGH RARE,ice,charge,723,245,48,25,80,13,25
-1000200036, Bok Gwang-hun,male,16,Gangbuk-gu,HIGH RARE,wind,disturb,685,185,35,22,65,35,25
-1000200037, Kang Han-gil,male,24,Gangbuk-gu,RARE,fire,charge,550,142,28,21,88,65,23
-1000200038, Hwangbo Jae-gyu,male,23,Gangbuk-gu,HIGH RARE,wind,crush,819,212,47,29,78,65,13
-1000200039, An Jung-san,male,15,Gangbuk-gu,RARE,fire,defense,525,135,21,29,56,60,79
-1000200040, Heo Jae-cheol,male,16,Gangbuk-gu,NORMAL,wind,charge,178,45,7,6,43,21,41
-1000200041, Yun Tae-yeong,male,17,Gangbuk-gu,RARE,fire,charge,625,125,30,24,88,78,80
-1000200042, Kang U-seop,male,19,Gangbuk-gu,NORMAL,fire,charge,284,78,15,9,78,38,41
-1000200043, Jo Seung-gyu,male,18,Gangbuk-gu,RARE,ice,defense,568,129,20,28,69,72,80
-2000200044, Yong Ji-hye,female,18,Gangbuk-gu,RARE,wind,charge,594,140,28,24,80,65,79
-2000200045, Yong Ji-hyo,female,16,Gangbuk-gu,RARE,wind,support,545,92,16,16,63,65,88
-1000200046, Moon Hee-chan,male,16,Gangbuk-gu,NORMAL,wind,charge,215,45,11,8,62,38,21
-2000400099, Choe Jeong-in,female,15,Gwanak-gu,RARE,ice,defense,448,95,12,21,57,55,78
-1000400100, Choe Dae-un,male,20,Gwanak-gu,RARE,ice,defense,542,118,25,16,80,65,69
-1000400101, Gwak Tae-u,male,18,Gwanak-gu,HIGH RARE,wind,crush,770,200,41,30,77,54,21
-1000400102, Kim Cheol-jung,male,22,Gwanak-gu,NORMAL,wind,charge,214,65,13,5,44,32,30
-1000400103, Seo Gyu-in,male,16,Gwanak-gu,NORMAL,wind,charge,298,56,14,9,66,65,35
-2000400104, Seo Gyu-an,female,16,Gwanak-gu,NORMAL,fire,charge,158,52,6,6,35,22,21
-2000400105, On Ri-yun,female,15,Gwanak-gu,NORMAL,wind,defense,249,45,6,13,70,42,40
-2000400106, On Ri-yeon,female,15,Gwanak-gu,RARE,wind,support,610,100,15,21,68,88,58
-1000200047, Chae Hun-gi,male,18,Gangbuk-gu,NORMAL,fire,charge,257,72,14,11,75,33,31
-1000200048, Lee Chan-yeol,male,19,Gangbuk-gu,NORMAL,fire,defense,239,80,7,8,55,31,36
-1000200049, Go Cha-yeon,male,17,Gangbuk-gu,NORMAL,fire,charge,295,75,9,5,65,54,40
-1000200050, Seon In-gu,male,21,Gangbuk-gu,NORMAL,ice,defense,225,82,6,13,75,16,26
-2000200051, Hwang Ye-young,female,16,Gangbuk-gu,NORMAL,wind,charge,222,45,13,6,65,38,31
-1000200052, Hwang Jun-tae,male,15,Gangbuk-gu,NORMAL,fire,charge,323,65,11,6,56,58,78
-2000200053, Hwang Ye-eun,female,14,Gangbuk-gu,RARE,wind,support,564,112,19,21,68,56,88
-2001100217, Yu Hye-yum,female,17,Dongjak-gu,NORMAL,wind,charge,193,45,13,5,66,18,39
-1001100218, Yu Hye-un,male,20,Dongjak-gu,RARE,wind,charge,461,131,28,15,77,34,39
-1001100219, Oh Han-eum,male,20,Dongjak-gu,RARE,ice,charge,487,133,28,20,75,54,19
-2001100220, Ryu Tae-yeon,female,17,Dongjak-gu,NORMAL,fire,charge,243,48,11,11,55,45,39
-2001100221, Heo Yu-ri,female,17,Dongjak-gu,NORMAL,ice,charge,244,72,12,12,70,21,49
-2001100222, Ju Seul-gi,female,17,Dongjak-gu,NORMAL,wind,defense,277,69,6,13,72,38,51
-2001100223, Wang Yu-yeong,female,17,Dongjak-gu,NORMAL,ice,charge,244,65,10,10,65,22,61
-2001100224, Ha Ji-yeon,female,17,Dongjak-gu,NORMAL,ice,charge,350,77,9,8,76,65,59
-2001100225, Seo A-ran,female,15,Dongjak-gu,NORMAL,wind,charge,337,80,14,6,75,72,30
-2001100226, Seo A-ri,female,17,Dongjak-gu,NORMAL,ice,charge,306,65,15,11,77,62,29
-1001100227, Jo Han-eol,male,19,Dongjak-gu,RARE,wind,charge,543,148,28,25,75,64,30
-1001100228, Ma Ha-rang,male,19,Dongjak-gu,RARE,fire,charge,474,148,30,21,65,43,27
-2001100229, Jeong Ha-na,female,17,Dongjak-gu,RARE,ice,charge,563,143,28,16,75,65,68
-2001100230, Jeong Ha-ru,female,20,Dongjak-gu,SUPER RARE,wind,crush,1009,222,70,32,45,16,50
-2001100231, Ban Ji-a,female,16,Dongjak-gu,NORMAL,wind,defense,253,45,6,7,55,32,81
-2001100232, Ban Ji-yun,female,17,Dongjak-gu,HIGH RARE,dark,disturb,941,211,23,31,65,59,72
-2001100233, Jang Cho-rong,female,16,Dongjak-gu,SUPER RARE,ice,crush,1569,415,68,42,75,74,82
-2001100234, Yu Jin-i,female,16,Dongjak-gu,NORMAL,wind,charge,220,45,7,5,38,31,69
-2001100235, Min Ji-eun,female,16,Dongjak-gu,SUPER RARE,fire,charge,1529,415,68,42,74,75,82
-1001100236, Kim Han-gyeol,male,17,Dongjak-gu,HIGH RARE,ice,crush,904,211,47,35,88,72,34
-2001100237, Kim Han-byeol,female,18,Dongjak-gu,HIGH RARE,fire,fascination,893,211,40,42,65,65,13
-2001100238, Na Yun-a,female,16,Dongjak-gu,NORMAL,fire,charge,201,65,11,8,54,9,56
-2001100239, Na Yun-yeong,female,15,Dongjak-gu,NORMAL,fire,charge,220,71,12,10,70,5,59
-1001100240, Sin Seong-jin,male,21,Dongjak-gu,NORMAL,wind,defense,136,42,6,7,44,13,17
-2001100241, Sin Ye-eun,female,17,Dongjak-gu,SUPER RARE,dark,disturb,1766,420,61,65,75,75,3
-2001100242, Sin A-eun,female,18,Dongjak-gu,SUPER RARE,dark,fascination,1643,422,62,67,75,45,8
-2001100243, Lim Ye-ri,female,18,Dongjak-gu,ULTRA RARE,dark,disturb,2652,560,77,65,75,90,90
-2000700139, Noh Jeong-a,female,19,Geumcheon-gu,RARE,fire,crush,519,126,27,23,77,46,42
-2000700140, Noh Jeong-eun,female,17,Geumcheon-gu,HIGH RARE,ice,crush,693,211,42,21,48,52,43
-2000700141, Jang Hye-rin,female,20,Geumcheon-gu,NORMAL,wind,charge,260,77,15,11,68,31,41
-2000700142, Im Jo-eun,female,21,Geumcheon-gu,NORMAL,ice,defense,298,89,14,14,75,50,21
-2000700143, Yun Su-yeong,female,27,Geumcheon-gu,NORMAL,wind,defense,227,77,6,7,52,14,65
-2000700144, Yu Tae-i,female,24,Geumcheon-gu,NORMAL,wind,charge,248,64,12,8,65,39,32
-2000700145, Oh Bit-na,female,16,Geumcheon-gu,NORMAL,fire,charge,324,88,15,14,82,44,52
-2000700146, Kim So-yeong,female,19,Geumcheon-gu,SUPER RARE,ice,crush,1229,320,44,35,64,78,31
-2000700147, Hwang Da-yeong,female,17,Geumcheon-gu,NORMAL,wind,charge,247,44,12,13,55,42,51
-2000700148, Hwang Da-mi,female,16,Geumcheon-gu,NORMAL,wind,charge,305,78,12,11,77,45,49
-2000700149, Hwang Da-yun,female,15,Geumcheon-gu,RARE,fire,charge,546,125,25,21,77,68,57
-2000700150, Lee Nu-ri,female,17,Geumcheon-gu,RARE,wind,charge,480,121,27,19,65,57,41
-2000700151, Ye Min-ji,female,19,Geumcheon-gu,RARE,wind,charge,481,122,27,12,77,48,51
-2000700152, Song Da-hye,female,20,Geumcheon-gu,RARE,wind,charge,521,145,28,21,77,42,60
-2000700153, Heo Dong-a,female,20,Geumcheon-gu,RARE,wind,charge,532,148,16,15,75,70,44
-2000700154, Tak Hui-won,female,21,Geumcheon-gu,RARE,wind,crush,541,144,25,21,66,57,50
-2000700155, Sin Dan-bi,female,23,Geumcheon-gu,NORMAL,wind,defense,313,77,125,5,65,14,21
-2000700156, Seol Ji-won,female,21,Geumcheon-gu,NORMAL,ice,defense,265,52,6,13,65,44,52
-2000700157, Park Bo-ra,female,28,Geumcheon-gu,NORMAL,fire,charge,243,88,15,13,72,23,24
-2000700158, Ryu Ha-neul,female,25,Geumcheon-gu,NORMAL,wind,charge,323,80,15,14,72,62,33
-2000700159, Ryu Jang-mi,female,23,Geumcheon-gu,NORMAL,wind,charge,244,62,10,7,62,31,50
-2000700160, Yang Ju-yeong,female,19,Geumcheon-gu,RARE,wind,support,498,121,21,22,65,44,49
-2000700161, Kwon Ji-u,female,19,Geumcheon-gu,RARE,wind,charge,468,132,25,21,65,44,42
-2000700162, Kwon Ji-a,female,20,Geumcheon-gu,HIGH RARE,wind,crush,792,200,39,30,65,77,25
-2000700163, Jeong Hye-won,female,18,Geumcheon-gu,NORMAL,wind,charge,272,68,6,6,43,42,71
-2000700164, Jeong Hye-jin,female,16,Geumcheon-gu,NORMAL,wind,defense,263,45,6,7,55,38,81
-2000700165, Lim Gyu-ri,female,18,Geumcheon-gu,ULTRA RARE,ice,crush,2203,580,78,60,65,78,62
-2000700166, Yang Yu-yeong,female,22,Geumcheon-gu,HIGH RARE,wind,charge,790,216,44,29,75,65,31
-1000300056, Seo Tae-u,male,25,Gangseo-gu,SUPER RARE,ice,crush,1357,420,60,45,75,25,13
-1000300057, Kim Ja-geun,male,21,Gangseo-gu,NORMAL,wind,defense,192,56,6,8,44,25,35
-1000300058, Han Seok-yeol,male,27,Gangseo-gu,NORMAL,fire,charge,118,33,6,5,32,16,15
-1000300059, Yun Dong-hun,male,23,Gangseo-gu,NORMAL,wind,charge,77,32,5,5,15,8,9
-1000300060, An Yong-tae,male,19,Gangseo-gu,RARE,fire,charge,498,133,27,26,74,44,42
-1000300061, Pyo Jeong-jae,male,16,Gangseo-gu,NORMAL,wind,defense,191,64,6,11,65,13,28
-1000300062, Jang Dong-man,male,18,Gangseo-gu,NORMAL,ice,charge,287,89,14,13,78,44,19
-1000300063, So Seok-jun,male,17,Gangseo-gu,NORMAL,wind,defense,186,45,7,8,55,16,47
-1000300064, Jeon Seong-guk,male,19,Gangseo-gu,NORMAL,wind,charge,211,77,13,12,77,16,12
-1000300065, Yu Hyeong-su,male,21,Gangseo-gu,NORMAL,ice,charge,236,88,12,11,56,33,12
-2000300066, Yun Jeong-ha,female,19,Gangseo-gu,NORMAL,wind,charge,214,65,9,8,65,12,52
-1000300067, Park Eon-seok,male,20,Gangseo-gu,RARE,wind,charge,472,144,27,23,82,30,24
-2000300068, Kim Hui-geon,female,18,Gangseo-gu,NORMAL,wind,charge,92,32,6,5,12,16,11
-2000300069, Kim Hyeon-jin,female,16,Gangseo-gu,NORMAL,fire,defense,199,85,10,14,65,12,13
-1000300070, Bae Seung-gyu,male,19,Gangseo-gu,RARE,wind,charge,462,144,29,25,65,44,12
-1000300071, Ku Seong-won,male,17,Gangseo-gu,NORMAL,fire,charge,230,77,14,13,88,21,11
-1000300072, Gwak Myeong-gu,male,16,Gangseo-gu,NORMAL,ice,defense,120,43,6,10,44,6,14
-1000300073, Seo Yeong-seok,male,21,Gangseo-gu,RARE,ice,defense,445,112,12,27,77,45,31
-1000300074, Ju Yeon-uk,male,23,Gangseo-gu,NORMAL,wind,charge,269,78,15,11,80,44,12
-1000300075, Go Han-hong,male,25,Gangseo-gu,NORMAL,ice,charge,155,44,10,6,64,16,11
-1000300076, Gwak Jae-jun,male,18,Gangseo-gu,NORMAL,fire,charge,198,90,15,13,82,6,1
-1000300077, Jeon Ho-yeong,male,19,Gangseo-gu,NORMAL,wind,charge,180,78,15,9,66,12,3
-1000300078, Yeom Sang-hwi,male,22,Gangseo-gu,NORMAL,fire,charge,225,99,15,6,89,13,5
-1000300079, Yeom Tae-yeong,male,21,Gangseo-gu,NORMAL,wind,defense,219,88,10,13,85,13,11
-2000300080, Jang A-yu,female,16,Gangseo-gu,HIGH RARE,wind,crush,897,215,48,42,78,56,70
-2000300081, Jang Se-yu,female,17,Gangseo-gu,HIGH RARE,wind,charge,854,205,47,39,75,60,78
-2000300082, Choe Ji-yeon,female,18,Gangseo-gu,SUPER RARE,ice,disturb,1416,350,45,45,55,76,74
-2000300083, Lim Na-ri,female,17,Gangseo-gu,ULTRA RARE,fire,crush,2233,580,75,65,74,55,72
-2000800170, Ye Yu-na,female,15,Nowon-gu,NORMAL,ice,defense,332,77,8,14,65,55,72
-2000800171, Ye Yu-jin,female,17,Nowon-gu,NORMAL,wind,defense,206,44,5,7,32,21,82
-2000800172, Sin Ji-a,female,17,Nowon-gu,NORMAL,fire,charge,299,44,9,8,56,55,80
-2000800173, Kang Yu-yeong,female,15,Nowon-gu,NORMAL,wind,charge,179,38,15,6,65,21,28
-2000800174, Bok Seon-a,female,15,Nowon-gu,NORMAL,wind,charge,286,65,13,11,65,56,32
-2000800175, Ju Seo-hyeong,female,15,Nowon-gu,NORMAL,wind,charge,199,44,9,6,45,23,57
-2000800176, Park Saem,female,15,Nowon-gu,RARE,wind,disturb,534,128,15,15,56,65,14
-1000800177, Choe Han-gil,male,21,Nowon-gu,RARE,wind,charge,432,121,26,19,65,48,13
-1000800178, Choe Du-gil,male,19,Nowon-gu,RARE,wind,charge,471,119,29,16,77,54,18
-2000800179, Yang Gyeo-ul,female,17,Nowon-gu,SUPER RARE,fire,crush,1428,400,47,35,77,78,75
-1000800180, Song Dong-hyeok,male,17,Nowon-gu,HIGH RARE,ice,crush,868,215,38,32,77,65,79
-2000800181, Ryu Ha-nui,female,17,Nowon-gu,HIGH RARE,wind,disturb,855,195,30,30,65,77,9
-1000800182, Bok Gyu-cheol,male,19,Nowon-gu,NORMAL,wind,charge,184,46,7,7,65,23,20
-2000800183, Nam So-yeon,female,16,Nowon-gu,RARE,wind,charge,415,110,25,16,65,44,21
-2000800184, Seol Ha-neul,female,15,Nowon-gu,RARE,wind,crush,446,115,23,16,65,44,29
-2000800185, Jeong A-yun,female,15,Nowon-gu,HIGH RARE,wind,fascination,889,200,32,35,65,80,6
-2000800186, Jeong Da-yun,female,17,Nowon-gu,SUPER RARE,ice,crush,1281,348,44,45,66,77,3
-2000800187, Oh Saem-na,female,16,Nowon-gu,RARE,wind,charge,439,117,22,18,65,43,42
-2000800188, Sim Beo-deul,female,16,Nowon-gu,RARE,wind,charge,402,122,24,20,77,16,24
-1000800189, Jeon Su-yang,male,18,Nowon-gu,RARE,ice,crush,529,144,28,24,85,44,21
-2000800190, Hwang Ji-su,female,15,Nowon-gu,RARE,fire,charge,503,133,25,20,80,41,57
-2000800191, Kim Saet-byeol,female,16,Nowon-gu,RARE,dark,disturb,694,100,22,19,60,88,6
-1000800192, Go Byeong-heon,male,19,Nowon-gu,NORMAL,wind,defense,177,45,6,7,44,16,49
-2000800193, Tak Se-eun,female,17,Nowon-gu,NORMAL,wind,defense,177,33,5,5,30,16,77
-2000800194, Hwang Ji-eun,female,17,Nowon-gu,NORMAL,fire,charge,366,77,14,10,65,66,80
-2000800195, Heo Yu-ran,female,17,Nowon-gu,NORMAL,ice,charge,230,65,13,6,59,22,54
-2000800196, Pyo Ji-a,female,16,Nowon-gu,RARE,wind,support,618,121,14,20,65,77,88
-2000800197, Jeong A-ram,female,17,Nowon-gu,ULTRA RARE,ice,crush,2186,615,75,55,68,65,77
-1001400252, Tak DK,male,17,Seocho-gu,HIGH RARE,wind,crush,798,212,45,25,77,65,13
-2001400253, Ha Jang-mi,female,17,Seocho-gu,RARE,dark,fascination,706,122,26,16,54,88,6
-2001400254, Tak DH,female,15,Seocho-gu,RARE,fire,fascination,494,122,24,21,65,44,16
-1001400255, Mun Dong-hyeok,male,17,Seocho-gu,NORMAL,wind,charge,240,65,12,11,70,32,29
-1001400256, Gwak Min-su,male,17,Seocho-gu,NORMAL,wind,charge,215,55,10,6,52,34,33
-2001400257, Jo A-rin,female,16,Seocho-gu,NORMAL,fire,defense,142,38,7,5,25,16,41
-1001400258, Bong U-ram,male,17,Seocho-gu,NORMAL,ice,charge,164,31,5,6,23,16,72
-2001400259, Seo Ae-jeong,female,16,Seocho-gu,NORMAL,wind,charge,258,45,10,5,45,48,65
-2001400260, Sin A-yun,female,17,Seocho-gu,NORMAL,fire,defense,323,65,12,10,65,55,72
-2001400261, Sin A-rin,female,15,Seocho-gu,HIGH RARE,fire,charge,724,185,35,29,56,66,72
-2001400262, An Da-mi,female,15,Seocho-gu,NORMAL,wind,defense,322,55,8,13,68,55,80
-2001400263, Yu A-ri,female,17,Seocho-gu,SUPER RARE,wind,crush,1427,400,50,45,77,80,6
-2001400264, Yu Na-ri,female,15,Seocho-gu,HIGH RARE,wind,defense,757,211,35,35,75,65,11
-2001400265, Hwang Han-gyeol,female,16,Seocho-gu,HIGH RARE,wind,charge,744,222,40,25,75,60,12
-1001400266, Namgung Hyeong-nam,male,17,Seocho-gu,RARE,wind,charge,520,148,30,20,77,65,8
-2001400267, Baek Beo-deul,female,15,Seocho-gu,RARE,dark,support,814,150,15,30,77,77,77
-1001400268, No Jae-beom,male,15,Seocho-gu,NORMAL,wind,charge,191,55,8,8,65,23,21
-2001400269, Song Ye-bin,female,15,Seocho-gu,NORMAL,ice,defense,317,65,6,11,56,55,80
-2001400270, Yang Je-rim,female,15,Seocho-gu,HIGH RARE,wind,charge,794,215,35,30,70,65,72
-1001400271, Jeon Jung-hyeok,male,16,Seocho-gu,HIGH RARE,fire,defense,875,245,25,40,85,65,80
-1001400272, Jeong Ji-seok,male,17,Seocho-gu,NORMAL,wind,charge,294,88,12,11,80,42,32
-1001400273, Kang Cheol-ha,male,17,Seocho-gu,RARE,wind,charge,424,122,28,19,75,33,12
-1001400274, Jo Ju-yeol,male,16,Seocho-gu,RARE,ice,defense,433,121,15,18,77,43,21
-2001400275, Yang So-yeong,female,16,Seocho-gu,NORMAL,wind,defense,286,77,11,12,65,44,45
-2001400276, An Ji-yeon,female,16,Seocho-gu,RARE,wind,crush,501,131,27,16,44,55,78
-2001400277, An Ju-yeon,female,18,Seocho-gu,RARE,wind,charge,544,121,29,19,65,65,87
-2001400278, Ju Seo-yeong,female,18,Seocho-gu,NORMAL,wind,defense,187,77,11,10,44,16,25
-2001400279, Yun Mideum,female,18,Seocho-gu,SUPER RARE,wind,crush,1431,350,48,45,77,75,80
-2000900199, Heo Jin-seo,female,15,Dobong-gu,RARE,ice,crush,566,115,28,25,88,70,13
-2000900200, Jeong Yeong-a,female,15,Dobong-gu,NORMAL,wind,defense,292,44,6,11,52,55,78
-2000900201, Ha Yun-ha,female,15,Dobong-gu,NORMAL,fire,charge,267,77,13,11,70,44,21
-2000900202, Choe Yu-an,female,15,Dobong-gu,NORMAL,ice,charge,310,80,15,9,77,65,13
-2000900203, Kwon Ye-gang,female,15,Dobong-gu,NORMAL,fire,defense,405,80,10,13,77,78,82
-2000900204, Kwon Ye-jin,female,17,Dobong-gu,RARE,wind,crush,632,122,30,20,75,80,80
-2000900205, Yang Seo-jin,female,14,Dobong-gu,RARE,ice,charge,625,150,27,25,80,78,75
-2000900206, Song Ji-a,female,14,Dobong-gu,HIGH RARE,ice,disturb,910,180,40,30,75,80,6
-2000900207, Song Ji-eun,female,14,Dobong-gu,HIGH RARE,dark,crush,985,233,48,25,80,92,2
-2000900208, Lee Mit-eum,female,15,Dobong-gu,NORMAL,wind,defense,225,65,9,11,65,33,19
-2000900209, Hwang Eun-chae,female,14,Dobong-gu,NORMAL,wind,support,348,65,8,12,70,45,88
-2000900210, Hwang Eun-a,female,14,Dobong-gu,NORMAL,light,support,652,88,12,15,77,85,90
-2000900211, Yun Tae-hui,female,15,Dobong-gu,NORMAL,wind,charge,373,77,15,10,72,66,81
-2000900212, Oh Han-Seol,female,14,Dobong-gu,RARE,wind,support,660,145,25,28,77,65,80
-2000900213, Kim Mi-Yoon,female,15,Dobong-gu,NORMAL,wind,defense,356,78,10,12,55,70,73
-2000900214, Kwon Ye-Rhi,female,18,Dobong-gu,HIGH RARE,wind,crush,846,200,40,35,80,55,72
-2000900215, Oh Soel-Hoa,female,18,Dobong-gu,SUPER RARE,ice,crush,1507,450,48,38,78,80,75
+2000100001, Lim Yu-ri,FEMALE,16,GANGNAM,ULTRA RARE,DARK,FASCINATION,2452,550,70,70,75,90,1
+2002000352, Kim Ji-woo,FEMALE,18,YONGSAN,HIGH RARE,LIGHT,SUPPORT,996,200,31,48,77,46,88
+2000100002, Oh Hee-jin,FEMALE,13,GANGNAM,NORMAL,ICE,CHARGE,337,70,13,8,70,65,58
+2000600115, Mun Ji-a,FEMALE,19,GURO,HIGH RARE,FIRE,CRUSH,928,210,35,45,80,85,58
+2000600116, Go Myeong-shin,FEMALE,15,YANGCHEON,HIGH RARE,ICE,CRUSH,730,180,44,20,55,65,60
+2000600117, Park Hye-an,FEMALE,17,GURO,RARE,WIND,SUPPORT,385,80,10,12,56,30,78
+2000100003, Lee Min-chae,FEMALE,15,GANGNAM,RARE,DARK,SUPPORT,437,125,25,25,65,3,55
+2000100004, Hwangbo Ye,FEMALE,16,GANGNAM,RARE,WIND,CRUSH,290,100,15,15,30,10,65
+2000100005, Kim Ji-soo,FEMALE,15,GANGNAM,HIGH RARE,DARK,DISTURB,742,200,21,44,88,25,10
+2000600118, Kang Ji-min,FEMALE,19,GURO,NORMAL,FIRE,CHARGE,213,55,8,6,40,45,21
+1001900346, Lee Yeong-ha,MALE,18,YEONGDEUNGPO,RARE,ICE,CHARGE,393,120,20,13,60,45,15
+1000600119, Lee Hu-nam,MALE,19,GURO,RARE,FIRE,CRUSH,409,110,21,21,70,30,18
+1000600120, Kim Hoo,MALE,17,GURO,HIGH RARE,WIND,DISTURB,1013,245,35,45,80,75,15
+1000600121, Oh Myeong-jun,MALE,17,GURO,NORMAL,ICE,CHARGE,288,75,14,6,75,55,20
+1000600122, Lee Myeong-jin,MALE,17,GURO,HIGH RARE,FIRE,CRUSH,731,212,33,33,90,15,45
+1001400245, Kim Jae-ryang,MALE,17,SEOCHO,HIGH RARE,ICE,CHARGE,606,210,30,15,65,35,25
+2000600123, An Hee-suk,FEMALE,19,GURO,NORMAL,ICE,CHARGE,198,44,8,6,45,33,35
+1000500107, Choe Guk-seon,MALE,15,GURO,HIGH RARE,ICE,CHARGE,704,250,35,35,55,55,1
+2002000353, An Ji-su,FEMALE,18,YONGSAN,HIGH RARE,FIRE,CHARGE,882,220,40,35,85,75,65
+1000600124, Park O-ryu,MALE,17,GURO,NORMAL,FIRE,CHARGE,348,75,15,15,75,55,73
+1002000354, Kang Jae-a,MALE,14,YONGSAN,NORMAL,WIND,CHARGE,244,75,13,11,55,30,45
+2002400374, Go Se-rin,FEMALE,16,JOONGRANG,SUPER RARE,ICE,DEFENSE,1422,310,60,50,80,56,88
+1002000355, Kang Jun-cheol,MALE,18,YONGSAN,SUPER RARE,FIRE,CHARGE,1406,300,60,60,70,70,55
+1000600125, Go Jeong-tae,MALE,19,GURO,SUPER RARE,FIRE,DISTURB,1502,350,55,65,80,45,10
+2000600126, Mun Ji-ye,FEMALE,20,GURO,RARE,FIRE,SUPPORT,675,150,15,30,75,75,80
+1000600127, Gwak Jin-yeong,MALE,20,GURO,HIGH RARE,ICE,CHARGE,769,212,35,22,75,88,12
+2001800343, Yeon Jae-eun,FEMALE,16,YANGCHEON,NORMAL,ICE,CHARGE,339,80,11,14,75,65,40
+2000100006, Oh Yu-na,FEMALE,15,GANGNAM,RARE,DARK,SUPPORT,650,110,20,30,65,60,55
+1000200018, Zee Se-Kang,MALE,21,GANGBUK,ULTRA RARE,FIRE,CHARGE,2100,520,80,55,80,35,60
+2000200019, Zee Se-ryeon,FEMALE,16,GANGBUK,HIGH RARE,LIGHT,SUPPORT,835,155,10,20,75,55,88
+2000600128, Jeong Seo-yeong,FEMALE,15,GURO,RARE,FIRE,CRUSH,426,90,20,15,65,55,15
+2000600129, Jeong A-yeong,FEMALE,14,GURO,NORMAL,WIND,CHARGE,319,89,12,10,65,72,12
+1002400375, So Min-seop,MALE,19,JOONGRANG,SUPER RARE,DARK,CRUSH,1478,385,70,35,70,65,15
+1000600130, Mun Ji-cheol,MALE,18,GURO,SUPER RARE,FIRE,CHARGE,1293,330,68,40,80,3,55
+2001900347, Jin Ha-rin,FEMALE,17,YEONGDEUNGPO,SUPER RARE,WIND,CRUSH,1510,300,70,40,77,90,90
+2001600317, Jin Gyo-jin,FEMALE,16,SEONGBUK,RARE,ICE,CRUSH,547,85,29,11,75,65,88
+1000600131, Yu Jin-san,MALE,18,GURO,RARE,FIRE,CRUSH,402,120,28,12,70,23,19
+2000600132, Lee Yeong-a,FEMALE,14,GURO,RARE,WIND,SUPPORT,473,95,16,18,44,50,90
+1001700331, Lee Ho-jun,MALE,18,SONGPA,NORMAL,WIND,CHARGE,248,89,15,13,80,12,42
+1000100007, Min Hong-gi,MALE,17,GANGNAM,SUPER RARE,FIRE,CHARGE,1583,350,68,58,85,75,72
+2000100008, Min Yu-yeon,FEMALE,15,GANGNAM,RARE,WIND,SUPPORT,478,120,11,20,45,45,89
+2000900198, Jeong Yeon-a,FEMALE,16,DOBONG,RARE,WIND,DISTURB,530,99,12,13,53,65,53
+1000200020, Choe Gang-su,MALE,15,GANGBUK,NORMAL,WIND,DEFENSE,192,54,6,11,48,12,55
+1001800344, An Jae-su,MALE,16,YANGCHEON,RARE,WIND,SUPPORT,433,100,25,10,45,60,11
+1000500108, Im Chang-su,MALE,18,GWANGJIN,NORMAL,FIRE,CHARGE,325,89,15,13,77,43,60
+1000500109, Im Chang-yeol,MALE,17,GWANGJIN,SUPER RARE,WIND,CHARGE,1283,300,55,55,68,39,50
+2001400246, Kim Jae-sin,FEMALE,16,SEOCHO,SUPER RARE,DARK,CRUSH,1565,350,65,30,70,85,65
+2001400247, Chae Ye-rin,FEMALE,15,SEOCHO,HIGH RARE,ICE,DISTURB,643,210,31,31,35,35,35
+1001900348, Cheon Jae-hwang,MALE,16,YANGCHEON,NORMAL,WIND,DEFENSE,181,65,6,10,65,15,13
+1001900349, Kang Sin,MALE,18,YANGCHEON,NORMAL,WIND,CHARGE,366,78,14,12,80,65,65
+1000600133, Kim Jeong-han,MALE,17,GURO,NORMAL,ICE,CHARGE,294,88,10,15,65,44,42
+2000600134, Yun Se-jeong,FEMALE,16,GURO,RARE,WIND,DEFENSE,469,115,18,28,65,65,20
+2000600135, Jeon Mi-seong,FEMALE,15,GURO,HIGH RARE,FIRE,DISTURB,869,130,38,30,85,65,45
+2000600136, Yu Jin-a,FEMALE,16,GURO,NORMAL,WIND,CHARGE,277,78,16,8,65,55,13
+1001600318, Geum Yu-jin,MALE,18,SEONGBUK,RARE,WIND,CRUSH,553,110,25,15,70,65,75
+2001400248, Im Hye-ri,FEMALE,14,SEOCHO,ULTRA RARE,LIGHT,SUPPORT,2368,550,50,80,65,78,99
+1002400376, An Ho-seon,MALE,16,JOONGRANG,RARE,FIRE,CHARGE,394,99,25,15,65,40,20
+1001600319, Kim Jae-min,MALE,18,SEONGBUK,NORMAL,WIND,CHARGE,298,65,10,12,77,45,55
+1001600320, Seong Jae-su,MALE,18,SEONGBUK,RARE,ICE,CRUSH,298,99,30,10,45,15,10
+2001600321, Yang Ji-rim,FEMALE,16,SEONGBUK,RARE,WIND,DISTURB,440,85,12,18,55,40,55
+1001600322, Yun Seok-gu,MALE,17,SEONGBUK,NORMAL,FIRE,CHARGE,316,80,15,13,78,40,65
+1001600323, Yun Seok-pal,MALE,16,SEONGBUK,RARE,FIRE,CHARGE,473,120,25,15,75,50,40
+1001600324, In Chang-su,MALE,19,SEONGBUK,SUPER RARE,DARK,CRUSH,1556,330,60,45,80,90,12
+2000500110, Yun Jin-a,FEMALE,16,GWANGJIN,RARE,LIGHT,SUPPORT,685,95,10,11,65,65,99
+1001600325, In Chang-min,MALE,23,SEONGBUK,NORMAL,FIRE,CHARGE,119,33,5,5,45,10,16
+2001400249, Ye Haet-bit,FEMALE,15,SEOCHO,NORMAL,WIND,CHARGE,245,38,9,8,65,38,57
+1001600326, Jeong Tae-jin,MALE,20,SEONGBUK,HIGH RARE,FIRE,CRUSH,757,210,44,25,70,58,16
+1001600327, Jeon Min-jin,MALE,18,SEONGBUK,RARE,FIRE,CHARGE,455,130,28,19,67,51,14
+1001600328, Gyeong Won-seok,MALE,18,SEONGBUK,RARE,WIND,CHARGE,468,121,27,26,59,60,20
+1001600329, Chu Jeong-uk,MALE,18,SEONGBUK,RARE,WIND,CHARGE,506,122,29,25,77,65,12
+1002400377, Park Seong-gwan,MALE,22,JOONGRANG,HIGH RARE,FIRE,DEFENSE,746,222,27,44,65,66,12
+1001600330, Jin Su-yeol,MALE,19,SEONGBUK,RARE,ICE,CRUSH,386,100,23,14,65,30,24
+2000500111, Jo Yun-ha,FEMALE,16,GWANGJIN,RARE,WIND,SUPPORT,393,100,16,13,55,36,33
+1000500112, Du Yun-chang,MALE,19,GWANGJIN,RARE,FIRE,CHARGE,440,110,25,19,67,54,18
+1000500113, Seon Yeong-un,MALE,18,GANGNAM,RARE,FIRE,DEFENSE,415,130,15,30,88,14,11
+1000100009, Kang Tae-jun,MALE,17,GANGNAM,RARE,FIRE,CRUSH,476,110,20,15,75,55,25
+1000100010, Kang Tae-an,MALE,15,GANGNAM,RARE,WIND,CHARGE,450,115,21,14,75,55,20
+1000100011, Lee Min-su,MALE,17,GANGNAM,HIGH RARE,ICE,DEFENSE,618,200,35,25,55,40,18
+1000100012, Kim Cheol-min,MALE,17,GANGNAM,NORMAL,WIND,DEFENSE,101,30,5,6,12,16,21
+1000100013, Kim Hong-min,MALE,15,GANGNAM,NORMAL,WIND,DEFENSE,88,31,5,5,14,10,18
+1002400378, Lee Seong-ho,MALE,18,JOONGRANG,ULTRA RARE,DARK,CRUSH,2327,500,75,60,70,80,85
+2000500114, Jo Yun-i,FEMALE,16,GWANGJIN,HIGH RARE,WIND,DISTURB,684,120,35,35,60,45,25
+1002100356, Lee Jin-gyu,MALE,15,EUNPYEONG,NORMAL,WIND,DEFENSE,373,85,12,15,80,65,65
+1002100357, Ma Hyeong-eun,MALE,19,EUNPYEONG,NORMAL,ICE,CHARGE,193,45,9,6,45,40,16
+1002100358, Lee Taek-gil,MALE,18,EUNPYEONG,NORMAL,WIND,DEFENSE,291,65,8,13,77,45,50
+1002100359, Choe Jae-hong,MALE,17,EUNPYEONG,NORMAL,WIND,CHARGE,227,65,15,11,45,30,45
+1002100360, Kim Min-kyu,MALE,16,EUNPYEONG,NORMAL,WIND,CHARGE,176,42,6,6,45,40,3
+2000400084, Cheon Hye-won,FEMALE,15,GWANAK,NORMAL,ICE,DEFENSE,309,80,12,12,60,44,70
+2000400085, Seon Na-yeong,FEMALE,15,GWANAK,NORMAL,FIRE,CHARGE,284,45,8,6,55,45,88
+2000400086, Lee Yoony,FEMALE,16,GWANAK,HIGH RARE,ICE,SUPPORT,708,180,38,38,70,22,55
+2000400087, Choe Yun-aa,FEMALE,17,GWANAK,HIGH RARE,WIND,SUPPORT,747,150,35,35,60,50,88
+2000400088, Choe Yun-hee,FEMALE,16,GWANAK,SUPER RARE,DARK,FASCINATION,1360,250,45,55,55,40,88
+2000400089, Choe Yun-jeong,FEMALE,18,GWANAK,RARE,ICE,CRUSH,528,100,30,20,65,65,55
+1000400090, Yun Tae-min,MALE,16,GWANAK,HIGH RARE,WIND,CHARGE,690,165,35,30,65,55,55
+1000400091, Kim Cheol-ha,MALE,18,GWANAK,NORMAL,ICE,CHARGE,204,45,9,8,55,30,35
+1002100361, Sin Ju-ho,MALE,18,EUNPYEONG,NORMAL,FIRE,CHARGE,321,70,14,10,70,56,60
+2002100362, Sin Ju-won,FEMALE,16,EUNPYEONG,NORMAL,DARK,DEFENSE,316,45,11,5,55,40,55
+1002100363, Jang Je-hun,MALE,20,EUNPYEONG,NORMAL,FIRE,CHARGE,262,70,14,8,65,45,30
+1002100364, Lee Jae-deok,MALE,21,EUNPYEONG,HIGH RARE,FIRE,CRUSH,562,150,38,22,45,45,15
+2002100365, Lee So-jin,FEMALE,20,EUNPYEONG,NORMAL,FIRE,CHARGE,253,50,12,5,45,45,66
+1002100366, Kim Jun-ki,MALE,17,EUNPYEONG,SUPER RARE,ICE,CHARGE,1304,300,68,48,55,55,78
+1002100367, Mun Cheol-jae,MALE,16,EUNPYEONG,NORMAL,ICE,DEFENSE,198,45,6,11,55,30,30
+1002100368, Jeong Jae-heon,MALE,20,EUNPYEONG,NORMAL,ICE,CHARGE,237,75,11,8,75,32,17
+1002100369, Choe Bong-geun,MALE,17,EUNPYEONG,NORMAL,WIND,CHARGE,205,55,10,10,65,15,45
+1002100370, Choe Jin-gyu,MALE,16,EUNPYEONG,HIGH RARE,WIND,CRUSH,572,180,35,22,55,30,12
+1002100371, Choe Chang-won,MALE,20,EUNPYEONG,ULTRA RARE,DARK,OVERWHELMING,2337,500,70,70,70,70,1
+2002400379, Han Ha-ru,FEMALE,18,JOONGRANG,NORMAL,FIRE,CHARGE,332,88,14,10,75,75,10
+1002400380, Pung Him-chan,MALE,16,JOONGRANG,NORMAL,FIRE,DEFENSE,211,60,7,13,55,30,25
+1002400381, Pyo O-seong,MALE,18,JOONGRANG,NORMAL,WIND,CHARGE,229,60,12,8,58,40,22
+2002400382, Tak Ri,FEMALE,14,JOONGRANG,NORMAL,FIRE,CHARGE,405,80,11,6,80,80,80
+2002400383, Choe Yeo-jin,FEMALE,16,JOONGRANG,NORMAL,ICE,DEFENSE,246,50,8,11,35,35,80
+1002400384, Jegal Beo-deul,MALE,18,JOONGRANG,NORMAL,WIND,CHARGE,340,75,14,8,75,55,70
+2002300373, Han Mideum,FEMALE,16,JUNG GU,NORMAL,ICE,DEFENSE,213,55,5,11,35,20,75
+1002200372, Seo Seong-min,MALE,9,JONGNO,ULTRA RARE,LIGHT,DISTURB,2285,450,55,70,55,90,90
+1000400092, Geum Eo-jin,MALE,23,GWANAK,SUPER RARE,ICE,CHARGE,1644,400,65,55,85,88,78
+1000400093, Choe Min-Woo,MALE,18,GWANAK,NORMAL,FIRE,CHARGE,139,55,11,8,45,10,10
+2001800345, An Ji-yun,FEMALE,15,YANGCHEON,NORMAL,WIND,CHARGE,199,55,10,8,45,40,12
+1000100014, Han Jae,MALE,19,GANGNAM,NORMAL,WIND,CHARGE,202,55,10,5,55,30,25
+2000100015, Jeon Jan-di,FEMALE,17,GANGNAM,NORMAL,ICE,CHARGE,212,65,9,7,55,30,24
+1000100016, Jeong Hyeong-jun,MALE,16,GANGNAM,NORMAL,FIRE,DEFENSE,170,50,6,8,45,22,23
+2000100017, Jang Eun-chae,FEMALE,15,GANGNAM,NORMAL,ICE,CHARGE,245,55,10,7,45,55,28
+1000200021, Gil Jeong-jae,MALE,17,GANGBUK,NORMAL,ICE,DEFENSE,332,80,6,14,55,55,82
+1000200022, Gil Yun-jae,MALE,16,GANGBUK,NORMAL,WIND,CHARGE,366,75,13,8,75,65,80
+2000200023, Gil Seon-jae,FEMALE,15,GANGBUK,HIGH RARE,WIND,CRUSH,770,77,44,25,78,80,82
+2000400094, Seon Mi-yeong,FEMALE,22,GWANAK,SUPER RARE,ICE,DISTURB,1453,300,65,35,70,75,43
+2000400095, Yun Hui-ji,FEMALE,16,GWANAK,NORMAL,WIND,CHARGE,279,78,13,11,75,45,25
+2001900350, Kim Ga-ram,FEMALE,18,YEONGDEUNGPO,NORMAL,FIRE,DEFENSE,251,60,7,11,65,44,28
+1001900351, Kim Deul,MALE,17,YEONGDEUNGPO,NORMAL,WIND,CHARGE,159,55,10,8,45,16,18
+2000800167, Kwon Du-ri,FEMALE,16,NOWON,NORMAL,WIND,FASCINATION,234,45,10,11,55,32,30
+1000700137, Namgung Mu-yeol,MALE,17,GEUMCHEON,NORMAL,FIRE,CHARGE,242,80,12,11,75,30,16
+1001700332, Hwang Ki-hun,MALE,18,SONGPA,RARE,FIRE,CHARGE,444,120,25,15,75,44,24
+1001700333, Hwang Bo-hun,MALE,16,SONGPA,RARE,FIRE,CHARGE,400,122,27,25,77,1,38
+2001700334, Jeong Sae-ron,FEMALE,15,SONGPA,NORMAL,ICE,CHARGE,254,66,13,9,70,45,21
+2001700335, Yu Han-gyeol,FEMALE,16,SONGPA,NORMAL,WIND,CHARGE,160,45,11,6,45,20,21
+1001000212, Heo Seong,MALE,16,DONGDAEMUN,NORMAL,FIRE,DEFENSE,265,75,8,13,65,44,27
+1001000213, Kim Jae-seop,MALE,18,DONGDAEMUN,SUPER RARE,FIRE,CRUSH,1421,400,68,40,75,50,16
+2001100215, Yun Mi-ri-nae,FEMALE,18,DONGJAK,NORMAL,ICE,CHARGE,276,70,10,6,55,60,23
+2001100216, Jeon Ha-na,FEMALE,15,DONGJAK,NORMAL,WIND,DEFENSE,254,70,10,10,65,44,21
+1001700336, An Hyeon,MALE,16,SONGPA,NORMAL,FIRE,CHARGE,233,59,12,8,66,40,19
+1001700337, Gwak Je-hyeong,MALE,17,SONGPA,NORMAL,WIND,CHARGE,341,80,13,11,75,70,35
+1001700338, Seo Gyeong-seok,MALE,17,SONGPA,NORMAL,FIRE,CHARGE,344,75,10,8,70,58,75
+2001700339, Seol Dal,FEMALE,17,SONGPA,NORMAL,FIRE,CHARGE,366,88,13,9,80,55,78
+1001700340, Park Mi-reu,MALE,17,SONGPA,NORMAL,ICE,DEFENSE,236,45,8,11,56,25,75
+2001700341, Nam Tae-eun,FEMALE,17,SONGPA,NORMAL,WIND,CHARGE,254,44,5,12,55,31,85
+2001700342, Bong Jin-yu,FEMALE,10,SONGPA,ULTRA RARE,DARK,DISTURB,2321,600,65,75,45,88,22
+2000800168, Lee Je-won,FEMALE,15,NOWON,NORMAL,WIND,SUPPORT,302,55,6,8,55,63,19
+1000300054, Ga Yun-Woo,MALE,16,GANGSEO,NORMAL,WIND,CHARGE,228,70,10,10,55,32,29
+2000300055, Kang Na-bit,FEMALE,17,GANGSEO,NORMAL,WIND,CHARGE,213,45,15,11,70,28,31
+2000700138, Kang Ri-an,FEMALE,16,GEUMCHEON,NORMAL,FIRE,CHARGE,236,55,13,7,65,40,27
+1000800169, Kang Myeong-jun,MALE,15,NOWON,NORMAL,WIND,DEFENSE,267,45,6,10,70,33,78
+1001000214, Kang Sang,MALE,16,DONGDAEMUN,NORMAL,WIND,DEFENSE,226,45,5,12,55,30,58
+2001200244, Kang Seo-eon,FEMALE,15,MAPO,NORMAL,FIRE,SUPPORT,439,60,12,13,70,78,80
+1001400250, Kang Seung-heon,MALE,18,SEOCHO,NORMAL,WIND,CHARGE,325,56,11,5,72,55,79
+2001400251, Go Myeong-hui,FEMALE,15,SEOCHO,NORMAL,FIRE,DEFENSE,329,35,5,11,55,75,82
+1001500280, Hwang Hyeok,MALE,19,SEONGDONG,NORMAL,WIND,CHARGE,373,75,12,6,77,78,58
+2001500281, Hwang Jin,FEMALE,16,SEONGDONG,NORMAL,WIND,CHARGE,232,45,11,6,45,28,78
+2001500282, Hong Ga-yeong,FEMALE,16,SEONGDONG,RARE,FIRE,CHARGE,564,120,24,20,82,65,80
+2000400096, Lee Ro-ha,FEMALE,18,SEONGDONG,RARE,WIND,SUPPORT,628,110,16,22,65,80,92
+1001500283, Yun U-ram,MALE,16,SEONGDONG,RARE,FIRE,CRUSH,501,111,25,18,70,65,18
+2001500284, Chu Na-ri,FEMALE,16,SEONGDONG,NORMAL,FIRE,CHARGE,226,70,12,8,70,28,21
+1001500285, Seo Jin-seong,MALE,21,SEONGDONG,RARE,DARK,DISTURB,452,120,16,15,65,32,20
+1001500286, Baek Cheon-ju,MALE,28,SEONGDONG,HIGH RARE,ICE,CHARGE,696,198,38,38,65,44,16
+1001500287, Song Cheol-sun,MALE,21,SEONGDONG,NORMAL,ICE,CHARGE,222,55,9,6,56,41,20
+1001500288, Sa Jin-tae,MALE,18,SEONGDONG,NORMAL,FIRE,CHARGE,246,65,10,9,75,38,21
+1001500289, Park Tae-uk,MALE,19,SEONGDONG,NORMAL,FIRE,CHARGE,170,45,8,7,56,18,25
+1001500290, Pung Geon,MALE,18,SEONGDONG,HIGH RARE,WIND,CHARGE,649,215,38,24,56,44,19
+2001500291, Hong Na-yeong,FEMALE,15,SEONGDONG,NORMAL,ICE,CHARGE,223,35,10,6,65,15,85
+2001500292, Hong Da-yeong,FEMALE,14,SEONGDONG,HIGH RARE,WIND,SUPPORT,932,200,25,45,80,77,83
+1001500293, Jeong Han-seo,MALE,15,SEONGDONG,HIGH RARE,WIND,CHARGE,813,199,36,28,78,66,82
+2001500294, An Ri,FEMALE,16,SEONGDONG,RARE,WIND,CRUSH,628,125,28,23,82,71,79
+1001500295, Sin Jae,MALE,16,SEONGDONG,NORMAL,FIRE,CHARGE,368,77,13,8,80,72,59
+1001500296, Ha Hyeok,MALE,16,SEONGDONG,NORMAL,FIRE,CHARGE,157,45,7,5,33,18,37
+2001500297, Jo Yeong-ae,FEMALE,16,SEONGDONG,NORMAL,WIND,CHARGE,175,44,8,6,52,21,30
+1001500298, Jeon Ju-il,MALE,15,SEONGDONG,RARE,FIRE,CHARGE,395,110,22,18,56,44,21
+1001500299, Lee Jin-u,MALE,15,SEONGDONG,NORMAL,WIND,CHARGE,199,44,7,5,42,38,31
+1001500300, Jang Seung-heon,MALE,16,SEONGDONG,NORMAL,ICE,CHARGE,174,55,7,6,45,21,25
+1001500301, Guk Tae-won,MALE,15,SEONGDONG,NORMAL,WIND,CHARGE,196,66,8,6,46,28,21
+1001500302, Jeong Jong-il,MALE,16,SEONGDONG,NORMAL,WIND,DEFENSE,338,65,8,11,71,56,80
+1001500303, Yun Nam-gyu,MALE,17,SEONGDONG,RARE,WIND,CHARGE,554,121,23,16,78,68,79
+1001500304, Ye Hyeon-seung,MALE,18,SEONGDONG,NORMAL,FIRE,CHARGE,397,70,11,10,80,77,82
+2000400097, Lee Hye-gyeong,FEMALE,16,GWANAK,SUPER RARE,ICE,FASCINATION,1592,350,45,55,75,88,52
+1001500305, Mun Jae,MALE,20,SEONGDONG,SUPER RARE,FIRE,CHARGE,1484,420,62,35,85,65,60
+1001500306, Kang Cheol-hun,MALE,19,SEONGDONG,HIGH RARE,FIRE,CHARGE,721,200,40,25,75,35,60
+1001500307, Kang Cheol-jin,MALE,18,SEONGDONG,HIGH RARE,ICE,CRUSH,844,210,40,23,80,65,72
+2001500308, Ju Ye-seo,FEMALE,18,SEONGDONG,HIGH RARE,ICE,SUPPORT,822,190,25,38,65,65,85
+2000400098, Moon Yu-seon,FEMALE,14,GWANAK,SUPER RARE,LIGHT,SUPPORT,1631,350,35,66,65,76,90
+2001500309, Gong Tae-in,FEMALE,16,SEONGDONG,NORMAL,WIND,CHARGE,263,45,11,9,55,40,72
+1001500310, Gong Yun-seong,MALE,18,SEONGDONG,NORMAL,WIND,CHARGE,257,44,8,6,58,46,55
+1001500311, Seo O-seong,MALE,22,SEONGDONG,SUPER RARE,WIND,CRUSH,1226,280,45,38,77,65,19
+2001500312, Ju Ye-na,FEMALE,16,SEONGDONG,RARE,WIND,FASCINATION,560,120,15,15,65,55,70
+1001500313, Jang Mu-yeong,MALE,19,SEONGDONG,SUPER RARE,FIRE,CHARGE,1525,350,69,44,85,72,78
+2001500314, Ju Ye-rin,FEMALE,15,SEONGDONG,SUPER RARE,WIND,SUPPORT,1392,280,35,55,75,80,85
+1001500315, Choe Chang-min,MALE,18,SEONGDONG,ULTRA RARE,DARK,OVERWHELMING,2330,505,75,60,80,60,8
+2001500316, Lee Ji-young,FEMALE,16,SEONGDONG,MYTHIC RARE,ABYSS,EXTERMINATE,12765,1850,450,450,100,100,100
+1000200024, Seon-u Min-cheol,MALE,18,GANGBUK,SUPER RARE,FIRE,DEFENSE,1600,480,40,68,85,56,77
+2000200025, Seon-u Min-a,FEMALE,15,GANGBUK,HIGH RARE,WIND,CHARGE,869,200,40,35,88,65,80
+2000200026, Bae Na-bit,FEMALE,17,GANGBUK,RARE,WIND,FASCINATION,591,100,20,20,75,55,81
+2000200027, Nam Go-eun,FEMALE,17,GANGBUK,HIGH RARE,ICE,CRUSH,762,212,45,25,56,72,21
+2000200028, Son Ran,FEMALE,16,GANGBUK,RARE,FIRE,CHARGE,436,116,27,16,61,43,45
+2000200029, Seo Ha-yun,FEMALE,17,GANGBUK,NORMAL,WIND,DEFENSE,228,55,7,11,56,38,31
+1000200030, Kim Seong-jin,MALE,18,GANGBUK,MYTHIC RARE,ABYSS,FURIOUS,12383,1850,460,440,95,95,1
+2000200031, Ryu Ha-ye,FEMALE,17,GANGBUK,RARE,DARK,SUPPORT,678,98,12,21,58,65,89
+1000200032, Kim Jun-ha,MALE,17,GANGBUK,NORMAL,WIND,CHARGE,260,65,11,9,65,43,32
+1000200033, Nam Gyeong-taek,MALE,16,GANGBUK,NORMAL,WIND,CHARGE,206,65,8,8,43,25,39
+1000200034, Sa Ju-hyeok,MALE,17,GANGBUK,NORMAL,WIND,DEFENSE,353,80,10,12,77,54,78
+1000200035, Bok Gwang-jun,MALE,18,GANGBUK,HIGH RARE,ICE,CHARGE,723,245,48,25,80,13,25
+1000200036, Bok Gwang-hun,MALE,16,GANGBUK,HIGH RARE,WIND,DISTURB,685,185,35,22,65,35,25
+1000200037, Kang Han-gil,MALE,24,GANGBUK,RARE,FIRE,CHARGE,550,142,28,21,88,65,23
+1000200038, Hwangbo Jae-gyu,MALE,23,GANGBUK,HIGH RARE,WIND,CRUSH,819,212,47,29,78,65,13
+1000200039, An Jung-san,MALE,15,GANGBUK,RARE,FIRE,DEFENSE,525,135,21,29,56,60,79
+1000200040, Heo Jae-cheol,MALE,16,GANGBUK,NORMAL,WIND,CHARGE,178,45,7,6,43,21,41
+1000200041, Yun Tae-yeong,MALE,17,GANGBUK,RARE,FIRE,CHARGE,625,125,30,24,88,78,80
+1000200042, Kang U-seop,MALE,19,GANGBUK,NORMAL,FIRE,CHARGE,284,78,15,9,78,38,41
+1000200043, Jo Seung-gyu,MALE,18,GANGBUK,RARE,ICE,DEFENSE,568,129,20,28,69,72,80
+2000200044, Yong Ji-hye,FEMALE,18,GANGBUK,RARE,WIND,CHARGE,594,140,28,24,80,65,79
+2000200045, Yong Ji-hyo,FEMALE,16,GANGBUK,RARE,WIND,SUPPORT,545,92,16,16,63,65,88
+1000200046, Moon Hee-chan,MALE,16,GANGBUK,NORMAL,WIND,CHARGE,215,45,11,8,62,38,21
+2000400099, Choe Jeong-in,FEMALE,15,GWANAK,RARE,ICE,DEFENSE,448,95,12,21,57,55,78
+1000400100, Choe Dae-un,MALE,20,GWANAK,RARE,ICE,DEFENSE,542,118,25,16,80,65,69
+1000400101, Gwak Tae-u,MALE,18,GWANAK,HIGH RARE,WIND,CRUSH,770,200,41,30,77,54,21
+1000400102, Kim Cheol-jung,MALE,22,GWANAK,NORMAL,WIND,CHARGE,214,65,13,5,44,32,30
+1000400103, Seo Gyu-in,MALE,16,GWANAK,NORMAL,WIND,CHARGE,298,56,14,9,66,65,35
+2000400104, Seo Gyu-an,FEMALE,16,GWANAK,NORMAL,FIRE,CHARGE,158,52,6,6,35,22,21
+2000400105, On Ri-yun,FEMALE,15,GWANAK,NORMAL,WIND,DEFENSE,249,45,6,13,70,42,40
+2000400106, On Ri-yeon,FEMALE,15,GWANAK,RARE,WIND,SUPPORT,610,100,15,21,68,88,58
+1000200047, Chae Hun-gi,MALE,18,GANGBUK,NORMAL,FIRE,CHARGE,257,72,14,11,75,33,31
+1000200048, Lee Chan-yeol,MALE,19,GANGBUK,NORMAL,FIRE,DEFENSE,239,80,7,8,55,31,36
+1000200049, Go Cha-yeon,MALE,17,GANGBUK,NORMAL,FIRE,CHARGE,295,75,9,5,65,54,40
+1000200050, Seon In-gu,MALE,21,GANGBUK,NORMAL,ICE,DEFENSE,225,82,6,13,75,16,26
+2000200051, Hwang Ye-young,FEMALE,16,GANGBUK,NORMAL,WIND,CHARGE,222,45,13,6,65,38,31
+1000200052, Hwang Jun-tae,MALE,15,GANGBUK,NORMAL,FIRE,CHARGE,323,65,11,6,56,58,78
+2000200053, Hwang Ye-eun,FEMALE,14,GANGBUK,RARE,WIND,SUPPORT,564,112,19,21,68,56,88
+2001100217, Yu Hye-yum,FEMALE,17,DONGJAK,NORMAL,WIND,CHARGE,193,45,13,5,66,18,39
+1001100218, Yu Hye-un,MALE,20,DONGJAK,RARE,WIND,CHARGE,461,131,28,15,77,34,39
+1001100219, Oh Han-eum,MALE,20,DONGJAK,RARE,ICE,CHARGE,487,133,28,20,75,54,19
+2001100220, Ryu Tae-yeon,FEMALE,17,DONGJAK,NORMAL,FIRE,CHARGE,243,48,11,11,55,45,39
+2001100221, Heo Yu-ri,FEMALE,17,DONGJAK,NORMAL,ICE,CHARGE,244,72,12,12,70,21,49
+2001100222, Ju Seul-gi,FEMALE,17,DONGJAK,NORMAL,WIND,DEFENSE,277,69,6,13,72,38,51
+2001100223, Wang Yu-yeong,FEMALE,17,DONGJAK,NORMAL,ICE,CHARGE,244,65,10,10,65,22,61
+2001100224, Ha Ji-yeon,FEMALE,17,DONGJAK,NORMAL,ICE,CHARGE,350,77,9,8,76,65,59
+2001100225, Seo A-ran,FEMALE,15,DONGJAK,NORMAL,WIND,CHARGE,337,80,14,6,75,72,30
+2001100226, Seo A-ri,FEMALE,17,DONGJAK,NORMAL,ICE,CHARGE,306,65,15,11,77,62,29
+1001100227, Jo Han-eol,MALE,19,DONGJAK,RARE,WIND,CHARGE,543,148,28,25,75,64,30
+1001100228, Ma Ha-rang,MALE,19,DONGJAK,RARE,FIRE,CHARGE,474,148,30,21,65,43,27
+2001100229, Jeong Ha-na,FEMALE,17,DONGJAK,RARE,ICE,CHARGE,563,143,28,16,75,65,68
+2001100230, Jeong Ha-ru,FEMALE,20,DONGJAK,SUPER RARE,WIND,CRUSH,1009,222,70,32,45,16,50
+2001100231, Ban Ji-a,FEMALE,16,DONGJAK,NORMAL,WIND,DEFENSE,253,45,6,7,55,32,81
+2001100232, Ban Ji-yun,FEMALE,17,DONGJAK,HIGH RARE,DARK,DISTURB,941,211,23,31,65,59,72
+2001100233, Jang Cho-rong,FEMALE,16,DONGJAK,SUPER RARE,ICE,CRUSH,1569,415,68,42,75,74,82
+2001100234, Yu Jin-i,FEMALE,16,DONGJAK,NORMAL,WIND,CHARGE,220,45,7,5,38,31,69
+2001100235, Min Ji-eun,FEMALE,16,DONGJAK,SUPER RARE,FIRE,CHARGE,1529,415,68,42,74,75,82
+1001100236, Kim Han-gyeol,MALE,17,DONGJAK,HIGH RARE,ICE,CRUSH,904,211,47,35,88,72,34
+2001100237, Kim Han-byeol,FEMALE,18,DONGJAK,HIGH RARE,FIRE,FASCINATION,893,211,40,42,65,65,13
+2001100238, Na Yun-a,FEMALE,16,DONGJAK,NORMAL,FIRE,CHARGE,201,65,11,8,54,9,56
+2001100239, Na Yun-yeong,FEMALE,15,DONGJAK,NORMAL,FIRE,CHARGE,220,71,12,10,70,5,59
+1001100240, Sin Seong-jin,MALE,21,DONGJAK,NORMAL,WIND,DEFENSE,136,42,6,7,44,13,17
+2001100241, Sin Ye-eun,FEMALE,17,DONGJAK,SUPER RARE,DARK,DISTURB,1766,420,61,65,75,75,3
+2001100242, Sin A-eun,FEMALE,18,DONGJAK,SUPER RARE,DARK,FASCINATION,1643,422,62,67,75,45,8
+2001100243, Lim Ye-ri,FEMALE,18,DONGJAK,ULTRA RARE,DARK,DISTURB,2652,560,77,65,75,90,90
+2000700139, Noh Jeong-a,FEMALE,19,GEUMCHEON,RARE,FIRE,CRUSH,519,126,27,23,77,46,42
+2000700140, Noh Jeong-eun,FEMALE,17,GEUMCHEON,HIGH RARE,ICE,CRUSH,693,211,42,21,48,52,43
+2000700141, Jang Hye-rin,FEMALE,20,GEUMCHEON,NORMAL,WIND,CHARGE,260,77,15,11,68,31,41
+2000700142, Im Jo-eun,FEMALE,21,GEUMCHEON,NORMAL,ICE,DEFENSE,298,89,14,14,75,50,21
+2000700143, Yun Su-yeong,FEMALE,27,GEUMCHEON,NORMAL,WIND,DEFENSE,227,77,6,7,52,14,65
+2000700144, Yu Tae-i,FEMALE,24,GEUMCHEON,NORMAL,WIND,CHARGE,248,64,12,8,65,39,32
+2000700145, Oh Bit-na,FEMALE,16,GEUMCHEON,NORMAL,FIRE,CHARGE,324,88,15,14,82,44,52
+2000700146, Kim So-yeong,FEMALE,19,GEUMCHEON,SUPER RARE,ICE,CRUSH,1229,320,44,35,64,78,31
+2000700147, Hwang Da-yeong,FEMALE,17,GEUMCHEON,NORMAL,WIND,CHARGE,247,44,12,13,55,42,51
+2000700148, Hwang Da-mi,FEMALE,16,GEUMCHEON,NORMAL,WIND,CHARGE,305,78,12,11,77,45,49
+2000700149, Hwang Da-yun,FEMALE,15,GEUMCHEON,RARE,FIRE,CHARGE,546,125,25,21,77,68,57
+2000700150, Lee Nu-ri,FEMALE,17,GEUMCHEON,RARE,WIND,CHARGE,480,121,27,19,65,57,41
+2000700151, Ye Min-ji,FEMALE,19,GEUMCHEON,RARE,WIND,CHARGE,481,122,27,12,77,48,51
+2000700152, Song Da-hye,FEMALE,20,GEUMCHEON,RARE,WIND,CHARGE,521,145,28,21,77,42,60
+2000700153, Heo Dong-a,FEMALE,20,GEUMCHEON,RARE,WIND,CHARGE,532,148,16,15,75,70,44
+2000700154, Tak Hui-won,FEMALE,21,GEUMCHEON,RARE,WIND,CRUSH,541,144,25,21,66,57,50
+2000700155, Sin Dan-bi,FEMALE,23,GEUMCHEON,NORMAL,WIND,DEFENSE,313,77,125,5,65,14,21
+2000700156, Seol Ji-won,FEMALE,21,GEUMCHEON,NORMAL,ICE,DEFENSE,265,52,6,13,65,44,52
+2000700157, Park Bo-ra,FEMALE,28,GEUMCHEON,NORMAL,FIRE,CHARGE,243,88,15,13,72,23,24
+2000700158, Ryu Ha-neul,FEMALE,25,GEUMCHEON,NORMAL,WIND,CHARGE,323,80,15,14,72,62,33
+2000700159, Ryu Jang-mi,FEMALE,23,GEUMCHEON,NORMAL,WIND,CHARGE,244,62,10,7,62,31,50
+2000700160, Yang Ju-yeong,FEMALE,19,GEUMCHEON,RARE,WIND,SUPPORT,498,121,21,22,65,44,49
+2000700161, Kwon Ji-u,FEMALE,19,GEUMCHEON,RARE,WIND,CHARGE,468,132,25,21,65,44,42
+2000700162, Kwon Ji-a,FEMALE,20,GEUMCHEON,HIGH RARE,WIND,CRUSH,792,200,39,30,65,77,25
+2000700163, Jeong Hye-won,FEMALE,18,GEUMCHEON,NORMAL,WIND,CHARGE,272,68,6,6,43,42,71
+2000700164, Jeong Hye-jin,FEMALE,16,GEUMCHEON,NORMAL,WIND,DEFENSE,263,45,6,7,55,38,81
+2000700165, Lim Gyu-ri,FEMALE,18,GEUMCHEON,ULTRA RARE,ICE,CRUSH,2203,580,78,60,65,78,62
+2000700166, Yang Yu-yeong,FEMALE,22,GEUMCHEON,HIGH RARE,WIND,CHARGE,790,216,44,29,75,65,31
+1000300056, Seo Tae-u,MALE,25,GANGSEO,SUPER RARE,ICE,CRUSH,1357,420,60,45,75,25,13
+1000300057, Kim Ja-geun,MALE,21,GANGSEO,NORMAL,WIND,DEFENSE,192,56,6,8,44,25,35
+1000300058, Han Seok-yeol,MALE,27,GANGSEO,NORMAL,FIRE,CHARGE,118,33,6,5,32,16,15
+1000300059, Yun Dong-hun,MALE,23,GANGSEO,NORMAL,WIND,CHARGE,77,32,5,5,15,8,9
+1000300060, An Yong-tae,MALE,19,GANGSEO,RARE,FIRE,CHARGE,498,133,27,26,74,44,42
+1000300061, Pyo Jeong-jae,MALE,16,GANGSEO,NORMAL,WIND,DEFENSE,191,64,6,11,65,13,28
+1000300062, Jang Dong-man,MALE,18,GANGSEO,NORMAL,ICE,CHARGE,287,89,14,13,78,44,19
+1000300063, So Seok-jun,MALE,17,GANGSEO,NORMAL,WIND,DEFENSE,186,45,7,8,55,16,47
+1000300064, Jeon Seong-guk,MALE,19,GANGSEO,NORMAL,WIND,CHARGE,211,77,13,12,77,16,12
+1000300065, Yu Hyeong-su,MALE,21,GANGSEO,NORMAL,ICE,CHARGE,236,88,12,11,56,33,12
+2000300066, Yun Jeong-ha,FEMALE,19,GANGSEO,NORMAL,WIND,CHARGE,214,65,9,8,65,12,52
+1000300067, Park Eon-seok,MALE,20,GANGSEO,RARE,WIND,CHARGE,472,144,27,23,82,30,24
+2000300068, Kim Hui-geon,FEMALE,18,GANGSEO,NORMAL,WIND,CHARGE,92,32,6,5,12,16,11
+2000300069, Kim Hyeon-jin,FEMALE,16,GANGSEO,NORMAL,FIRE,DEFENSE,199,85,10,14,65,12,13
+1000300070, Bae Seung-gyu,MALE,19,GANGSEO,RARE,WIND,CHARGE,462,144,29,25,65,44,12
+1000300071, Ku Seong-won,MALE,17,GANGSEO,NORMAL,FIRE,CHARGE,230,77,14,13,88,21,11
+1000300072, Gwak Myeong-gu,MALE,16,GANGSEO,NORMAL,ICE,DEFENSE,120,43,6,10,44,6,14
+1000300073, Seo Yeong-seok,MALE,21,GANGSEO,RARE,ICE,DEFENSE,445,112,12,27,77,45,31
+1000300074, Ju Yeon-uk,MALE,23,GANGSEO,NORMAL,WIND,CHARGE,269,78,15,11,80,44,12
+1000300075, Go Han-hong,MALE,25,GANGSEO,NORMAL,ICE,CHARGE,155,44,10,6,64,16,11
+1000300076, Gwak Jae-jun,MALE,18,GANGSEO,NORMAL,FIRE,CHARGE,198,90,15,13,82,6,1
+1000300077, Jeon Ho-yeong,MALE,19,GANGSEO,NORMAL,WIND,CHARGE,180,78,15,9,66,12,3
+1000300078, Yeom Sang-hwi,MALE,22,GANGSEO,NORMAL,FIRE,CHARGE,225,99,15,6,89,13,5
+1000300079, Yeom Tae-yeong,MALE,21,GANGSEO,NORMAL,WIND,DEFENSE,219,88,10,13,85,13,11
+2000300080, Jang A-yu,FEMALE,16,GANGSEO,HIGH RARE,WIND,CRUSH,897,215,48,42,78,56,70
+2000300081, Jang Se-yu,FEMALE,17,GANGSEO,HIGH RARE,WIND,CHARGE,854,205,47,39,75,60,78
+2000300082, Choe Ji-yeon,FEMALE,18,GANGSEO,SUPER RARE,ICE,DISTURB,1416,350,45,45,55,76,74
+2000300083, Lim Na-ri,FEMALE,17,GANGSEO,ULTRA RARE,FIRE,CRUSH,2233,580,75,65,74,55,72
+2000800170, Ye Yu-na,FEMALE,15,NOWON,NORMAL,ICE,DEFENSE,332,77,8,14,65,55,72
+2000800171, Ye Yu-jin,FEMALE,17,NOWON,NORMAL,WIND,DEFENSE,206,44,5,7,32,21,82
+2000800172, Sin Ji-a,FEMALE,17,NOWON,NORMAL,FIRE,CHARGE,299,44,9,8,56,55,80
+2000800173, Kang Yu-yeong,FEMALE,15,NOWON,NORMAL,WIND,CHARGE,179,38,15,6,65,21,28
+2000800174, Bok Seon-a,FEMALE,15,NOWON,NORMAL,WIND,CHARGE,286,65,13,11,65,56,32
+2000800175, Ju Seo-hyeong,FEMALE,15,NOWON,NORMAL,WIND,CHARGE,199,44,9,6,45,23,57
+2000800176, Park Saem,FEMALE,15,NOWON,RARE,WIND,DISTURB,534,128,15,15,56,65,14
+1000800177, Choe Han-gil,MALE,21,NOWON,RARE,WIND,CHARGE,432,121,26,19,65,48,13
+1000800178, Choe Du-gil,MALE,19,NOWON,RARE,WIND,CHARGE,471,119,29,16,77,54,18
+2000800179, Yang Gyeo-ul,FEMALE,17,NOWON,SUPER RARE,FIRE,CRUSH,1428,400,47,35,77,78,75
+1000800180, Song Dong-hyeok,MALE,17,NOWON,HIGH RARE,ICE,CRUSH,868,215,38,32,77,65,79
+2000800181, Ryu Ha-nui,FEMALE,17,NOWON,HIGH RARE,WIND,DISTURB,855,195,30,30,65,77,9
+1000800182, Bok Gyu-cheol,MALE,19,NOWON,NORMAL,WIND,CHARGE,184,46,7,7,65,23,20
+2000800183, Nam So-yeon,FEMALE,16,NOWON,RARE,WIND,CHARGE,415,110,25,16,65,44,21
+2000800184, Seol Ha-neul,FEMALE,15,NOWON,RARE,WIND,CRUSH,446,115,23,16,65,44,29
+2000800185, Jeong A-yun,FEMALE,15,NOWON,HIGH RARE,WIND,FASCINATION,889,200,32,35,65,80,6
+2000800186, Jeong Da-yun,FEMALE,17,NOWON,SUPER RARE,ICE,CRUSH,1281,348,44,45,66,77,3
+2000800187, Oh Saem-na,FEMALE,16,NOWON,RARE,WIND,CHARGE,439,117,22,18,65,43,42
+2000800188, Sim Beo-deul,FEMALE,16,NOWON,RARE,WIND,CHARGE,402,122,24,20,77,16,24
+1000800189, Jeon Su-yang,MALE,18,NOWON,RARE,ICE,CRUSH,529,144,28,24,85,44,21
+2000800190, Hwang Ji-su,FEMALE,15,NOWON,RARE,FIRE,CHARGE,503,133,25,20,80,41,57
+2000800191, Kim Saet-byeol,FEMALE,16,NOWON,RARE,DARK,DISTURB,694,100,22,19,60,88,6
+1000800192, Go Byeong-heon,MALE,19,NOWON,NORMAL,WIND,DEFENSE,177,45,6,7,44,16,49
+2000800193, Tak Se-eun,FEMALE,17,NOWON,NORMAL,WIND,DEFENSE,177,33,5,5,30,16,77
+2000800194, Hwang Ji-eun,FEMALE,17,NOWON,NORMAL,FIRE,CHARGE,366,77,14,10,65,66,80
+2000800195, Heo Yu-ran,FEMALE,17,NOWON,NORMAL,ICE,CHARGE,230,65,13,6,59,22,54
+2000800196, Pyo Ji-a,FEMALE,16,NOWON,RARE,WIND,SUPPORT,618,121,14,20,65,77,88
+2000800197, Jeong A-ram,FEMALE,17,NOWON,ULTRA RARE,ICE,CRUSH,2186,615,75,55,68,65,77
+1001400252, Tak DK,MALE,17,SEOCHO,HIGH RARE,WIND,CRUSH,798,212,45,25,77,65,13
+2001400253, Ha Jang-mi,FEMALE,17,SEOCHO,RARE,DARK,FASCINATION,706,122,26,16,54,88,6
+2001400254, Tak DH,FEMALE,15,SEOCHO,RARE,FIRE,FASCINATION,494,122,24,21,65,44,16
+1001400255, Mun Dong-hyeok,MALE,17,SEOCHO,NORMAL,WIND,CHARGE,240,65,12,11,70,32,29
+1001400256, Gwak Min-su,MALE,17,SEOCHO,NORMAL,WIND,CHARGE,215,55,10,6,52,34,33
+2001400257, Jo A-rin,FEMALE,16,SEOCHO,NORMAL,FIRE,DEFENSE,142,38,7,5,25,16,41
+1001400258, Bong U-ram,MALE,17,SEOCHO,NORMAL,ICE,CHARGE,164,31,5,6,23,16,72
+2001400259, Seo Ae-jeong,FEMALE,16,SEOCHO,NORMAL,WIND,CHARGE,258,45,10,5,45,48,65
+2001400260, Sin A-yun,FEMALE,17,SEOCHO,NORMAL,FIRE,DEFENSE,323,65,12,10,65,55,72
+2001400261, Sin A-rin,FEMALE,15,SEOCHO,HIGH RARE,FIRE,CHARGE,724,185,35,29,56,66,72
+2001400262, An Da-mi,FEMALE,15,SEOCHO,NORMAL,WIND,DEFENSE,322,55,8,13,68,55,80
+2001400263, Yu A-ri,FEMALE,17,SEOCHO,SUPER RARE,WIND,CRUSH,1427,400,50,45,77,80,6
+2001400264, Yu Na-ri,FEMALE,15,SEOCHO,HIGH RARE,WIND,DEFENSE,757,211,35,35,75,65,11
+2001400265, Hwang Han-gyeol,FEMALE,16,SEOCHO,HIGH RARE,WIND,CHARGE,744,222,40,25,75,60,12
+1001400266, Namgung Hyeong-nam,MALE,17,SEOCHO,RARE,WIND,CHARGE,520,148,30,20,77,65,8
+2001400267, Baek Beo-deul,FEMALE,15,SEOCHO,RARE,DARK,SUPPORT,814,150,15,30,77,77,77
+1001400268, No Jae-beom,MALE,15,SEOCHO,NORMAL,WIND,CHARGE,191,55,8,8,65,23,21
+2001400269, Song Ye-bin,FEMALE,15,SEOCHO,NORMAL,ICE,DEFENSE,317,65,6,11,56,55,80
+2001400270, Yang Je-rim,FEMALE,15,SEOCHO,HIGH RARE,WIND,CHARGE,794,215,35,30,70,65,72
+1001400271, Jeon Jung-hyeok,MALE,16,SEOCHO,HIGH RARE,FIRE,DEFENSE,875,245,25,40,85,65,80
+1001400272, Jeong Ji-seok,MALE,17,SEOCHO,NORMAL,WIND,CHARGE,294,88,12,11,80,42,32
+1001400273, Kang Cheol-ha,MALE,17,SEOCHO,RARE,WIND,CHARGE,424,122,28,19,75,33,12
+1001400274, Jo Ju-yeol,MALE,16,SEOCHO,RARE,ICE,DEFENSE,433,121,15,18,77,43,21
+2001400275, Yang So-yeong,FEMALE,16,SEOCHO,NORMAL,WIND,DEFENSE,286,77,11,12,65,44,45
+2001400276, An Ji-yeon,FEMALE,16,SEOCHO,RARE,WIND,CRUSH,501,131,27,16,44,55,78
+2001400277, An Ju-yeon,FEMALE,18,SEOCHO,RARE,WIND,CHARGE,544,121,29,19,65,65,87
+2001400278, Ju Seo-yeong,FEMALE,18,SEOCHO,NORMAL,WIND,DEFENSE,187,77,11,10,44,16,25
+2001400279, Yun Mideum,FEMALE,18,SEOCHO,SUPER RARE,WIND,CRUSH,1431,350,48,45,77,75,80
+2000900199, Heo Jin-seo,FEMALE,15,DOBONG,RARE,ICE,CRUSH,566,115,28,25,88,70,13
+2000900200, Jeong Yeong-a,FEMALE,15,DOBONG,NORMAL,WIND,DEFENSE,292,44,6,11,52,55,78
+2000900201, Ha Yun-ha,FEMALE,15,DOBONG,NORMAL,FIRE,CHARGE,267,77,13,11,70,44,21
+2000900202, Choe Yu-an,FEMALE,15,DOBONG,NORMAL,ICE,CHARGE,310,80,15,9,77,65,13
+2000900203, Kwon Ye-gang,FEMALE,15,DOBONG,NORMAL,FIRE,DEFENSE,405,80,10,13,77,78,82
+2000900204, Kwon Ye-jin,FEMALE,17,DOBONG,RARE,WIND,CRUSH,632,122,30,20,75,80,80
+2000900205, Yang Seo-jin,FEMALE,14,DOBONG,RARE,ICE,CHARGE,625,150,27,25,80,78,75
+2000900206, Song Ji-a,FEMALE,14,DOBONG,HIGH RARE,ICE,DISTURB,910,180,40,30,75,80,6
+2000900207, Song Ji-eun,FEMALE,14,DOBONG,HIGH RARE,DARK,CRUSH,985,233,48,25,80,92,2
+2000900208, Lee Mit-eum,FEMALE,15,DOBONG,NORMAL,WIND,DEFENSE,225,65,9,11,65,33,19
+2000900209, Hwang Eun-chae,FEMALE,14,DOBONG,NORMAL,WIND,SUPPORT,348,65,8,12,70,45,88
+2000900210, Hwang Eun-a,FEMALE,14,DOBONG,NORMAL,LIGHT,SUPPORT,652,88,12,15,77,85,90
+2000900211, Yun Tae-hui,FEMALE,15,DOBONG,NORMAL,WIND,CHARGE,373,77,15,10,72,66,81
+2000900212, Oh Han-Seol,FEMALE,14,DOBONG,RARE,WIND,SUPPORT,660,145,25,28,77,65,80
+2000900213, Kim Mi-Yoon,FEMALE,15,DOBONG,NORMAL,WIND,DEFENSE,356,78,10,12,55,70,73
+2000900214, Kwon Ye-Rhi,FEMALE,18,DOBONG,HIGH RARE,WIND,CRUSH,846,200,40,35,80,55,72
+2000900215, Oh Soel-Hoa,FEMALE,18,DOBONG,SUPER RARE,ICE,CRUSH,1507,450,48,38,78,80,75
