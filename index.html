@@ -5,24 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VR 이상형 월드컵 Beta</title>
   <!-- Favicon -->
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="favicon.png">
-<link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    body { font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif; background-size: cover; background-position: center; background-attachment: fixed; }
+    body {
+      font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
     .overlay { background: rgba(0,0,0,0.72); position: absolute; inset: 0; z-index: 1; }
+    video { pointer-events: none; }
   </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NP3VPPBRKL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NP3VPPBRKL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP3VPPBRKL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NP3VPPBRKL');
+  </script>
 </head>
 <body id="body" class="text-white min-h-screen relative">
 
@@ -30,7 +39,16 @@
   <div id="start-screen" class="min-h-screen relative">
     <div class="overlay"></div>
     <div class="max-w-2xl mx-auto px-6 text-center relative z-10 pt-16">
-      <img src="https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/img/stage_bg/title.png" class="mx-auto mb-10 max-w-md" alt="Title">
+      <!-- 메인 타이틀 영상 (음소거 + 자동재생 + 루프) -->
+      <video 
+        src="https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/wcup_main.mp4"
+        class="mx-auto mb-10 max-w-md w-full rounded-2xl"
+        autoplay
+        muted
+        loop
+        playsinline
+        style="max-height: 280px; object-fit: contain;">
+      </video>
 
       <div class="mb-8">
         <div class="text-xs font-semibold tracking-widest text-violet-300 mb-4">성별 선택</div>
@@ -269,11 +287,12 @@
             <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
             <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${historyHTML}</div>
           </div>
-<button
-  onclick="location.reload();"
-  class="mt-12 px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl">
-  다시 시작하기
-</button>        </div>
+          <button
+            onclick="location.reload();"
+            class="mt-12 px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl">
+            다시 시작하기
+          </button>
+        </div>
       `;
     }
 
@@ -389,7 +408,30 @@
       }
     }
 
-    document.addEventListener('contextmenu', e => { e.preventDefault(); alert("마우스 오른쪽 버튼은 사용할 수 없습니다."); });
+    // ===== 우클릭 / 개발자도구 / 소스보기 등 차단 =====
+    document.addEventListener('contextmenu', e => {
+      e.preventDefault();
+      alert("마우스 오른쪽 버튼은 사용할 수 없습니다.");
+    });
+
+    document.addEventListener('keydown', e => {
+      // F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S, Ctrl+P 차단
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'i', 'j', 'c'].includes(e.key)) ||
+        (e.ctrlKey && ['u', 'U', 's', 'S', 'p', 'P'].includes(e.key)) ||
+        (e.metaKey && e.altKey && ['I', 'J', 'C', 'i', 'j', 'c'].includes(e.key)) // Mac
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+        alert("이 기능은 사용할 수 없습니다.");
+        return false;
+      }
+    });
+
+    // 텍스트 선택 / 드래그 방지
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
 
     window.onload = () => {
       setBackground('title');
@@ -398,7 +440,5 @@
       document.getElementById('start-btn').onclick = startGame;
     };
   </script>
-    <!-- 기존 내용들 -->
-
 </body>
 </html>
