@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐릭터 기억력 카드 게임</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif; }
+    .card { perspective: 800px; }
+    .card-inner { position: relative; width: 100%; height: 100%; transition: transform .45s; transform-style: preserve-3d; }
+    .card.flipped .card-inner { transform: rotateY(180deg); }
+    .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: .9rem; overflow: hidden; }
+    .back-face { transform: rotateY(180deg); }
+    .card.matched .back-face { box-shadow: 0 0 0 3px #34d399; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white min-h-screen select-none">
+  <div class="max-w-3xl mx-auto px-3 py-4">
+    <div class="flex items-center justify-between mb-3">
+      <h1 class="text-xl md:text-2xl font-black">🧠 기억력 카드 게임</h1>
+      <a href="index.html" class="text-sm text-zinc-400 hover:text-emerald-400">← 이상형 월드컵</a>
+    </div>
+
+    <!-- 시작 화면 -->
+    <section id="start-screen" class="text-center">
+      <p class="text-zinc-400 mb-6">같은 캐릭터 두 장을 찾아 짝을 맞추세요. 레벨이 오를수록 카드가 늘고 시간은 빠듯해져요.</p>
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <div class="bg-black/60 border border-white/15 rounded-2xl p-4"><div class="text-zinc-400 text-sm">최고 레벨</div><div id="best-level" class="text-3xl font-black text-emerald-400">-</div></div>
+        <div class="bg-black/60 border border-white/15 rounded-2xl p-4"><div class="text-zinc-400 text-sm">최고 점수</div><div id="best-score" class="text-3xl font-black text-emerald-400">-</div></div>
+      </div>
+      <button id="start-btn" disabled class="w-full md:w-auto px-12 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 disabled:opacity-40 text-black text-xl font-bold">불러오는 중...</button>
+      <div class="mt-8 text-left">
+        <div class="text-zinc-400 text-sm mb-2">최근 기록</div>
+        <ul id="history" class="space-y-2"></ul>
+      </div>
+    </section>
+
+    <!-- 게임 화면 -->
+    <section id="game-screen" class="hidden">
+      <div class="grid grid-cols-4 gap-2 text-center mb-3 text-sm">
+        <div class="bg-black/60 rounded-xl py-2"><div class="text-zinc-400">레벨</div><div id="hud-level" class="font-bold text-lg">1</div></div>
+        <div class="bg-black/60 rounded-xl py-2"><div class="text-zinc-400">시간</div><div id="hud-time" class="font-bold text-lg">0</div></div>
+        <div class="bg-black/60 rounded-xl py-2"><div class="text-zinc-400">이동</div><div id="hud-moves" class="font-bold text-lg">0</div></div>
+        <div class="bg-black/60 rounded-xl py-2"><div class="text-zinc-400">점수</div><div id="hud-score" class="font-bold text-lg text-emerald-400">0</div></div>
+      </div>
+      <div class="h-1.5 bg-white/10 rounded-full mb-4 overflow-hidden"><div id="time-bar" class="h-full bg-emerald-400 transition-all"></div></div>
+      <div id="board" class="grid gap-2 mx-auto"></div>
+    </section>
+  </div>
+
+  <!-- 결과 오버레이 -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+    <div class="bg-zinc-900 border border-emerald-400/40 rounded-3xl p-8 text-center w-full max-w-sm">
+      <div id="ov-title" class="text-3xl font-black mb-2"></div>
+      <div id="ov-text" class="text-zinc-300 mb-6"></div>
+      <button id="ov-btn" class="w-full py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black text-xl font-bold"></button>
+      <button id="ov-home" class="w-full mt-3 py-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20">처음으로</button>
+    </div>
+  </div>
+
+  <script>
+    const BASE = "https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/";
+    const CSV_URL = BASE + "VR_DATA.csv";
+
+    // ===== 기록 저장 모듈 (나중에 Supabase/Firebase로 교체 시 이 객체만 바꾸면 됨) =====
+    const RecordStore = (() => {
+      const KEY = 'memoryGameRecords.v1';
+      const empty = () => ({ bestLevel: 0, bestScore: 0, history: [] });
+      const read = () => { try { return { ...empty(), ...JSON.parse(localStorage.getItem(KEY)) }; } catch { return empty(); } };
+      return {
+        async load() { return read(); },
+        async saveRun({ level, score, time }) {
+          const r = read();
+          r.bestLevel = Math.max(r.bestLevel, level);
+          r.bestScore = Math.max(r.bestScore, score);
+          r.history = [{ level, score, time, date: new Date().toISOString() }, ...r.history].slice(0, 5);
+          localStorage.setItem(KEY, JSON.stringify(r));
+          return r;
+        }
+      };
+    })();
+
+    async function loadCSVData() {
+      const text = await (await fetch(CSV_URL + '?t=' + Date.now())).text();
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(',').map(h => h.trim());
+      return lines.slice(1).filter(l => l.trim()).map(l => {
+        const v = l.split(',').map(x => x.trim().replace(/^"|"$/g, ''));
+        const o = {}; headers.forEach((h, i) => o[h] = v[i] || ''); return o;
+      }).filter(o => o.id && (o['이름'] || o.name));
+    }
+
+    const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+    const $ = id => document.getElementById(id);
+
+    // 레벨 설정: 1레벨 3쌍, 레벨마다 1쌍 증가(최대 18쌍), 쌍당 시간은 점점 줄어듦
+    function levelConfig(level) {
+      const pairs = Math.min(level + 2, 18, data.length);
+      const perPair = Math.max(2.5, 6 - (level - 1) * 0.4);
+      const cards = pairs * 2;
+      const cols = cards <= 6 ? 3 : cards <= 16 ? 4 : cards <= 30 ? 5 : 6;
+      return { pairs, cols, timeLimit: Math.ceil(pairs * perPair) + 5 };
+    }
+
+    let data = [], state = null, timer = null;
+
+    async function refreshStart() {
+      const r = await RecordStore.load();
+      $('best-level').textContent = r.bestLevel || '-';
+      $('best-score').textContent = r.bestScore || '-';
+      $('history').innerHTML = r.history.length ? r.history.map(h =>
+        `<li class="flex justify-between bg-black/60 border border-white/10 rounded-xl px-4 py-2 text-sm"><span>레벨 <b class="text-emerald-400">${h.level}</b> · ${h.score}점 · ${h.time}초</span><span class="text-zinc-500">${new Date(h.date).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span></li>`
+      ).join('') : '<li class="text-zinc-500 text-sm">아직 기록이 없어요.</li>';
+    }
+
+    function startGame() {
+      state = { level: 1, score: 0, totalTime: 0 };
+      $('start-screen').classList.add('hidden'); $('game-screen').classList.remove('hidden');
+      startLevel();
+    }
+
+    function startLevel() {
+      const cfg = levelConfig(state.level);
+      Object.assign(state, { cfg, moves: 0, matched: 0, open: [], lock: false, timeLeft: cfg.timeLimit, elapsed: 0 });
+      const picks = shuffle(data).slice(0, cfg.pairs);
+      const deck = shuffle([...picks, ...picks]);
+      const board = $('board');
+      board.style.gridTemplateColumns = `repeat(${cfg.cols}, minmax(0, 1fr))`;
+      board.style.maxWidth = (cfg.cols * 130) + 'px';
+      board.innerHTML = '';
+      deck.forEach(p => {
+        const name = p['이름'] || p.name;
+        const c = document.createElement('div');
+        c.className = 'card aspect-[3/4] cursor-pointer';
+        c.dataset.id = p.id;
+        c.innerHTML = `<div class="card-inner">
+          <div class="face bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/15 flex items-center justify-center text-3xl text-emerald-400/70 font-black">?</div>
+          <div class="face back-face bg-black"><img class="w-full h-full object-cover" alt="${name}" src="${BASE}img/bt_img/${p.id}.jpg">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent text-[11px] md:text-xs font-bold px-1 pb-1 pt-4 truncate">${name}</div></div></div>`;
+        const img = c.querySelector('img');
+        img.onerror = () => { img.onerror = null; img.src = `${BASE}img/bt_img/${p.id}.png`; };
+        c.onclick = () => flip(c);
+        board.appendChild(c);
+      });
+      updateHud();
+      clearInterval(timer);
+      timer = setInterval(() => {
+        state.timeLeft--; state.elapsed++; updateHud();
+        if (state.timeLeft <= 0) gameOver();
+      }, 1000);
+    }
+
+    function updateHud() {
+      $('hud-level').textContent = state.level;
+      $('hud-time').textContent = state.timeLeft;
+      $('hud-moves').textContent = state.moves;
+      $('hud-score').textContent = state.score;
+      const pct = Math.max(0, state.timeLeft / state.cfg.timeLimit * 100);
+      $('time-bar').style.width = pct + '%';
+      $('time-bar').className = 'h-full transition-all ' + (pct < 25 ? 'bg-red-500' : 'bg-emerald-400');
+    }
+
+    function flip(c) {
+      if (state.lock || c.classList.contains('flipped')) return;
+      c.classList.add('flipped');
+      state.open.push(c);
+      if (state.open.length < 2) return;
+      state.moves++;
+      const [a, b] = state.open; state.open = [];
+      if (a.dataset.id === b.dataset.id) {
+        a.classList.add('matched'); b.classList.add('matched');
+        state.matched++; state.score += 100;
+        updateHud();
+        if (state.matched === state.cfg.pairs) levelClear();
+      } else {
+        state.lock = true; updateHud();
+        setTimeout(() => { a.classList.remove('flipped'); b.classList.remove('flipped'); state.lock = false; }, 800);
+      }
+    }
+
+    function showOverlay(title, text, btnText, onBtn) {
+      $('ov-title').innerHTML = title; $('ov-text').innerHTML = text; $('ov-btn').textContent = btnText;
+      $('ov-btn').onclick = () => { $('overlay').classList.add('hidden'); onBtn(); };
+      $('overlay').classList.remove('hidden');
+    }
+
+    function levelClear() {
+      clearInterval(timer);
+      const bonus = state.timeLeft * 10 + Math.max(0, state.cfg.pairs * 2 - state.moves) * 20;
+      state.score += bonus; state.totalTime += state.elapsed; updateHud();
+      setTimeout(() => showOverlay(
+        `<span class="text-emerald-400">레벨 ${state.level} 클리어!</span>`,
+        `이동 ${state.moves}회 · 남은 시간 ${state.timeLeft}초<br>보너스 +${bonus} · 총점 <b>${state.score}</b>`,
+        '다음 레벨 ▶', () => { state.level++; startLevel(); }), 500);
+    }
+
+    async function gameOver() {
+      clearInterval(timer); state.lock = true;
+      state.totalTime += state.elapsed;
+      const reached = state.level;
+      const r = await RecordStore.saveRun({ level: reached, score: state.score, time: state.totalTime });
+      const best = r.bestScore === state.score && state.score > 0 ? '<br><span class="text-emerald-400">🏆 최고 점수!</span>' : '';
+      showOverlay('<span class="text-red-400">시간 초과!</span>',
+        `도달 레벨 <b>${reached}</b> · 점수 <b>${state.score}</b>${best}`, '다시 하기', startGame);
+    }
+
+    $('ov-home').onclick = async () => {
+      clearInterval(timer);
+      if (state && !state.lock && state.matched !== undefined && $('ov-btn').textContent.startsWith('다음')) {
+        // 클리어 화면에서 그만두면 그때까지의 기록 저장
+        await RecordStore.saveRun({ level: state.level, score: state.score, time: state.totalTime });
+      }
+      $('overlay').classList.add('hidden');
+      $('game-screen').classList.add('hidden'); $('start-screen').classList.remove('hidden');
+      refreshStart();
+    };
+
+    (async () => {
+      refreshStart();
+      try {
+        data = await loadCSVData();
+        $('start-btn').disabled = false; $('start-btn').textContent = '게임 시작';
+        $('start-btn').onclick = startGame;
+      } catch (e) { $('start-btn').textContent = '데이터를 불러오지 못했어요'; }
+    })();
+  </script>
+</body>
+</html>
