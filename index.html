@@ -67,6 +67,7 @@
       <button id="start-btn" class="w-full py-6 text-2xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 active:scale-[0.985] transition-all rounded-3xl disabled:opacity-40 shadow-xl mb-6" disabled>
         게임 시작하기
       </button>
+      <a id="memory-link" href="memory.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-black/60 border border-white/20 hover:border-emerald-400 text-sm md:text-base text-zinc-200 hover:text-emerald-300 transition-all backdrop-blur-md">🃏 캐릭터 짝 맞추기 게임</a>
     </div>
   </div>
 
@@ -222,6 +223,27 @@
     }
 
     function handleChoice(winner, loser) {
+      if (document.getElementById('confirm-overlay')) return;
+      const name = winner['이름'] || winner.name || '-';
+      const ov = document.createElement('div');
+      ov.id = 'confirm-overlay';
+      ov.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200] p-4";
+      ov.innerHTML = `<div class="text-center w-full max-w-[600px]">
+          <div class="text-emerald-400 text-xl md:text-2xl mb-4">이 선택으로 할까요?</div>
+          <img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[60vh] max-w-full rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" alt="${name}">
+          <div class="text-3xl md:text-4xl font-bold mt-4 text-white">${name}</div>
+          <div class="flex gap-4 justify-center mt-6">
+            <button id="confirm-cancel" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xl font-bold">취소</button>
+            <button id="confirm-ok" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black text-xl font-bold">확인</button>
+          </div></div>`;
+      const img = ov.querySelector('img');
+      img.onerror = () => { img.onerror = null; img.src = `${BASE}img/bt_img/${winner.id}.png`; };
+      ov.querySelector('#confirm-cancel').onclick = () => ov.remove();
+      ov.querySelector('#confirm-ok').onclick = () => { ov.remove(); confirmChoice(winner, loser); };
+      document.body.appendChild(ov);
+    }
+
+    function confirmChoice(winner, loser) {
       nextRoundPlayers.push(winner);
       showSelectedHighlight(winner);
       setTimeout(showNextMatchup, 1300);
