@@ -222,6 +222,27 @@
     }
 
     function handleChoice(winner, loser) {
+      if (document.getElementById('confirm-overlay')) return;
+      const name = winner['이름'] || winner.name || '-';
+      const ov = document.createElement('div');
+      ov.id = 'confirm-overlay';
+      ov.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200] p-4";
+      ov.innerHTML = `<div class="text-center w-full max-w-[600px]">
+          <div class="text-emerald-400 text-xl md:text-2xl mb-4">이 선택으로 할까요?</div>
+          <img src="${BASE}img/bt_img/${winner.id}.jpg" class="max-h-[60vh] max-w-full rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" alt="${name}">
+          <div class="text-3xl md:text-4xl font-bold mt-4 text-white">${name}</div>
+          <div class="flex gap-4 justify-center mt-6">
+            <button id="confirm-cancel" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xl font-bold">취소</button>
+            <button id="confirm-ok" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black text-xl font-bold">확인</button>
+          </div></div>`;
+      const img = ov.querySelector('img');
+      img.onerror = () => { img.onerror = null; img.src = `${BASE}img/bt_img/${winner.id}.png`; };
+      ov.querySelector('#confirm-cancel').onclick = () => ov.remove();
+      ov.querySelector('#confirm-ok').onclick = () => { ov.remove(); confirmChoice(winner, loser); };
+      document.body.appendChild(ov);
+    }
+
+    function confirmChoice(winner, loser) {
       nextRoundPlayers.push(winner);
       showSelectedHighlight(winner);
       setTimeout(showNextMatchup, 1300);
