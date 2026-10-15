@@ -136,10 +136,9 @@
         c.dataset.id = p.id;
         c.innerHTML = `<div class="card-inner">
           <div class="face bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/15 flex items-center justify-center text-3xl text-emerald-400/70 font-black">?</div>
-          <div class="face back-face bg-black"><img class="w-full h-full object-cover" alt="${name}" src="${BASE}img/bt_img/${p.id}.jpg">
+          <div class="face back-face bg-black"><img class="w-full h-full object-cover" alt="${name}" src="${BASE}img/bt_img/${p.id}.webp">
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent text-[11px] md:text-xs font-bold px-1 pb-1 pt-4 truncate">${name}</div></div></div>`;
         const img = c.querySelector('img');
-        img.onerror = () => { img.onerror = null; img.src = `${BASE}img/bt_img/${p.id}.png`; };
         c.onclick = () => flip(c);
         board.appendChild(c);
       });
