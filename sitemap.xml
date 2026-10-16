@@ -4,4 +4,8 @@
     <loc>https://wcup.mbbs.kr/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://wcup.mbbs.kr/memory.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
