@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+.dev.vars
+img/og/
+teaser_art/
+worker-configuration.d.ts
+*.log

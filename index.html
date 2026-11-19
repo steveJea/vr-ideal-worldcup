@@ -2,483 +2,153 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR 이상형 월드컵 | Violence Royale 캐릭터 토너먼트</title>
-  <!-- SEO -->
-  <meta name="description" content="Violence Royale 시리즈 캐릭터들로 즐기는 이상형 월드컵. 두 캐릭터 중 마음에 드는 쪽을 골라 토너먼트를 끝까지 이어가고, 나만의 최애 캐릭터를 찾아보세요. PC·모바일에서 바로 플레이.">
-  <meta name="keywords" content="VR 이상형 월드컵, 이상형 월드컵, 캐릭터 월드컵, 토너먼트, 최애 찾기, Violence Royale, 웹게임">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VR 이상형 월드컵</title>
+  <meta name="description" content="VR 이상형 월드컵. 두 명 중 마음이 가는 쪽을 골라, 마지막에 남는 최애를 확인해 보세요.">
+  <meta name="theme-color" content="#10080b">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#0b0b12">
-  <link rel="canonical" href="https://wcup.mbbs.kr/">
+  <link rel="canonical" href="__ORIGIN__/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VR 이상형 월드컵">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="VR 이상형 월드컵 | Violence Royale 캐릭터 토너먼트">
-  <meta property="og:description" content="Violence Royale 시리즈 캐릭터들로 즐기는 이상형 월드컵. 두 캐릭터 중 마음에 드는 쪽을 골라 토너먼트를 끝까지 이어가고, 나만의 최애 캐릭터를 찾아보세요. PC·모바일에서 바로 플레이.">
-  <meta property="og:url" content="https://wcup.mbbs.kr/">
-  <meta property="og:image" content="https://wcup.mbbs.kr/img/og.jpg">
+  <meta property="og:title" content="VR 이상형 월드컵">
+  <meta property="og:description" content="두 명 중 마음이 가는 쪽을 골라, 마지막에 남는 최애를 확인해 보세요.">
+  <meta property="og:url" content="__ORIGIN__/">
+  <meta property="og:image" content="__ORIGIN__/img/teaser/og.jpg?v=3">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="임유리, VR 이상형 월드컵">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VR 이상형 월드컵 | Violence Royale 캐릭터 토너먼트">
-  <meta name="twitter:description" content="Violence Royale 시리즈 캐릭터들로 즐기는 이상형 월드컵. 두 캐릭터 중 마음에 드는 쪽을 골라 토너먼트를 끝까지 이어가고, 나만의 최애 캐릭터를 찾아보세요. PC·모바일에서 바로 플레이.">
-  <meta name="twitter:image" content="https://wcup.mbbs.kr/img/og.jpg">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "VR 이상형 월드컵", "description": "Violence Royale 시리즈 캐릭터들로 즐기는 이상형 월드컵. 두 캐릭터 중 마음에 드는 쪽을 골라 토너먼트를 끝까지 이어가고, 나만의 최애 캐릭터를 찾아보세요. PC·모바일에서 바로 플레이.", "url": "https://wcup.mbbs.kr/", "image": "https://wcup.mbbs.kr/img/og.jpg", "inLanguage": "ko", "genre": "Casual", "gamePlatform": ["Web browser", "PC", "Mobile"], "applicationCategory": "Game", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}</script>
-  <!-- Favicon -->
+  <meta name="twitter:title" content="VR 이상형 월드컵">
+  <meta name="twitter:description" content="두 명 중 마음이 가는 쪽을 골라, 마지막에 남는 최애를 확인해 보세요.">
+  <meta name="twitter:image" content="__ORIGIN__/img/teaser/og.jpg?v=3">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <script src="js/id-alias.js"></script><!-- 카드 ID 변경: 옛 ID 기록(localStorage) 1회 변환 -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .overlay { background: rgba(0,0,0,0.72); position: absolute; inset: 0; z-index: 1; }
-    video { pointer-events: none; }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP3VPPBRKL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NP3VPPBRKL');
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css?v=3">
+  <link rel="preload" as="image" href="img/teaser/title.webp?v=3" type="image/webp">
 </head>
-<body id="body" class="text-white min-h-screen relative">
+<body>
+  <section id="view-home" class="home">
+    <div class="hero">
+      <picture class="hero-photos">
+        <source srcset="img/teaser/title.webp?v=3" type="image/webp">
+        <img id="cover-a" alt="임유리" width="1080" height="1920" src="img/teaser/title.png?v=3">
+      </picture>
+      <header class="hero-bar">
+        <span class="brand">VR</span>
+        <button type="button" id="open-rank" class="ghost">전체 순위</button>
+      </header>
+    </div>
+    <div class="home-panel">
+      <div class="hero-copy">
+        <p class="key-name">임유리</p>
+        <p class="eyebrow">이상형 월드컵</p>
+        <h1>마지막에 <br>남는 한 사람</h1>
+        <p class="lead">마주 선 두 사람 가운데, 더 오래 보고 싶은 쪽을 고릅니다.</p>
+      </div>
+      <form id="setup" class="setup">
+        <fieldset>
+          <legend>누구를 만날까요</legend>
+          <div class="segment" id="gender">
+            <button type="button" data-gender="female" aria-pressed="true">여성</button>
+            <button type="button" data-gender="male" aria-pressed="false">남성</button>
+            <button type="button" data-gender="all" aria-pressed="false">모두</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>토너먼트 규모</legend>
+          <div class="sizes" id="sizes">
+            <button type="button" data-size="16" aria-pressed="true"><b>16</b><span>강</span></button>
+            <button type="button" data-size="32" aria-pressed="false"><b>32</b><span>강</span></button>
+            <button type="button" data-size="64" aria-pressed="false"><b>64</b><span>강</span></button>
+          </div>
+        </fieldset>
+        <p id="roster-note" class="note">명단을 불러오는 중입니다.</p>
+        <button id="start" class="cta" type="submit" disabled>명단을 불러오는 중</button>
+      </form>
+      <footer class="colophon">
+        <section id="channels" hidden>
+          <h2>공식 채널</h2>
+          <div id="channel-list" class="channels"></div>
+        </section>
+        <p class="legal">엔터인코드</p>
+      </footer>
+    </div>
+  </section>
 
-  <!-- START SCREEN -->
-  <div id="start-screen" class="min-h-screen relative">
-    <div class="overlay"></div>
-    <div class="max-w-2xl mx-auto px-6 text-center relative z-10 pt-16">
-      <!-- 메인 타이틀 영상 (음소거 + 자동재생 + 루프) -->
-      <video 
-        src="https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/wcup_main.mp4"
-        class="mx-auto mb-10 max-w-md w-full rounded-2xl"
-        autoplay
-        muted
-        loop
-        playsinline
-        style="max-height: 280px; object-fit: contain;">
-      </video>
-
-      <div class="mb-8">
-        <div class="text-xs font-semibold tracking-widest text-violet-300 mb-4">성별 선택</div>
-        <div class="grid grid-cols-3 gap-4" id="gender-buttons">
-          <div data-gender="male" class="gender-btn cursor-pointer border-2 border-slate-700 hover:border-violet-500 bg-black/70 rounded-3xl p-5 transition-all backdrop-blur-md">남성</div>
-          <div data-gender="female" class="gender-btn cursor-pointer border-2 border-slate-700 hover:border-violet-500 bg-black/70 rounded-3xl p-5 transition-all backdrop-blur-md">여성</div>
-          <div data-gender="mix" class="gender-btn cursor-pointer border-2 border-slate-700 hover:border-violet-500 bg-black/70 rounded-3xl p-5 transition-all backdrop-blur-md">혼합</div>
+  <section id="view-match" class="match" hidden>
+    <header class="match-bar">
+      <div class="match-top">
+        <button type="button" id="quit" class="text-btn">나가기</button>
+        <div class="round">
+          <strong id="round-label">16강</strong>
+          <span id="match-count">1 / 8</span>
         </div>
       </div>
+      <div class="meter" aria-hidden="true"><span id="meter-bar"></span></div>
+    </header>
+    <button type="button" class="fighter" id="fighter-a"></button>
+    <div class="vs" aria-hidden="true"><span>VS</span></div>
+    <button type="button" class="fighter" id="fighter-b"></button>
+  </section>
 
-      <div class="mb-8">
-        <div class="text-xs font-semibold tracking-widest text-violet-300 mb-4">토너먼트 규모 선택</div>
-        <div class="grid grid-cols-3 gap-4" id="size-buttons"></div>
+  <section id="view-result" class="result" hidden>
+    <header class="subbar">
+      <button type="button" id="result-home" class="text-btn">처음으로</button>
+      <button type="button" id="result-rank" class="text-btn">전체 순위</button>
+    </header>
+    <p class="eyebrow">내 최애 히로인</p>
+    <h1 id="winner-name"></h1>
+    <ul id="winner-facts" class="facts"></ul>
+    <figure class="poster">
+      <img id="poster" alt="">
+    </figure>
+    <p id="rank-status" class="note"></p>
+    <div class="action-grid">
+      <button type="button" id="share-x">X에 올리기</button>
+      <button type="button" id="copy-link">링크 복사</button>
+      <button type="button" id="native-share">공유하기</button>
+      <button type="button" id="share-kakao" hidden>카카오톡</button>
+    </div>
+    <button type="button" id="again" class="cta" type="button">다시 고르기</button>
+  </section>
+
+  <section id="view-rank" class="rank" hidden>
+    <header class="subbar">
+      <button type="button" id="rank-back" class="text-btn">뒤로</button>
+      <h1>전체 순위</h1>
+    </header>
+    <p class="lead rank-lead">토너먼트에서 1위로 남은 횟수와, 전체 우승 가운데 비율입니다.</p>
+    <p id="rank-total" class="note"></p>
+    <ol id="rank-list" class="rank-list"></ol>
+    <p id="rank-empty" class="note" hidden>아직 집계된 우승이 없습니다.</p>
+    <p id="rank-error" class="note" hidden></p>
+    <button type="button" id="rank-retry" hidden>다시 불러오기</button>
+  </section>
+
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <p id="sheet-title">이 사람으로 갈까요?</p>
+      <img id="sheet-photo" alt="">
+      <strong id="sheet-name"></strong>
+      <div class="sheet-actions">
+        <button type="button" id="sheet-cancel">다시 보기</button>
+        <button type="button" id="sheet-ok">이 사람으로</button>
       </div>
-
-      <button id="start-btn" class="w-full py-6 text-2xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 active:scale-[0.985] transition-all rounded-3xl disabled:opacity-40 shadow-xl mb-6" disabled>
-        게임 시작하기
-      </button>
-      <a id="memory-link" href="memory.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-black/60 border border-white/20 hover:border-emerald-400 text-sm md:text-base text-zinc-200 hover:text-emerald-300 transition-all backdrop-blur-md">🃏 캐릭터 짝 맞추기 게임</a>
     </div>
   </div>
 
-  <!-- GAME SCREEN -->
-  <div id="game-screen" class="hidden min-h-screen relative">
-    <div class="overlay"></div>
-    <div class="max-w-5xl mx-auto px-6 pt-8 pb-16 relative z-10">
-      <div class="flex items-center justify-between mb-8">
-        <div id="round-badge" class="px-6 h-10 flex items-center text-lg font-bold rounded-3xl tracking-wider bg-black/60"></div>
-        <div class="text-sm text-slate-300">
-          남은 후보 <span id="remaining-count" class="font-mono text-3xl font-bold text-white">16</span>명
-        </div>
-      </div>
-      <div id="matchup-container" class="min-h-[560px] flex items-center justify-center"></div>
-    </div>
+  <div id="splash" class="splash" hidden>
+    <p>ROUND</p>
+    <strong id="splash-label"></strong>
   </div>
+  <div id="toast" class="toast" role="status"></div>
 
-  <!-- WINNER SCREEN -->
-  <div id="winner-screen" class="hidden min-h-screen relative">
-    <div class="overlay"></div>
-    <div class="max-w-2xl mx-auto pt-16 px-6 text-center relative z-10"></div>
-  </div>
-
-  <!-- 라운드 전환 -->
-  <div id="round-transition" class="hidden fixed inset-0 bg-black/95 z-[300] flex items-center justify-center">
-    <div id="round-transition-text" class="text-7xl font-black tracking-widest text-white"></div>
-  </div>
-
-  <!-- 프로필 모달 -->
-  <div id="profile-modal" class="hidden fixed inset-0 bg-black/90 z-[400] flex items-center justify-center p-4">
-    <div class="bg-zinc-900 rounded-3xl max-w-md w-full border border-white/20 overflow-hidden relative">
-      <button onclick="closeProfile()" class="absolute top-4 right-4 w-10 h-10 bg-black/60 hover:bg-black rounded-full flex items-center justify-center text-xl z-10">✕</button>
-      <div id="profile-content"></div>
-    </div>
-  </div>
-
-  <script>
-    const BASE = "https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/";
-    const CSV_URL = "https://raw.githubusercontent.com/steveJea/vr-ideal-worldcup/main/VR_DATA.csv";
-
-    const BG = {
-      title: BASE + "img/stage_bg/title.webp",
-      64: BASE + "img/stage_bg/64.webp",
-      32: BASE + "img/stage_bg/32.webp",
-      16: BASE + "img/stage_bg/16.webp",
-      8: BASE + "img/stage_bg/8.webp",
-      4: BASE + "img/stage_bg/4.webp",
-      2: BASE + "img/stage_bg/2.webp",
-      win: BASE + "img/stage_bg/win.webp"
-    };
-
-    let globalData = [];
-    let currentRoundPlayers = [];
-    let nextRoundPlayers = [];
-    let currentRoundName = '';
-    let selectedSize = null;
-    let selectedGender = null;
-    let currentWinner = null;
-
-    function setBackground(key) {
-      document.getElementById('body').style.backgroundImage = `url(${BG[key] || BG.win})`;
-    }
-
-    async function loadCSVData() {
-      const res = await fetch(CSV_URL + '?t=' + Date.now());
-      const text = await res.text();
-      const lines = text.trim().split(/\r?\n/);
-      if (lines.length < 2) return [];
-
-      const headers = lines[0].split(',').map(h => h.trim());
-      const data = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        if (!lines[i].trim()) continue;
-        const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
-        const obj = {};
-        headers.forEach((h, idx) => obj[h] = values[idx] || '');
-        if (obj['이름'] || obj.name) data.push(obj);
-      }
-      return data;
-    }
-
-    function filterByGender(data, mode) {
-      if (mode === 'mix') return data;
-      return data.filter(p => {
-        const g = (p['성별'] || p.gender || '').toString().toLowerCase().trim();
-        if (mode === 'male') return g === 'male' || g === 'm' || g === '남' || g === '남성';
-        if (mode === 'female') return g === 'female' || g === 'f' || g === '여' || g === '여성';
-        return true;
-      });
-    }
-
-    function shuffle(arr) {
-      const a = [...arr];
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-
-    function getRoundName(num) {
-      if (num === 1) return '우승자';
-      const map = {64:'64강',32:'32강',16:'16강',8:'8강',4:'4강',2:'결승'};
-      return map[num] || `${num}강`;
-    }
-
-    function updateStatus() {
-      document.getElementById('remaining-count').textContent = currentRoundPlayers.length + nextRoundPlayers.length;
-      document.getElementById('round-badge').textContent = currentRoundName;
-      const roundKey = currentRoundName === '우승자' ? 'win' : currentRoundName.replace('강','').replace('결승','2');
-      setBackground(roundKey);
-    }
-
-    function createContestantCard(person, onChoose) {
-      const name = person['이름'] || person.name || '-';
-      const id = person.id || 'unknown';
-      const card = document.createElement('div');
-      card.className = `tournament-card group w-full max-w-[360px] bg-black/70 border border-white/30 hover:border-violet-400 rounded-3xl overflow-hidden cursor-pointer shadow-2xl backdrop-blur-md`;
-      card.innerHTML = `
-        <div class="relative">
-          <img src="${BASE}img/bt_img/${id}.webp" class="w-full aspect-[4/3] object-cover" alt="${name}">
-          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <div class="text-white text-3xl font-bold tracking-tight">${name}</div>
-          </div>
-        </div>
-      `;
-      const img = card.querySelector('img');
-      card.addEventListener('click', onChoose);
-      return card;
-    }
-
-    function renderMatchup(container, p1, p2) {
-      container.innerHTML = '';
-      const wrap = document.createElement('div');
-      wrap.className = "flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-[1100px]";
-      const vs = document.createElement('div');
-      vs.innerHTML = `<div class="text-6xl font-black text-white/80 tracking-widest">VS</div>`;
-      wrap.appendChild(createContestantCard(p1, () => handleChoice(p1, p2)));
-      wrap.appendChild(vs);
-      wrap.appendChild(createContestantCard(p2, () => handleChoice(p2, p1)));
-      container.appendChild(wrap);
-    }
-
-    function showSelectedHighlight(winner) {
-      const div = document.createElement('div');
-      div.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200]";
-      div.innerHTML = `<div class="text-center"><div class="text-emerald-400 text-2xl mb-6">선택 완료 ✓</div><img src="${BASE}img/bt_img/${winner.id}.webp" class="max-h-[65vh] rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto"><div class="text-4xl font-bold mt-6 text-white">${winner['이름'] || winner.name}</div></div>`;
-      document.body.appendChild(div);
-      setTimeout(() => div.remove(), 1250);
-    }
-
-    function handleChoice(winner, loser) {
-      if (document.getElementById('confirm-overlay')) return;
-      const name = winner['이름'] || winner.name || '-';
-      const ov = document.createElement('div');
-      ov.id = 'confirm-overlay';
-      ov.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-[200] p-4";
-      ov.innerHTML = `<div class="text-center w-full max-w-[600px]">
-          <div class="text-emerald-400 text-xl md:text-2xl mb-4">이 선택으로 할까요?</div>
-          <img src="${BASE}img/bt_img/${winner.id}.webp" class="max-h-[60vh] max-w-full rounded-3xl shadow-2xl border-4 border-emerald-400 mx-auto" alt="${name}">
-          <div class="text-3xl md:text-4xl font-bold mt-4 text-white">${name}</div>
-          <div class="flex gap-4 justify-center mt-6">
-            <button id="confirm-cancel" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xl font-bold">취소</button>
-            <button id="confirm-ok" class="flex-1 max-w-[180px] py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black text-xl font-bold">확인</button>
-          </div></div>`;
-      const img = ov.querySelector('img');
-      ov.querySelector('#confirm-cancel').onclick = () => ov.remove();
-      ov.querySelector('#confirm-ok').onclick = () => { ov.remove(); confirmChoice(winner, loser); };
-      document.body.appendChild(ov);
-    }
-
-    function confirmChoice(winner, loser) {
-      nextRoundPlayers.push(winner);
-      showSelectedHighlight(winner);
-      setTimeout(showNextMatchup, 1300);
-    }
-
-    async function showNextMatchup() {
-      const container = document.getElementById('matchup-container');
-      if (currentRoundPlayers.length === 0 && nextRoundPlayers.length > 0) {
-        currentRoundPlayers = shuffle(nextRoundPlayers);
-        nextRoundPlayers = [];
-        currentRoundName = getRoundName(currentRoundPlayers.length);
-        updateStatus();
-        const overlay = document.getElementById('round-transition');
-        document.getElementById('round-transition-text').textContent = currentRoundName;
-        overlay.classList.remove('hidden');
-        await new Promise(r => setTimeout(r, 1200));
-        overlay.classList.add('hidden');
-      }
-      if (currentRoundPlayers.length <= 1) {
-        showWinner(currentRoundPlayers[0] || nextRoundPlayers[0]);
-        return;
-      }
-      const p1 = currentRoundPlayers.shift();
-      const p2 = currentRoundPlayers.shift();
-      renderMatchup(container, p1, p2);
-      updateStatus();
-    }
-
-    function showWinner(winner) {
-      currentWinner = winner;
-
-      let hallOfFame = JSON.parse(localStorage.getItem('hallOfFame') || '[]');
-      const exist = hallOfFame.find(w => w.id === winner.id);
-      if (exist) exist.wins++;
-      else hallOfFame.unshift({id: winner.id, name: winner['이름'] || winner.name, wins: 1});
-      localStorage.setItem('hallOfFame', JSON.stringify(hallOfFame));
-
-      document.getElementById('game-screen').classList.add('hidden');
-      const ws = document.getElementById('winner-screen');
-      ws.classList.remove('hidden');
-      setBackground('win');
-
-      let historyHTML = '';
-      hallOfFame.forEach(w => {
-        historyHTML += `
-          <div onclick="showProfileFromHall('${w.id}')" class="flex gap-4 bg-black/60 p-4 rounded-2xl cursor-pointer hover:bg-black/80 transition-all">
-            <img src="${BASE}img/bt_img/${w.id}.webp" class="w-16 h-16 object-cover rounded-xl">
-            <div><div class="font-bold">${w.name}</div><div class="text-emerald-400">${w.wins}회 우승</div></div>
-          </div>
-        `;
-      });
-
-      ws.querySelector('div').innerHTML = `
-        <div class="max-w-2xl mx-auto pt-12 px-6 text-center">
-          <div class="text-7xl mb-4">👑</div>
-          <h2 class="text-6xl font-black mb-3">최종 우승자</h2>
-          <div class="mx-auto w-96 rounded-3xl overflow-hidden border-8 border-yellow-400 my-10 relative">
-            <img src="${BASE}img/bt_img/${winner.id}.webp" class="w-full">
-          </div>
-          <div class="text-5xl font-bold mb-4">${winner['이름'] || winner.name}</div>
-          <button onclick="showProfile()" class="mb-10 w-14 h-14 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-3xl font-bold">?</button>
-          <div class="mt-8">
-            <h3 class="text-xl mb-6 text-violet-300 font-bold">🏆 역대 우승자</h3>
-            <div class="grid grid-cols-1 gap-4 max-h-[380px] overflow-auto">${historyHTML}</div>
-          </div>
-          <button
-            onclick="location.reload();"
-            class="mt-12 px-12 py-5 bg-white text-black font-bold text-xl rounded-3xl">
-            다시 시작하기
-          </button>
-        </div>
-      `;
-    }
-
-    function showProfileFromHall(id) {
-      const person = globalData.find(p => (p.id || p.ID) === id);
-      if (person) {
-        currentWinner = person;
-        showProfile();
-      } else {
-        alert("프로필 정보를 찾을 수 없습니다.");
-      }
-    }
-
-    function showProfile() {
-      if (!currentWinner) return;
-      const person = currentWinner;
-      const name = person['이름'] || person.name || '-';
-      const gender = person['성별'] || person.gender || '-';
-      const region = person['지역'] || person.region || '-';
-      const grade = person['등급'] || person.grade || '-';
-      const cls = person['클래스'] || person.class || '-';
-      const attr = person['속성'] || person.attribute || '-';
-
-      document.getElementById('profile-content').innerHTML = `
-        <div class="p-6">
-          <img src="${BASE}img/bt_img/${person.id}.webp" class="w-full rounded-2xl mb-6">
-          <div class="text-3xl font-bold mb-6">${name}</div>
-          <div class="grid grid-cols-2 gap-4 text-sm">
-            <div><span class="text-zinc-400">성별</span><br>${gender}</div>
-            <div><span class="text-zinc-400">지역</span><br>${region}</div>
-            <div><span class="text-zinc-400">등급</span><br>${grade}</div>
-            <div><span class="text-zinc-400">클래스</span><br>${cls}</div>
-            <div><span class="text-zinc-400">속성</span><br>${attr}</div>
-          </div>
-        </div>
-      `;
-      document.getElementById('profile-modal').classList.remove('hidden');
-    }
-
-    function closeProfile() {
-      document.getElementById('profile-modal').classList.add('hidden');
-    }
-
-    function initTournament(contestants) {
-      currentRoundPlayers = shuffle(contestants);
-      nextRoundPlayers = [];
-      currentRoundName = getRoundName(currentRoundPlayers.length);
-      document.getElementById('start-screen').classList.add('hidden');
-      document.getElementById('game-screen').classList.remove('hidden');
-      setBackground('64');
-      updateStatus();
-      showNextMatchup();
-    }
-
-    function setupGenderButtons() {
-      document.querySelectorAll('.gender-btn').forEach(btn => {
-        btn.onclick = () => {
-          document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('border-violet-500','bg-violet-950'));
-          btn.classList.add('border-violet-500','bg-violet-950');
-          selectedGender = btn.dataset.gender;
-          checkStartReady();
-        };
-      });
-    }
-
-    function setupSizeButtons() {
-      const container = document.getElementById('size-buttons');
-      [16,32,64].forEach(n => {
-        const btn = document.createElement('div');
-        btn.className = `cursor-pointer border-2 border-slate-700 hover:border-violet-500 bg-black/70 rounded-3xl p-8 transition-all backdrop-blur-md`;
-        btn.innerHTML = `<div class="text-5xl font-black">${n}강</div><div class="text-slate-400 mt-2">${n}명</div>`;
-        btn.onclick = () => {
-          document.querySelectorAll('#size-buttons > div').forEach(b => b.classList.remove('border-violet-500','bg-violet-950'));
-          btn.classList.add('border-violet-500','bg-violet-950');
-          selectedSize = n;
-          checkStartReady();
-        };
-        container.appendChild(btn);
-      });
-    }
-
-    function checkStartReady() {
-      document.getElementById('start-btn').disabled = !(selectedGender && selectedSize);
-    }
-
-    async function startGame() {
-      const btn = document.getElementById('start-btn');
-      btn.disabled = true;
-      btn.textContent = "로딩 중...";
-
-      try {
-        globalData = await loadCSVData();
-        let filtered = filterByGender(globalData, selectedGender);
-
-        if (filtered.length < 4) {
-          alert(`선택한 성별(${selectedGender})의 카드가 부족합니다. (${filtered.length}개)`);
-          btn.disabled = false;
-          btn.textContent = "게임 시작하기";
-          return;
-        }
-
-        let size = selectedSize;
-        if (filtered.length < size) size = filtered.length;
-        while (size > 2 && (size & (size - 1)) !== 0) size--;
-        initTournament(shuffle(filtered).slice(0, size));
-      } catch (e) {
-        console.error(e);
-        alert("데이터 로딩 실패");
-        btn.disabled = false;
-        btn.textContent = "게임 시작하기";
-      }
-    }
-
-    // ===== 우클릭 / 개발자도구 / 소스보기 등 차단 =====
-    document.addEventListener('contextmenu', e => {
-      e.preventDefault();
-      alert("마우스 오른쪽 버튼은 사용할 수 없습니다.");
-    });
-
-    document.addEventListener('keydown', e => {
-      // F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S, Ctrl+P 차단
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'i', 'j', 'c'].includes(e.key)) ||
-        (e.ctrlKey && ['u', 'U', 's', 'S', 'p', 'P'].includes(e.key)) ||
-        (e.metaKey && e.altKey && ['I', 'J', 'C', 'i', 'j', 'c'].includes(e.key)) // Mac
-      ) {
-        e.preventDefault();
-        e.stopPropagation();
-        alert("이 기능은 사용할 수 없습니다.");
-        return false;
-      }
-    });
-
-    // 텍스트 선택 / 드래그 방지
-    document.addEventListener('selectstart', e => e.preventDefault());
-    document.addEventListener('dragstart', e => e.preventDefault());
-
-    window.onload = () => {
-      setBackground('title');
-      setupGenderButtons();
-      setupSizeButtons();
-      document.getElementById('start-btn').onclick = startGame;
-    };
-  </script>
-<script src="js/footer.js" data-current="wcup" data-mode="flow"></script>
+  <script src="js/config.js?v=3"></script>
+  <script type="module" src="js/app.js?v=3"></script>
 </body>
 </html>

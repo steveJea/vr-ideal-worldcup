@@ -1,0 +1,22 @@
+{
+  "name": "vr-wcup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "catalog": "node scripts/build-catalog.mjs",
+    "og": "node scripts/build-og.mjs",
+    "og:home": "node scripts/build-og.mjs --home",
+    "dev": "wrangler dev",
+    "migrate:local": "wrangler d1 migrations apply vr-wcup-ranking --local",
+    "test": "node --test tests/*.test.mjs",
+    "types": "wrangler types",
+    "check": "wrangler deploy --dry-run",
+    "deploy:preview": "node scripts/build-catalog.mjs && node scripts/build-og.mjs && wrangler deploy --temporary"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.165.0"
+  }
+}

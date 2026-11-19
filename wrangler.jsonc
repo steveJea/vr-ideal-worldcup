@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "vr-wcup-preview",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-11-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  },
+  // Preview only. Do not add a route or custom domain for wcup.mbbs.kr.
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/", "/index.html", "/api/*", "/r", "/r/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vr-wcup-ranking",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "RATE_SALT": "vr-wcup-public-rate-v1",
+    "MIN_RUN_MS": "2500",
+    "RUNS_PER_HOUR": "30",
+    "WINS_PER_HOUR": "40",
+    "WINDOW_MS": "3600000",
+    "RUN_TTL_MS": "21600000"
+  }
+}
