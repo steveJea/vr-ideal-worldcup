@@ -352,7 +352,6 @@
       const person = currentWinner;
       const name = person['이름'] || person.name || '-';
       const gender = person['성별'] || person.gender || '-';
-      const age = person['나이'] || person.age || '미상';
       const region = person['지역'] || person.region || '-';
       const grade = person['등급'] || person.grade || '-';
       const cls = person['클래스'] || person.class || '-';
@@ -364,7 +363,6 @@
           <div class="text-3xl font-bold mb-6">${name}</div>
           <div class="grid grid-cols-2 gap-4 text-sm">
             <div><span class="text-zinc-400">성별</span><br>${gender}</div>
-            <div><span class="text-zinc-400">나이</span><br>${age}</div>
             <div><span class="text-zinc-400">지역</span><br>${region}</div>
             <div><span class="text-zinc-400">등급</span><br>${grade}</div>
             <div><span class="text-zinc-400">클래스</span><br>${cls}</div>
