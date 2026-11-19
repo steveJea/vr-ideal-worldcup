@@ -1,4 +1,3 @@
-import { renderFavoriteCard, canvasFile, downloadCanvas } from "./card.js";
 import { filterByGender, loadHeroines } from "./data.js";
 import { factList } from "./labels.js";
 import { fetchRanking, publishWin, requestRun, statusCopy } from "./ranking.js";
@@ -12,7 +11,6 @@ import {
   shareNative,
   shareTitle,
   shareToKakao,
-  siteOrigin,
   xIntent,
 } from "./share.js";
 import { choose, currentPair, matchProgress, startBracket } from "./tournament.js";
@@ -25,7 +23,6 @@ const state = {
   busy: false,
   returnView: "home",
   winner: null,
-  canvas: null,
   runPromise: Promise.resolve(null),
   published: false,
 };
@@ -205,17 +202,11 @@ async function startTournament() {
   state.busy = true;
   state.published = false;
   state.winner = null;
-  state.canvas = null;
   state.runPromise = requestRun();
   showView("match");
   await splash(bracket.round);
   renderMatch();
   state.busy = false;
-}
-
-function fileName(name) {
-  const safe = name.replace(/[\\/:*?"<>|]/g, "").trim() || "heroine";
-  return `내-최애-히로인-${safe}.png`;
 }
 
 async function showResult(heroine) {
@@ -230,22 +221,10 @@ async function showResult(heroine) {
   }
   const poster = $("poster");
   poster.src = portraitUrl(heroine.id);
-  poster.alt = `${heroine.name}, 내 최애 히로인`;
+  poster.alt = heroine.name;
   $("rank-status").textContent = "순위를 확인하고 있습니다.";
   $("share-kakao").hidden = !kakaoConfigured();
   showView("result");
-
-  const host = siteOrigin().replace(/^https?:\/\//, "");
-  try {
-    state.canvas = await renderFavoriteCard(
-      { id: heroine.id, name: heroine.name, lines: factList(heroine).slice(0, 3) },
-      { host },
-    );
-    poster.src = state.canvas.toDataURL("image/png");
-  } catch (error) {
-    console.error(JSON.stringify({ message: "card_failed" }));
-    state.canvas = null;
-  }
 
   if (!state.published) {
     state.published = true;
@@ -353,11 +332,6 @@ function bind() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !$("sheet").hidden) closeSheet();
   });
-  $("save-card").addEventListener("click", () => {
-    if (!state.canvas || !state.winner) return;
-    downloadCanvas(state.canvas, fileName(state.winner.name));
-    toast("이미지를 저장했습니다.");
-  });
   $("copy-link").addEventListener("click", async () => {
     if (!state.winner) return;
     const ok = await copyText(resultUrl(state.winner.id));
@@ -370,12 +344,10 @@ function bind() {
   $("native-share").addEventListener("click", async () => {
     if (!state.winner) return;
     const url = resultUrl(state.winner.id);
-    const file = state.canvas ? await canvasFile(state.canvas, fileName(state.winner.name)) : null;
     const outcome = await shareNative({
       title: shareTitle(state.winner.name),
       text: shareTitle(state.winner.name),
       url,
-      file,
     });
     if (outcome === "shared" || outcome === "aborted") return;
     const ok = await copyText(url);

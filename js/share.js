@@ -121,19 +121,10 @@ export async function copyText(value) {
   }
 }
 
-export async function shareNative({ title, text, url, file }) {
+export async function shareNative({ title, text, url }) {
   if (!navigator.share) return "unsupported";
-  const payload = { title, text, url };
-  if (file && navigator.canShare?.({ files: [file] })) {
-    try {
-      await navigator.share({ ...payload, files: [file] });
-      return "shared";
-    } catch (error) {
-      if (error?.name === "AbortError") return "aborted";
-    }
-  }
   try {
-    await navigator.share(payload);
+    await navigator.share({ title, text, url });
     return "shared";
   } catch (error) {
     if (error?.name === "AbortError") return "aborted";

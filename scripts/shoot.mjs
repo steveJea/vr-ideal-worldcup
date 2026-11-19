@@ -42,7 +42,7 @@ for (let round = 0; round < 20; round += 1) {
   await page.waitForFunction(() => document.getElementById("sheet").hidden);
 }
 await page.waitForSelector("#view-result:not([hidden])");
-await page.waitForFunction(() => document.getElementById("poster")?.src.startsWith("data:image/png"));
+await page.waitForFunction(() => /\/img\/bt_img\/\d+\.webp$/.test(document.getElementById("poster")?.src || ""));
 await page.waitForFunction(() => {
   const text = document.getElementById("rank-status")?.textContent || "";
   return text && !text.includes("확인하고");
