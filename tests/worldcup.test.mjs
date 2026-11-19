@@ -230,8 +230,13 @@ test("rate limit key does not keep the address", async () => {
 
 test("title visual features 임유리 without changing ranking code", () => {
   const html = readFileSync("index.html", "utf8");
-  assert.match(html, /img\/bt_img\/10325\.webp/);
+  assert.match(html, /img\/teaser\/title\.webp\?v=3/);
+  assert.match(html, /img\/teaser\/og\.jpg\?v=3/);
+  assert.match(html, /summary_large_image/);
+  assert.match(html, /og:image:width" content="1200"/);
+  assert.match(html, /og:image:height" content="630"/);
   assert.match(html, /임유리/);
+  assert.equal(html.includes("이미지 저장"), false);
   const rankingCode = [
     "js/ranking.js",
     "worker/src/store.ts",

@@ -58,38 +58,10 @@ async function writeCard(id, name, detail, destination) {
   await base.composite(layers).jpeg({ quality: 80 }).toFile(destination);
 }
 
-const featured = catalog.find((entry) => entry.name === "임유리");
-if (!featured) throw new Error("missing featured heroine");
-const featuredFile = path.join(root, "img/bt_img", `${featured.id}.webp`);
-const featuredMeta = await sharp(featuredFile).metadata();
-const featuredScale = 1400 / featuredMeta.width;
-const featuredHeight = Math.round(featuredMeta.height * featuredScale);
-const featuredTop = Math.max(0, Math.min(featuredHeight - 630, Math.round(featuredHeight * 0.16)));
-const featuredFace = await sharp(featuredFile)
-  .resize(1400, featuredHeight)
-  .extract({ left: 200, top: featuredTop, width: 1200, height: 630 })
-  .jpeg({ quality: 84 })
-  .toBuffer();
-const homeOverlay = Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="homeFade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#10080b" stop-opacity="0.15"/>
-      <stop offset="0.45" stop-color="#10080b" stop-opacity="0"/>
-      <stop offset="1" stop-color="#10080b" stop-opacity="0.88"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#homeFade)"/>
-  <text x="64" y="470" fill="#e6c98a" font-family="WenQuanYi Micro Hei" font-size="28">VR</text>
-  <text x="64" y="545" fill="#f4efe8" font-family="WenQuanYi Micro Hei" font-size="72">${xml(featured.name)}</text>
-  <text x="64" y="592" fill="#e6c98a" font-family="WenQuanYi Micro Hei" font-size="28">이상형 월드컵</text>
-</svg>`);
-await sharp(featuredFace)
-  .composite([{ input: homeOverlay, left: 0, top: 0 }])
-  .jpeg({ quality: 84 })
-  .toFile(path.join(root, "img/home-og.jpg"));
-console.log(`home og ${featured.id} ${featured.name}`);
-
-if (homeOnly) process.exit(0);
+if (homeOnly) {
+  console.log("default preview is the approved file img/teaser/og.jpg");
+  process.exit(0);
+}
 
 let written = 0;
 let missing = 0;

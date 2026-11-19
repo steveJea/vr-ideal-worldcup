@@ -70,7 +70,7 @@ export function renderSharePage(input: {
   <meta name="twitter:description" content="${description}">
   <meta name="twitter:image" content="${escapeHtml(image)}">
   <link rel="icon" href="${origin}/favicon.png" type="image/png">
-  <link rel="stylesheet" href="${origin}/css/app.css">
+  <link rel="stylesheet" href="${origin}/css/app.css?v=3">
 </head>
 <body class="share-page">
   <main class="share">
@@ -94,7 +94,7 @@ export function renderMissingPage(origin: string): string {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>결과를 찾지 못했습니다</title>
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="${origin}/css/app.css">
+  <link rel="stylesheet" href="${origin}/css/app.css?v=3">
 </head>
 <body>
   <main class="share">

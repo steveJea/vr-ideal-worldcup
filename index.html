@@ -14,41 +14,42 @@
   <meta property="og:title" content="VR 이상형 월드컵">
   <meta property="og:description" content="두 명 중 마음이 가는 쪽을 골라, 마지막에 남는 최애를 확인해 보세요.">
   <meta property="og:url" content="__ORIGIN__/">
-  <meta property="og:image" content="__ORIGIN__/img/home-og.jpg">
+  <meta property="og:image" content="__ORIGIN__/img/teaser/og.jpg?v=3">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="임유리, VR 이상형 월드컵">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VR 이상형 월드컵">
   <meta name="twitter:description" content="두 명 중 마음이 가는 쪽을 골라, 마지막에 남는 최애를 확인해 보세요.">
-  <meta name="twitter:image" content="__ORIGIN__/img/home-og.jpg">
+  <meta name="twitter:image" content="__ORIGIN__/img/teaser/og.jpg?v=3">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="preload" as="image" href="img/bt_img/10325.webp">
+  <link rel="stylesheet" href="css/app.css?v=3">
+  <link rel="preload" as="image" href="img/teaser/title.webp?v=3" type="image/webp">
 </head>
 <body>
   <section id="view-home" class="home">
     <div class="hero">
-      <div class="hero-photos">
-        <img id="cover-a" class="on" alt="임유리" src="img/bt_img/10325.webp">
-      </div>
-      <div class="veil"></div>
+      <picture class="hero-photos">
+        <source srcset="img/teaser/title.webp?v=3" type="image/webp">
+        <img id="cover-a" alt="임유리" width="1080" height="1920" src="img/teaser/title.png?v=3">
+      </picture>
       <header class="hero-bar">
         <span class="brand">VR</span>
         <button type="button" id="open-rank" class="ghost">전체 순위</button>
       </header>
+    </div>
+    <div class="home-panel">
       <div class="hero-copy">
         <p class="key-name">임유리</p>
         <p class="eyebrow">이상형 월드컵</p>
-        <h1>마지막에<br>남는 한 사람</h1>
+        <h1>마지막에 <br>남는 한 사람</h1>
         <p class="lead">마주 선 두 사람 가운데, 더 오래 보고 싶은 쪽을 고릅니다.</p>
       </div>
-    </div>
-    <div class="home-panel">
       <form id="setup" class="setup">
         <fieldset>
           <legend>누구를 만날까요</legend>
@@ -147,7 +148,7 @@
   </div>
   <div id="toast" class="toast" role="status"></div>
 
-  <script src="js/config.js"></script>
-  <script type="module" src="js/app.js"></script>
+  <script src="js/config.js?v=3"></script>
+  <script type="module" src="js/app.js?v=3"></script>
 </body>
 </html>

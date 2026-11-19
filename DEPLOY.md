@@ -62,6 +62,6 @@ Nothing in this repo can authenticate to the owner's Cloudflare account by itsel
 
 Do not point the Worker at `wcup.mbbs.kr` until the owner chooses to replace the live site. Adding that domain is a separate step in the Cloudflare dashboard or a `routes` change that this preview intentionally does not include.
 
-Link previews need the generated JPEGs. `npm run og` writes `img/home-og.jpg` and `img/og/<id>.jpg`. The per-heroine files are gitignored and must be generated before deploy. If a JPEG is missing, `/r/:id` falls back to the portrait WebP.
+Link previews for a finished result need the generated JPEGs. `npm run og` writes `img/og/<id>.jpg`. Those files are gitignored and must be generated before deploy. If a JPEG is missing, `/r/:id` falls back to the portrait WebP. The site default preview is the approved `img/teaser/og.jpg`, not a generated file.
 
-The title screen and `img/home-og.jpg` feature 임유리 (id 10325). A finished result still previews that winner. Nothing in the ranking API prefers her; the board is only real win counts.
+The title screen uses the approved portrait `img/teaser/title.webp`. The default link preview is the approved file `img/teaser/og.jpg` (1200×630). A finished result still previews that winner at `/img/og/<id>.jpg`. Nothing in the ranking API prefers 임유리; the board is only real win counts. Asset URLs use `?v=3`.
